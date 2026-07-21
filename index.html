@@ -3,111 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consumer Location Finder</title>
+    <title>Location Tracker - Goalpara ESD</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f4f7f6; padding: 20px; margin: 0; }
-        .container { max-width: 500px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: auto; }
-        h2 { text-align: center; color: #333; margin-top: 0; }
-        label { margin-top: 15px; display: block; font-size: 14px; font-weight: bold; color: #555; }
-        input { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 18px; }
-        button#searchBtn { width: 100%; padding: 14px; background-color: #1a73e8; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 15px; }
-        button#searchBtn:disabled { background-color: #ccc; cursor: not-allowed; }
-        
-        #statusMessage { text-align: center; color: #888; font-size: 13px; margin-top: 8px; font-weight: bold; }
-        .result-box { margin-top: 25px; display: none; }
-        .calc-number { font-family: monospace; color: #1a73e8; font-size: 18px; font-weight: bold; text-align: center; display: block; margin-bottom: 15px; background: #e8f0fe; padding: 10px; border-radius: 6px; }
-        
-        /* Links Container */
-        .links-container { display: flex; flex-direction: column; gap: 12px; }
-        
-        /* Map Buttons */
-        .map-btn { display: flex; align-items: center; justify-content: space-between; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; color: white; transition: transform 0.1s ease; }
-        .map-btn:active { transform: scale(0.98); }
-        
-        .btn-smart { background-color: #28a745; }
-        .btn-arms { background-color: #17a2b8; }
-        .btn-prepaid { background-color: #6f42c1; }
-        
-        .no-data-tag { font-size: 13px; color: #888; font-style: italic; padding: 8px; background: #eee; border-radius: 6px; text-align: center; }
+        :root {
+            --primary: #0f4c81;
+            --primary-hover: #083358;
+            --accent-smart: #10b981;
+            --accent-arms: #0284c7;
+            --accent-prepaid: #8b5cf6;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 12px;
+        }
+
+        .app-card {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 480px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            padding: 28px 24px;
+            border: 1px solid #f1f5f9;
+        }
+
+        /* Branding Header */
+        .brand-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .brand-logo {
+            height: 65px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+
+        .brand-header h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+        }
+
+        .brand-header p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+            font-weight: 500;
+        }
+
+        /* Input Form */
+        .search-box {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .input-group label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .styled-input {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 1.5px solid #e2e8f0;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.2s ease;
+            background: #fafafa;
+        }
+
+        .styled-input:focus {
+            border-color: var(--primary);
+            background: #ffffff;
+            box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1);
+        }
+
+        .btn-search {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            background-color: var(--primary);
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25);
+        }
+
+        .btn-search:hover:not(:disabled) {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-search:disabled {
+            background-color: #cbd5e1;
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: #f1f5f9;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        /* Results Section */
+        .results-section {
+            margin-top: 24px;
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .consumer-chip {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            color: #1e40af;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            letter-spacing: 0.05em;
+        }
+
+        .links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Map Action Buttons */
+        .map-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .map-card:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.05);
+        }
+
+        .map-card:active {
+            transform: scale(0.98);
+        }
+
+        .card-smart { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25); }
+        .card-arms { background: linear-gradient(135deg, #0284c7, #0369a1); box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25); }
+        .card-prepaid { background: linear-gradient(135deg, #8b5cf6, #6d28d9); box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25); }
+
+        .btn-icon-tag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-missing {
+            background: #f1f5f9;
+            color: #94a3b8;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px dashed #cbd5e1;
+        }
+
+        .error-card {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
+            padding: 14px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>Consumer Location Finder</h2>
-    
-    <label>Enter Last 5 Digits of Consumer No.</label>
-    <input type="number" id="shortInput" placeholder="e.g. 72136">
-    <button id="searchBtn" disabled>Search</button>
-    <div id="statusMessage">Downloading 60k database...</div>
+<div class="app-card">
+    <!-- Header with APDCL Logo -->
+    <div class="brand-header">
+        <img src="logo.png" alt="APDCL Logo" class="brand-logo" onerror="this.style.display='none'">
+        <h1>Location Tracker</h1>
+        <p>Goalpara Electrical Sub-Division (GESD)</p>
+    </div>
 
-    <div id="resultsArea" class="result-box">
-        <span class="calc-number" id="displayFullNumber"></span>
-        <div id="linksContainer" class="links-container"></div>
+    <!-- Search Section -->
+    <div class="search-box">
+        <div class="input-group">
+            <label for="shortInput">Consumer No. (Last 5 Digits)</label>
+            <input type="number" id="shortInput" class="styled-input" placeholder="e.g. 72136" autocomplete="off">
+        </div>
+        <button id="searchBtn" class="btn-search" disabled>Search Location</button>
+    </div>
+
+    <div id="statusMessage" class="status-badge">⏳ Loading database (60k records)...</div>
+
+    <!-- Results Display -->
+    <div id="resultsArea" class="results-section">
+        <div class="consumer-chip" id="displayFullNumber"></div>
+        <div id="linksContainer" class="links-grid"></div>
     </div>
 </div>
 
 <script>
     let consumerDatabase = {};
 
-    // 1. Load data.json into fast memory on startup
+    // Load and index data.json in memory
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            // Index by Consumer Number for instant lookup
             data.forEach(row => {
                 if (row.ConsumerNo) {
                     consumerDatabase[row.ConsumerNo.toString().trim()] = row;
                 }
             });
-            document.getElementById('statusMessage').textContent = "✅ Database Ready";
-            document.getElementById('statusMessage').style.color = "#28a745";
+            const status = document.getElementById('statusMessage');
+            status.textContent = "✅ System Ready";
+            status.style.color = "#059669";
+            status.style.background = "#ecfdf5";
             document.getElementById('searchBtn').disabled = false;
         })
         .catch(error => {
-            document.getElementById('statusMessage').textContent = "❌ Error loading data.json";
-            document.getElementById('statusMessage').style.color = "red";
+            const status = document.getElementById('statusMessage');
+            status.textContent = "❌ Failed to load data.json";
+            status.style.color = "#dc2626";
+            status.style.background = "#fef2f2";
         });
 
-    // 2. Strict Coordinate Sanitizer Function
+    // Clean & validate coordinates
     function isValidCoordinate(lat, long) {
         if (lat === null || lat === undefined || long === null || long === undefined) return false;
         
         let strLat = lat.toString().trim().toLowerCase();
         let strLong = long.toString().trim().toLowerCase();
         
-        // Check for common text placeholders
-        if (strLat === "" || strLat === "0" || strLat === "0.0" || strLat === "nil" || strLat === "null" || strLat === "n/a") return false;
-        if (strLong === "" || strLong === "0" || strLong === "0.0" || strLong === "nil" || strLong === "null" || strLong === "n/a") return false;
+        if (["", "0", "0.0", "nil", "null", "n/a"].includes(strLat)) return false;
+        if (["", "0", "0.0", "nil", "null", "n/a"].includes(strLong)) return false;
         
         let numLat = parseFloat(strLat);
         let numLong = parseFloat(strLong);
         
-        // Must be valid numbers and not equal to 0
         return !isNaN(numLat) && !isNaN(numLong) && numLat !== 0 && numLong !== 0;
     }
 
-    // 3. Helper to create clean Map Links
+    // Build modern map card or missing tag
     function createMapButton(label, lat, long, cssClass) {
         if (isValidCoordinate(lat, long)) {
             let cleanLat = parseFloat(lat);
             let cleanLong = parseFloat(long);
             let mapUrl = `https://www.google.com/maps?q=${cleanLat},${cleanLong}`;
             
-            return `<a href="${mapUrl}" target="_blank" class="map-btn ${cssClass}">
-                        <span>📍 ${label}</span>
-                        <span>Open Map ↗</span>
-                    </a>`;
+            return `
+                <a href="${mapUrl}" target="_blank" class="map-card ${cssClass}">
+                    <span class="btn-icon-tag">📍 ${label}</span>
+                    <span>Open ↗</span>
+                </a>`;
         }
-        return `<div class="no-data-tag">❌ ${label}: Location Not Available</div>`;
+        return `<div class="badge-missing">✕ ${label}: Not Available</div>`;
     }
 
-    // 4. Search Handler
+    // Perform Search
     document.getElementById('searchBtn').addEventListener('click', function() {
         let inputVal = document.getElementById('shortInput').value.trim();
         if (!inputVal) return;
 
-        // Apply your 12-digit calculation logic
         let last5 = inputVal.slice(-5).padStart(5, '0');
         let firstDigit = parseInt(last5.charAt(0));
         let prefix = firstDigit >= 7 ? "0400100" : "0400000";
@@ -120,15 +336,21 @@
         let container = document.getElementById('linksContainer');
 
         if (result) {
-            // Generate clean buttons dynamically
             let html = "";
-            html += createMapButton("Smart Meter Installed Location", result.SmartLat, result.SmartLong, "btn-smart");
-            html += createMapButton("ARMS eSuvidha Postpaid Location", result.ArmsLat, result.ArmsLong, "btn-arms");
-            html += createMapButton("Prepaid Meter Location", result.PrepaidLat, result.PrepaidLong, "btn-prepaid");
+            html += createMapButton("Smart Meter Location", result.SmartLat, result.SmartLong, "card-smart");
+            html += createMapButton("ARMS Postpaid Location", result.ArmsLat, result.ArmsLong, "card-arms");
+            html += createMapButton("Prepaid Meter Location", result.PrepaidLat, result.PrepaidLong, "card-prepaid");
             
             container.innerHTML = html;
         } else {
-            container.innerHTML = `<div class="no-data-tag" style="color:red;">No consumer record found for ${fullConsumerNumber}</div>`;
+            container.innerHTML = `<div class="error-card">No consumer record found for ${fullConsumerNumber}</div>`;
+        }
+    });
+
+    // Enter Key Search Trigger
+    document.getElementById('shortInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            document.getElementById('searchBtn').click();
         }
     });
 </script>
