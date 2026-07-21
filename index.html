@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Location Finder</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f4f7f6; padding: 20px; margin: 0; }
+        .container { max-width: 500px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: auto; }
+        h2 { text-align: center; color: #333; margin-top: 0; }
+        label { margin-top: 15px; display: block; font-size: 14px; font-weight: bold; color: #555; }
+        input { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 18px; }
+        button#searchBtn { width: 100%; padding: 14px; background-color: #1a73e8; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 15px; }
+        button#searchBtn:disabled { background-color: #ccc; cursor: not-allowed; }
+        
+        #statusMessage { text-align: center; color: #888; font-size: 13px; margin-top: 8px; font-weight: bold; }
+        .result-box { margin-top: 25px; display: none; }
+        .calc-number { font-family: monospace; color: #1a73e8; font-size: 18px; font-weight: bold; text-align: center; display: block; margin-bottom: 15px; background: #e8f0fe; padding: 10px; border-radius: 6px; }
+        
+        /* Links Container */
+        .links-container { display: flex; flex-direction: column; gap: 12px; }
+        
+        /* Map Buttons */
+        .map-btn { display: flex; align-items: center; justify-content: space-between; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; color: white; transition: transform 0.1s ease; }
+        .map-btn:active { transform: scale(0.98); }
+        
+        .btn-smart { background-color: #28a745; }
+        .btn-arms { background-color: #17a2b8; }
+        .btn-prepaid { background-color: #6f42c1; }
+        
+        .no-data-tag { font-size: 13px; color: #888; font-style: italic; padding: 8px; background: #eee; border-radius: 6px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Consumer Location Finder</h2>
+    
+    <label>Enter Last 5 Digits of Consumer No.</label>
+    <input type="number" id="shortInput" placeholder="e.g. 72136">
+    <button id="searchBtn" disabled>Search</button>
+    <div id="statusMessage">Downloading 60k database...</div>
+
+    <div id="resultsArea" class="result-box">
+        <span class="calc-number" id="displayFullNumber"></span>
+        <div id="linksContainer" class="links-container"></div>
+    </div>
+</div>
+
+<script>
+    let consumerDatabase = {};
+
+    // 1. Load data.json into fast memory on startup
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            // Index by Consumer Number for instant lookup
+            data.forEach(row => {
+                if (row.ConsumerNo) {
+                    consumerDatabase[row.ConsumerNo.toString().trim()] = row;
+                }
+            });
+            document.getElementById('statusMessage').textContent = "✅ Database Ready";
+            document.getElementById('statusMessage').style.color = "#28a745";
+            document.getElementById('searchBtn').disabled = false;
+        })
+        .catch(error => {
+            document.getElementById('statusMessage').textContent = "❌ Error loading data.json";
+            document.getElementById('statusMessage').style.color = "red";
+        });
+
+    // 2. Strict Coordinate Sanitizer Function
+    function isValidCoordinate(lat, long) {
+        if (lat === null || lat === undefined || long === null || long === undefined) return false;
+        
+        let strLat = lat.toString().trim().toLowerCase();
+        let strLong = long.toString().trim().toLowerCase();
+        
+        // Check for common text placeholders
+        if (strLat === "" || strLat === "0" || strLat === "0.0" || strLat === "nil" || strLat === "null" || strLat === "n/a") return false;
+        if (strLong === "" || strLong === "0" || strLong === "0.0" || strLong === "nil" || strLong === "null" || strLong === "n/a") return false;
+        
+        let numLat = parseFloat(strLat);
+        let numLong = parseFloat(strLong);
+        
+        // Must be valid numbers and not equal to 0
+        return !isNaN(numLat) && !isNaN(numLong) && numLat !== 0 && numLong !== 0;
+    }
+
+    // 3. Helper to create clean Map Links
+    function createMapButton(label, lat, long, cssClass) {
+        if (isValidCoordinate(lat, long)) {
+            let cleanLat = parseFloat(lat);
+            let cleanLong = parseFloat(long);
+            let mapUrl = `https://www.google.com/maps?q=${cleanLat},${cleanLong}`;
+            
+            return `<a href="${mapUrl}" target="_blank" class="map-btn ${cssClass}">
+                        <span>📍 ${label}</span>
+                        <span>Open Map ↗</span>
+                    </a>`;
+        }
+        return `<div class="no-data-tag">❌ ${label}: Location Not Available</div>`;
+    }
+
+    // 4. Search Handler
+    document.getElementById('searchBtn').addEventListener('click', function() {
+        let inputVal = document.getElementById('shortInput').value.trim();
+        if (!inputVal) return;
+
+        // Apply your 12-digit calculation logic
+        let last5 = inputVal.slice(-5).padStart(5, '0');
+        let firstDigit = parseInt(last5.charAt(0));
+        let prefix = firstDigit >= 7 ? "0400100" : "0400000";
+        let fullConsumerNumber = prefix + last5;
+
+        document.getElementById('displayFullNumber').textContent = fullConsumerNumber;
+        document.getElementById('resultsArea').style.display = "block";
+
+        let result = consumerDatabase[fullConsumerNumber];
+        let container = document.getElementById('linksContainer');
+
+        if (result) {
+            // Generate clean buttons dynamically
+            let html = "";
+            html += createMapButton("Smart Meter Installed Location", result.SmartLat, result.SmartLong, "btn-smart");
+            html += createMapButton("ARMS eSuvidha Postpaid Location", result.ArmsLat, result.ArmsLong, "btn-arms");
+            html += createMapButton("Prepaid Meter Location", result.PrepaidLat, result.PrepaidLong, "btn-prepaid");
+            
+            container.innerHTML = html;
+        } else {
+            container.innerHTML = `<div class="no-data-tag" style="color:red;">No consumer record found for ${fullConsumerNumber}</div>`;
+        }
+    });
+</script>
+
+</body>
+</html>
