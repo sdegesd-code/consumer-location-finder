@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location Tracker - Goalpara ESD</title>
-    <link rel="manifest" href="manifest.json">
+    
+    <!-- Added ./ so GitHub pages finds it easily -->
+    <link rel="manifest" href="./manifest.json">
+    
     <style>
         :root {
             --primary: #0f4c81;
@@ -69,13 +72,14 @@
 </head>
 <body>
 
-<!-- INBUILT INSTALL BUTTON (Uses the exact .hidden logic from your working app) -->
+<!-- INBUILT INSTALL BUTTON (Uses the exact .hidden logic) -->
 <button id="installAppBtn" class="hidden">📲 Install App to Home Screen</button>
 
 <!-- LOGIN SCREEN -->
 <div class="app-card" id="loginScreen">
     <div class="brand-header">
-        <img src="logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
+        <!-- Reverted back to Web Icon to ensure Chrome doesn't block the install -->
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo" class="brand-logo">
         <h1>Authorized Access</h1>
         <p>Goalpara ESD Location Tracker</p>
     </div>
@@ -88,7 +92,7 @@
 <!-- MAIN APP SCREEN -->
 <div class="app-card" id="mainApp">
     <div class="brand-header">
-        <img src="logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo" class="brand-logo">
         <h1>Location Tracker</h1>
         <button id="logoutBtn" style="background:none; border:none; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:12px; margin-top:5px;">Lock App</button>
     </div>
@@ -112,20 +116,20 @@
     // 1. EXTRACTED PWA INSTALLATION LOGIC
     // ==========================================
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js');
+        // Added ./ to the sw path
+        navigator.serviceWorker.register('./sw.js');
     }
 
     let deferredPrompt;
     const installBtn = document.getElementById('installAppBtn');
     
-    // Check if installed using a new unique key to prevent cache overlap
-    const hasInstalled = localStorage.getItem('gesd_tracker_installed_v3');
+    // Updated to v5 to force phone to forget old failures
+    const hasInstalled = localStorage.getItem('gesd_tracker_installed_v5');
 
     if (!hasInstalled) {
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
             deferredPrompt = e;
-            // Reveal the button exactly like your Indexing app
             installBtn.classList.remove('hidden');
         });
 
@@ -135,13 +139,13 @@
             
             const { outcome } = await deferredPrompt.userChoice;
             if (outcome === 'accepted') {
-                localStorage.setItem('gesd_tracker_installed_v3', 'true');
+                localStorage.setItem('gesd_tracker_installed_v5', 'true');
             }
             deferredPrompt = null;
         });
 
         window.addEventListener('appinstalled', () => {
-            localStorage.setItem('gesd_tracker_installed_v3', 'true');
+            localStorage.setItem('gesd_tracker_installed_v5', 'true');
             installBtn.classList.add('hidden');
         });
     }
