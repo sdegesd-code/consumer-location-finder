@@ -21,7 +21,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         body {
@@ -39,7 +39,7 @@
             width: 100%;
             max-width: 480px;
             border-radius: 20px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
             padding: 28px 24px;
             border: 1px solid #f1f5f9;
         }
@@ -57,40 +57,10 @@
             margin-bottom: 12px;
         }
 
-        .brand-header h1 {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: -0.02em;
-        }
+        .brand-header h1 { font-size: 20px; font-weight: 700; color: var(--primary); }
+        .brand-header p { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 
-        .brand-header p {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-top: 2px;
-            font-weight: 500;
-        }
-
-        /* Input Form */
-        .search-box {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .input-group label {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
+        /* Shared Inputs & Buttons */
         .styled-input {
             width: 100%;
             padding: 14px 16px;
@@ -100,15 +70,11 @@
             outline: none;
             transition: all 0.2s ease;
             background: #fafafa;
+            margin-bottom: 12px;
         }
+        .styled-input:focus { border-color: var(--primary); background: #ffffff; box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1); }
 
-        .styled-input:focus {
-            border-color: var(--primary);
-            background: #ffffff;
-            box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1);
-        }
-
-        .btn-search {
+        .btn-primary {
             width: 100%;
             padding: 14px;
             border-radius: 12px;
@@ -121,141 +87,62 @@
             transition: all 0.2s ease;
             box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25);
         }
-
-        .btn-search:hover:not(:disabled) {
-            background-color: var(--primary-hover);
-            transform: translateY(-1px);
-        }
-
-        .btn-search:disabled {
-            background-color: #cbd5e1;
-            box-shadow: none;
-            cursor: not-allowed;
-        }
+        .btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
+        .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
 
         /* Status Badge */
         .status-badge {
-            text-align: center;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--text-muted);
-            padding: 6px 12px;
-            border-radius: 20px;
-            background: #f1f5f9;
-            width: fit-content;
-            margin: 0 auto;
+            text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted);
+            padding: 6px 12px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 0 auto;
         }
 
-        /* Results Section */
-        .results-section {
-            margin-top: 24px;
-            display: none;
-            animation: fadeIn 0.3s ease-in-out;
-        }
+        /* Results & Maps */
+        .results-section { margin-top: 24px; display: none; }
+        .consumer-chip { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; font-family: monospace; font-size: 16px; font-weight: 700; text-align: center; padding: 10px; border-radius: 10px; margin-bottom: 18px; }
+        .links-grid { display: flex; flex-direction: column; gap: 12px; }
+        .map-card { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; border-radius: 12px; text-decoration: none; color: white; font-size: 14px; font-weight: 600; }
+        .card-smart { background: linear-gradient(135deg, #10b981, #059669); }
+        .card-arms { background: linear-gradient(135deg, #0284c7, #0369a1); }
+        .card-prepaid { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+        .badge-missing { background: #f1f5f9; color: #94a3b8; font-size: 13px; padding: 12px; border-radius: 12px; text-align: center; border: 1px dashed #cbd5e1; }
+        .error-card { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 14px; border-radius: 12px; text-align: center; font-size: 14px; font-weight: 600; }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .consumer-chip {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            color: #1e40af;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-size: 16px;
-            font-weight: 700;
-            text-align: center;
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 18px;
-            letter-spacing: 0.05em;
-        }
-
-        .links-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        /* Map Action Buttons */
-        .map-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 16px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: white;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-
-        .map-card:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.05);
-        }
-
-        .map-card:active {
-            transform: scale(0.98);
-        }
-
-        .card-smart { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25); }
-        .card-arms { background: linear-gradient(135deg, #0284c7, #0369a1); box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25); }
-        .card-prepaid { background: linear-gradient(135deg, #8b5cf6, #6d28d9); box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25); }
-
-        .btn-icon-tag {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .badge-missing {
-            background: #f1f5f9;
-            color: #94a3b8;
-            font-size: 13px;
-            font-weight: 500;
-            padding: 12px;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px dashed #cbd5e1;
-        }
-
-        .error-card {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-            color: #991b1b;
-            padding: 14px;
-            border-radius: 12px;
-            text-align: center;
-            font-size: 14px;
-            font-weight: 600;
-        }
+        /* Login Screen Specifics */
+        #loginError { color: #dc2626; font-size: 13px; text-align: center; margin-top: 10px; display: none; font-weight: 600; }
+        #mainApp { display: none; }
     </style>
 </head>
 <body>
 
-<div class="app-card">
-    <!-- Header with APDCL Logo -->
+<!-- LOGIN SCREEN -->
+<div class="app-card" id="loginScreen">
+    <div class="brand-header">
+        <img src="logo.png" alt="APDCL Logo" class="brand-logo" onerror="this.style.display='none'">
+        <h1>Authorized Access</h1>
+        <p>Goalpara ESD Location Tracker</p>
+    </div>
+    
+    <input type="password" id="passInput" class="styled-input" placeholder="Enter Access PIN" autocomplete="off">
+    <button id="loginBtn" class="btn-primary">Unlock App</button>
+    <div id="loginError">❌ Incorrect PIN. Please try again.</div>
+</div>
+
+<!-- MAIN APP SCREEN (Hidden by default) -->
+<div class="app-card" id="mainApp">
     <div class="brand-header">
         <img src="logo.png" alt="APDCL Logo" class="brand-logo" onerror="this.style.display='none'">
         <h1>Location Tracker</h1>
-        <p>Goalpara Electrical Sub-Division (GESD)</p>
+        <button id="logoutBtn" style="background:none; border:none; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:12px; margin-top:5px;">Lock App</button>
     </div>
 
-    <!-- Search Section -->
-    <div class="search-box">
-        <div class="input-group">
-            <label for="shortInput">Consumer No. (Last 5 Digits)</label>
-            <input type="number" id="shortInput" class="styled-input" placeholder="e.g. 72136" autocomplete="off">
-        </div>
-        <button id="searchBtn" class="btn-search" disabled>Search Location</button>
+    <div style="margin-bottom: 16px;">
+        <label for="shortInput" style="font-size: 13px; font-weight: 600; margin-bottom: 6px; display:block;">Consumer No. (Last 5 Digits)</label>
+        <input type="number" id="shortInput" class="styled-input" placeholder="e.g. 72136" autocomplete="off">
+        <button id="searchBtn" class="btn-primary" disabled>Search Location</button>
     </div>
 
-    <div id="statusMessage" class="status-badge">⏳ Loading database (60k records)...</div>
+    <div id="statusMessage" class="status-badge">⏳ Loading database...</div>
 
-    <!-- Results Display -->
     <div id="resultsArea" class="results-section">
         <div class="consumer-chip" id="displayFullNumber"></div>
         <div id="linksContainer" class="links-grid"></div>
@@ -263,63 +150,100 @@
 </div>
 
 <script>
+    // ==========================================
+    // 1. SECURITY & LOGIN LOGIC
+    // ==========================================
+    const CORRECT_PASSWORD = "gesd2026"; // <-- CHANGE THIS PASSWORD IF YOU WANT
+
+    const loginScreen = document.getElementById('loginScreen');
+    const mainApp = document.getElementById('mainApp');
+    const passInput = document.getElementById('passInput');
+
+    // Check if the worker already unlocked the app previously
+    if (localStorage.getItem('gesd_tracker_unlocked') === 'true') {
+        loginScreen.style.display = 'none';
+        mainApp.style.display = 'block';
+        loadDatabase(); // Start downloading data only if unlocked
+    }
+
+    // Handle Login Button Click
+    document.getElementById('loginBtn').addEventListener('click', function() {
+        if (passInput.value === CORRECT_PASSWORD) {
+            localStorage.setItem('gesd_tracker_unlocked', 'true');
+            loginScreen.style.display = 'none';
+            mainApp.style.display = 'block';
+            document.getElementById('loginError').style.display = 'none';
+            loadDatabase(); // Start downloading data
+        } else {
+            document.getElementById('loginError').style.display = 'block';
+            passInput.value = ""; // Clear the wrong password
+        }
+    });
+
+    // Enter Key on Password Field
+    passInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') document.getElementById('loginBtn').click();
+    });
+
+    // Logout/Lock Button
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+        localStorage.removeItem('gesd_tracker_unlocked');
+        mainApp.style.display = 'none';
+        loginScreen.style.display = 'block';
+        passInput.value = "";
+    });
+
+
+    // ==========================================
+    // 2. DATABASE & SEARCH LOGIC
+    // ==========================================
     let consumerDatabase = {};
 
-    // Load and index data.json in memory
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(row => {
-                if (row.ConsumerNo) {
-                    consumerDatabase[row.ConsumerNo.toString().trim()] = row;
-                }
+    function loadDatabase() {
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(row => {
+                    if (row.ConsumerNo) {
+                        consumerDatabase[row.ConsumerNo.toString().trim()] = row;
+                    }
+                });
+                const status = document.getElementById('statusMessage');
+                status.textContent = "✅ System Ready";
+                status.style.color = "#059669";
+                status.style.background = "#ecfdf5";
+                document.getElementById('searchBtn').disabled = false;
+            })
+            .catch(error => {
+                const status = document.getElementById('statusMessage');
+                status.textContent = "❌ Failed to load data.json";
+                status.style.color = "#dc2626";
+                status.style.background = "#fef2f2";
             });
-            const status = document.getElementById('statusMessage');
-            status.textContent = "✅ System Ready";
-            status.style.color = "#059669";
-            status.style.background = "#ecfdf5";
-            document.getElementById('searchBtn').disabled = false;
-        })
-        .catch(error => {
-            const status = document.getElementById('statusMessage');
-            status.textContent = "❌ Failed to load data.json";
-            status.style.color = "#dc2626";
-            status.style.background = "#fef2f2";
-        });
+    }
 
-    // Clean & validate coordinates
     function isValidCoordinate(lat, long) {
         if (lat === null || lat === undefined || long === null || long === undefined) return false;
-        
         let strLat = lat.toString().trim().toLowerCase();
         let strLong = long.toString().trim().toLowerCase();
-        
         if (["", "0", "0.0", "nil", "null", "n/a"].includes(strLat)) return false;
         if (["", "0", "0.0", "nil", "null", "n/a"].includes(strLong)) return false;
-        
         let numLat = parseFloat(strLat);
         let numLong = parseFloat(strLong);
-        
         return !isNaN(numLat) && !isNaN(numLong) && numLat !== 0 && numLong !== 0;
     }
 
-    // Build modern map card or missing tag
     function createMapButton(label, lat, long, cssClass) {
         if (isValidCoordinate(lat, long)) {
-            let cleanLat = parseFloat(lat);
-            let cleanLong = parseFloat(long);
-            let mapUrl = `https://www.google.com/maps?q=${cleanLat},${cleanLong}`;
-            
             return `
-                <a href="${mapUrl}" target="_blank" class="map-card ${cssClass}">
-                    <span class="btn-icon-tag">📍 ${label}</span>
+                <a href="https://www.google.com/maps?q=${parseFloat(lat)},${parseFloat(long)}" target="_blank" class="map-card ${cssClass}">
+                    <span>📍 ${label}</span>
                     <span>Open ↗</span>
                 </a>`;
         }
         return `<div class="badge-missing">✕ ${label}: Not Available</div>`;
     }
 
-    // Perform Search
     document.getElementById('searchBtn').addEventListener('click', function() {
         let inputVal = document.getElementById('shortInput').value.trim();
         if (!inputVal) return;
@@ -336,22 +260,17 @@
         let container = document.getElementById('linksContainer');
 
         if (result) {
-            let html = "";
-            html += createMapButton("Smart Meter Location", result.SmartLat, result.SmartLong, "card-smart");
-            html += createMapButton("ARMS Postpaid Location", result.ArmsLat, result.ArmsLong, "card-arms");
-            html += createMapButton("Prepaid Meter Location", result.PrepaidLat, result.PrepaidLong, "card-prepaid");
-            
-            container.innerHTML = html;
+            container.innerHTML = 
+                createMapButton("Smart Meter Location", result.SmartLat, result.SmartLong, "card-smart") +
+                createMapButton("ARMS Postpaid Location", result.ArmsLat, result.ArmsLong, "card-arms") +
+                createMapButton("Prepaid Meter Location", result.PrepaidLat, result.PrepaidLong, "card-prepaid");
         } else {
             container.innerHTML = `<div class="error-card">No consumer record found for ${fullConsumerNumber}</div>`;
         }
     });
 
-    // Enter Key Search Trigger
     document.getElementById('shortInput').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            document.getElementById('searchBtn').click();
-        }
+        if (e.key === 'Enter') document.getElementById('searchBtn').click();
     });
 </script>
 
