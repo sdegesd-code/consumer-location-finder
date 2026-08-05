@@ -4,99 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location Tracker - Goalpara ESD</title>
+    <!-- Links to the PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
     <style>
         :root {
             --primary: #0f4c81;
             --primary-hover: #083358;
-            --accent-smart: #10b981;
-            --accent-arms: #0284c7;
-            --accent-prepaid: #8b5cf6;
             --bg: #f8fafc;
             --card-bg: #ffffff;
             --text-main: #1e293b;
             --text-muted: #64748b;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px 12px; }
 
-        body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px 12px;
-        }
-
-        .app-card {
-            background: var(--card-bg);
-            width: 100%;
-            max-width: 480px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-            padding: 28px 24px;
-            border: 1px solid #f1f5f9;
-        }
-
+        .app-card { background: var(--card-bg); width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); padding: 28px 24px; border: 1px solid #f1f5f9; }
+        
         /* Branding Header */
-        .brand-header {
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
-        .brand-logo {
-            height: 65px;
-            width: auto;
-            object-fit: contain;
-            margin-bottom: 12px;
-        }
-
+        .brand-header { text-align: center; margin-bottom: 24px; }
+        .brand-logo { height: 65px; width: auto; object-fit: contain; margin-bottom: 12px; }
         .brand-header h1 { font-size: 20px; font-weight: 700; color: var(--primary); }
         .brand-header p { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 
         /* Shared Inputs & Buttons */
-        .styled-input {
-            width: 100%;
-            padding: 14px 16px;
-            border-radius: 12px;
-            border: 1.5px solid #e2e8f0;
-            font-size: 16px;
-            outline: none;
-            transition: all 0.2s ease;
-            background: #fafafa;
-            margin-bottom: 12px;
-        }
+        .styled-input { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #e2e8f0; font-size: 16px; outline: none; transition: all 0.2s ease; background: #fafafa; margin-bottom: 12px; }
         .styled-input:focus { border-color: var(--primary); background: #ffffff; box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1); }
-
-        .btn-primary {
-            width: 100%;
-            padding: 14px;
-            border-radius: 12px;
-            border: none;
-            background-color: var(--primary);
-            color: white;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25);
-        }
+        .btn-primary { width: 100%; padding: 14px; border-radius: 12px; border: none; background-color: var(--primary); color: white; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25); }
         .btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
         .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
 
-        /* Status Badge */
-        .status-badge {
-            text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted);
-            padding: 6px 12px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 0 auto;
-        }
-
-        /* Results & Maps */
+        /* Status Badge & Results */
+        .status-badge { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 6px 12px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 0 auto; }
         .results-section { margin-top: 24px; display: none; }
         .consumer-chip { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; font-family: monospace; font-size: 16px; font-weight: 700; text-align: center; padding: 10px; border-radius: 10px; margin-bottom: 18px; }
         .links-grid { display: flex; flex-direction: column; gap: 12px; }
@@ -107,12 +46,36 @@
         .badge-missing { background: #f1f5f9; color: #94a3b8; font-size: 13px; padding: 12px; border-radius: 12px; text-align: center; border: 1px dashed #cbd5e1; }
         .error-card { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 14px; border-radius: 12px; text-align: center; font-size: 14px; font-weight: 600; }
 
-        /* Login Screen Specifics */
+        /* Login Screen */
         #loginError { color: #dc2626; font-size: 13px; text-align: center; margin-top: 10px; display: none; font-weight: 600; }
         #mainApp { display: none; }
+
+        /* FORCE INSTALL OVERLAY */
+        #installOverlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 76, 129, 0.95); z-index: 9999;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 20px; display: none;
+        }
+        .install-box { background: white; padding: 30px 24px; border-radius: 16px; max-width: 350px; width: 100%; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        .install-box h2 { color: var(--primary); margin-bottom: 8px; font-size: 22px; }
+        .install-box p { color: var(--text-muted); margin-bottom: 24px; font-size: 14px; line-height: 1.5; }
+        .btn-install { background: #10b981; color: white; padding: 14px; border: none; border-radius: 12px; width: 100%; font-size: 16px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
+        .btn-skip { background: transparent; border: none; color: #94a3b8; margin-top: 16px; font-size: 13px; cursor: pointer; text-decoration: underline; }
     </style>
 </head>
 <body>
+
+<!-- FORCE INSTALL OVERLAY -->
+<div id="installOverlay">
+    <div class="install-box">
+        <img src="logo.png" alt="APDCL Logo" style="height: 60px; margin-bottom: 15px;" onerror="this.style.display='none'">
+        <h2>Install Application</h2>
+        <p>To use the GESD Location Tracker securely, you must install it to your home screen.</p>
+        <button id="forceInstallBtn" class="btn-install">📲 Install App Now</button>
+        <button id="skipInstallBtn" class="btn-skip">I'm on an iPhone (Skip)</button>
+    </div>
+</div>
 
 <!-- LOGIN SCREEN -->
 <div class="app-card" id="loginScreen">
@@ -127,7 +90,7 @@
     <div id="loginError">❌ Incorrect PIN. Please try again.</div>
 </div>
 
-<!-- MAIN APP SCREEN (Hidden by default) -->
+<!-- MAIN APP SCREEN -->
 <div class="app-card" id="mainApp">
     <div class="brand-header">
         <img src="logo.png" alt="APDCL Logo" class="brand-logo" onerror="this.style.display='none'">
@@ -151,48 +114,90 @@
 
 <script>
     // ==========================================
+    // 0. PWA INSTALLATION LOGIC
+    // ==========================================
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+    }
+
+    let deferredPrompt;
+    const installOverlay = document.getElementById('installOverlay');
+    const isAppInstalled = localStorage.getItem('gesd_app_installed_v2');
+
+    // Only listen for the prompt if it hasn't been installed yet
+    if (!isAppInstalled) {
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Prevent the mini-infobar from appearing on mobile
+            e.preventDefault();
+            // Stash the event so it can be triggered later.
+            deferredPrompt = e;
+            // Display the Full Screen Install Overlay
+            installOverlay.style.display = 'flex';
+        });
+
+        // Trigger the install when they click the big green button
+        document.getElementById('forceInstallBtn').addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    localStorage.setItem('gesd_app_installed_v2', 'true');
+                    installOverlay.style.display = 'none';
+                }
+                deferredPrompt = null;
+            }
+        });
+
+        // Allow iOS users (who don't get the auto-prompt) to skip
+        document.getElementById('skipInstallBtn').addEventListener('click', () => {
+            installOverlay.style.display = 'none';
+        });
+
+        // If the OS successfully installs the app, hide the overlay forever
+        window.addEventListener('appinstalled', () => {
+            localStorage.setItem('gesd_app_installed_v2', 'true');
+            installOverlay.style.display = 'none';
+        });
+    }
+
+    // ==========================================
     // 1. SECURITY & LOGIN LOGIC
     // ==========================================
-    const CORRECT_PASSWORD = "gesd2026"; // <-- CHANGE THIS PASSWORD IF YOU WANT
+    const CORRECT_PASSWORD = "gesd2026"; 
 
     const loginScreen = document.getElementById('loginScreen');
     const mainApp = document.getElementById('mainApp');
     const passInput = document.getElementById('passInput');
 
-    // Check if the worker already unlocked the app previously
     if (localStorage.getItem('gesd_tracker_unlocked') === 'true') {
         loginScreen.style.display = 'none';
         mainApp.style.display = 'block';
-        loadDatabase(); // Start downloading data only if unlocked
+        loadDatabase(); 
     }
 
-    // Handle Login Button Click
     document.getElementById('loginBtn').addEventListener('click', function() {
         if (passInput.value === CORRECT_PASSWORD) {
             localStorage.setItem('gesd_tracker_unlocked', 'true');
             loginScreen.style.display = 'none';
             mainApp.style.display = 'block';
             document.getElementById('loginError').style.display = 'none';
-            loadDatabase(); // Start downloading data
+            loadDatabase(); 
         } else {
             document.getElementById('loginError').style.display = 'block';
-            passInput.value = ""; // Clear the wrong password
+            passInput.value = ""; 
         }
     });
 
-    // Enter Key on Password Field
     passInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') document.getElementById('loginBtn').click();
     });
 
-    // Logout/Lock Button
     document.getElementById('logoutBtn').addEventListener('click', function() {
         localStorage.removeItem('gesd_tracker_unlocked');
         mainApp.style.display = 'none';
         loginScreen.style.display = 'block';
         passInput.value = "";
     });
-
 
     // ==========================================
     // 2. DATABASE & SEARCH LOGIC
@@ -273,6 +278,5 @@
         if (e.key === 'Enter') document.getElementById('searchBtn').click();
     });
 </script>
-
 </body>
 </html>
