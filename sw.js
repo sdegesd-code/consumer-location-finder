@@ -3,5 +3,5 @@ self.addEventListener('install', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-    // This minimal fetch listener is strictly required by Chrome to trigger the install prompt.
+    e.respondWith(fetch(e.request).catch(() => new Response("Offline")));
 });
