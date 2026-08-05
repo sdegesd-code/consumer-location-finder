@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Location Tracker - Goalpara ESD</title>
+    <title>Location Tracker</title>
     
-    <!-- Added ./ so GitHub pages finds it easily -->
     <link rel="manifest" href="./manifest.json">
     
     <style>
@@ -23,20 +22,10 @@
 
         .hidden { display: none !important; }
 
-        /* Install Banner */
         #installAppBtn {
-            width: 100%;
-            max-width: 480px;
-            padding: 14px;
-            background-color: #10b981;
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            width: 100%; max-width: 480px; padding: 14px; background-color: #10b981; color: white;
+            border: none; border-radius: 12px; font-size: 16px; font-weight: bold; cursor: pointer;
+            margin-bottom: 15px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
         }
 
         .app-card { background: var(--card-bg); width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); padding: 28px 24px; border: 1px solid #f1f5f9; }
@@ -49,15 +38,12 @@
         .styled-input { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #e2e8f0; font-size: 16px; outline: none; transition: all 0.2s ease; background: #fafafa; margin-bottom: 12px; }
         .styled-input:focus { border-color: var(--primary); background: #ffffff; box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1); }
         
-        .btn-primary { width: 100%; padding: 14px; border-radius: 12px; border: none; background-color: var(--primary); color: white; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25); }
-        .btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
-        .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
+        .btn-primary { width: 100%; padding: 14px; border-radius: 12px; border: none; background-color: var(--primary); color: white; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
+        .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; }
 
         .status-badge { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 6px 12px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 0 auto; }
-        
         .results-section { margin-top: 24px; display: none; }
         .consumer-chip { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; font-family: monospace; font-size: 16px; font-weight: 700; text-align: center; padding: 10px; border-radius: 10px; margin-bottom: 18px; }
-        
         .links-grid { display: flex; flex-direction: column; gap: 12px; }
         .map-card { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; border-radius: 12px; text-decoration: none; color: white; font-size: 14px; font-weight: 600; }
         .card-smart { background: linear-gradient(135deg, #10b981, #059669); }
@@ -72,14 +58,12 @@
 </head>
 <body>
 
-<!-- INBUILT INSTALL BUTTON (Uses the exact .hidden logic) -->
 <button id="installAppBtn" class="hidden">📲 Install App to Home Screen</button>
 
 <!-- LOGIN SCREEN -->
 <div class="app-card" id="loginScreen">
     <div class="brand-header">
-        <!-- Reverted back to Web Icon to ensure Chrome doesn't block the install -->
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Map_pin_icon.svg/512px-Map_pin_icon.svg.png" alt="Logo" class="brand-logo">
         <h1>Authorized Access</h1>
         <p>Goalpara ESD Location Tracker</p>
     </div>
@@ -92,7 +76,7 @@
 <!-- MAIN APP SCREEN -->
 <div class="app-card" id="mainApp">
     <div class="brand-header">
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Map_pin_icon.svg/512px-Map_pin_icon.svg.png" alt="Logo" class="brand-logo">
         <h1>Location Tracker</h1>
         <button id="logoutBtn" style="background:none; border:none; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:12px; margin-top:5px;">Lock App</button>
     </div>
@@ -113,18 +97,18 @@
 
 <script>
     // ==========================================
-    // 1. EXTRACTED PWA INSTALLATION LOGIC
+    // 1. PWA INSTALLATION LOGIC
     // ==========================================
     if ('serviceWorker' in navigator) {
-        // Added ./ to the sw path
-        navigator.serviceWorker.register('./sw.js');
+        // Explicitly set scope to the current GitHub Pages folder
+        navigator.serviceWorker.register('sw.js', { scope: './' });
     }
 
     let deferredPrompt;
     const installBtn = document.getElementById('installAppBtn');
     
-    // Updated to v5 to force phone to forget old failures
-    const hasInstalled = localStorage.getItem('gesd_tracker_installed_v5');
+    // Changing key to v6 for a fresh cache check
+    const hasInstalled = localStorage.getItem('gesd_tracker_v6');
 
     if (!hasInstalled) {
         window.addEventListener('beforeinstallprompt', (e) => {
@@ -136,16 +120,15 @@
         installBtn.addEventListener('click', async () => {
             installBtn.classList.add('hidden');
             deferredPrompt.prompt();
-            
             const { outcome } = await deferredPrompt.userChoice;
             if (outcome === 'accepted') {
-                localStorage.setItem('gesd_tracker_installed_v5', 'true');
+                localStorage.setItem('gesd_tracker_v6', 'true');
             }
             deferredPrompt = null;
         });
 
         window.addEventListener('appinstalled', () => {
-            localStorage.setItem('gesd_tracker_installed_v5', 'true');
+            localStorage.setItem('gesd_tracker_v6', 'true');
             installBtn.classList.add('hidden');
         });
     }
@@ -217,14 +200,11 @@
     }
 
     function isValidCoordinate(lat, long) {
-        if (lat === null || lat === undefined || long === null || long === undefined) return false;
+        if (lat == null || long == null) return false;
         let strLat = lat.toString().trim().toLowerCase();
         let strLong = long.toString().trim().toLowerCase();
         if (["", "0", "0.0", "nil", "null", "n/a"].includes(strLat)) return false;
-        if (["", "0", "0.0", "nil", "null", "n/a"].includes(strLong)) return false;
-        let numLat = parseFloat(strLat);
-        let numLong = parseFloat(strLong);
-        return !isNaN(numLat) && !isNaN(numLong) && numLat !== 0 && numLong !== 0;
+        return !isNaN(parseFloat(strLat)) && !isNaN(parseFloat(strLong));
     }
 
     function createMapButton(label, lat, long, cssClass) {
@@ -243,8 +223,7 @@
         if (!inputVal) return;
 
         let last5 = inputVal.slice(-5).padStart(5, '0');
-        let firstDigit = parseInt(last5.charAt(0));
-        let prefix = firstDigit >= 7 ? "0400100" : "0400000";
+        let prefix = parseInt(last5.charAt(0)) >= 7 ? "0400100" : "0400000";
         let fullConsumerNumber = prefix + last5;
 
         document.getElementById('displayFullNumber').textContent = fullConsumerNumber;
