@@ -31,7 +31,7 @@
         .app-card { background: var(--card-bg); width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); padding: 28px 24px; border: 1px solid #f1f5f9; }
         
         .brand-header { text-align: center; margin-bottom: 24px; }
-        .brand-logo { height: 65px; width: auto; object-fit: contain; margin-bottom: 12px; }
+        .brand-logo { height: 65px; width: auto; object-fit: contain; margin-bottom: 12px; border-radius: 12px; }
         .brand-header h1 { font-size: 20px; font-weight: 700; color: var(--primary); }
         .brand-header p { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 
@@ -63,7 +63,7 @@
 <!-- LOGIN SCREEN -->
 <div class="app-card" id="loginScreen">
     <div class="brand-header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Map_pin_icon.svg/512px-Map_pin_icon.svg.png" alt="Logo" class="brand-logo">
+        <img src="https://ui-avatars.com/api/?name=GE&background=0f4c81&color=fff&size=512" alt="Logo" class="brand-logo">
         <h1>Authorized Access</h1>
         <p>Goalpara ESD Location Tracker</p>
     </div>
@@ -76,7 +76,7 @@
 <!-- MAIN APP SCREEN -->
 <div class="app-card" id="mainApp">
     <div class="brand-header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Map_pin_icon.svg/512px-Map_pin_icon.svg.png" alt="Logo" class="brand-logo">
+        <img src="https://ui-avatars.com/api/?name=GE&background=0f4c81&color=fff&size=512" alt="Logo" class="brand-logo">
         <h1>Location Tracker</h1>
         <button id="logoutBtn" style="background:none; border:none; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:12px; margin-top:5px;">Lock App</button>
     </div>
@@ -100,15 +100,14 @@
     // 1. PWA INSTALLATION LOGIC
     // ==========================================
     if ('serviceWorker' in navigator) {
-        // Explicitly set scope to the current GitHub Pages folder
-        navigator.serviceWorker.register('sw.js', { scope: './' });
+        navigator.serviceWorker.register('./sw.js');
     }
 
     let deferredPrompt;
     const installBtn = document.getElementById('installAppBtn');
     
-    // Changing key to v6 for a fresh cache check
-    const hasInstalled = localStorage.getItem('gesd_tracker_v6');
+    // Bumped to v7 to ensure phone memory doesn't block it
+    const hasInstalled = localStorage.getItem('gesd_tracker_v7');
 
     if (!hasInstalled) {
         window.addEventListener('beforeinstallprompt', (e) => {
@@ -122,13 +121,13 @@
             deferredPrompt.prompt();
             const { outcome } = await deferredPrompt.userChoice;
             if (outcome === 'accepted') {
-                localStorage.setItem('gesd_tracker_v6', 'true');
+                localStorage.setItem('gesd_tracker_v7', 'true');
             }
             deferredPrompt = null;
         });
 
         window.addEventListener('appinstalled', () => {
-            localStorage.setItem('gesd_tracker_v6', 'true');
+            localStorage.setItem('gesd_tracker_v7', 'true');
             installBtn.classList.add('hidden');
         });
     }
