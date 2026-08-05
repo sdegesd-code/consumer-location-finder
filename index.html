@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location Tracker - Goalpara ESD</title>
-    <!-- Links to the PWA Manifest -->
     <link rel="manifest" href="manifest.json">
     <style>
         :root {
@@ -21,20 +20,17 @@
 
         .app-card { background: var(--card-bg); width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); padding: 28px 24px; border: 1px solid #f1f5f9; }
         
-        /* Branding Header */
         .brand-header { text-align: center; margin-bottom: 24px; }
         .brand-logo { height: 65px; width: auto; object-fit: contain; margin-bottom: 12px; }
         .brand-header h1 { font-size: 20px; font-weight: 700; color: var(--primary); }
         .brand-header p { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 
-        /* Shared Inputs & Buttons */
         .styled-input { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #e2e8f0; font-size: 16px; outline: none; transition: all 0.2s ease; background: #fafafa; margin-bottom: 12px; }
         .styled-input:focus { border-color: var(--primary); background: #ffffff; box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1); }
         .btn-primary { width: 100%; padding: 14px; border-radius: 12px; border: none; background-color: var(--primary); color: white; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25); }
         .btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
         .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
 
-        /* Status Badge & Results */
         .status-badge { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 6px 12px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 0 auto; }
         .results-section { margin-top: 24px; display: none; }
         .consumer-chip { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; font-family: monospace; font-size: 16px; font-weight: 700; text-align: center; padding: 10px; border-radius: 10px; margin-bottom: 18px; }
@@ -46,11 +42,9 @@
         .badge-missing { background: #f1f5f9; color: #94a3b8; font-size: 13px; padding: 12px; border-radius: 12px; text-align: center; border: 1px dashed #cbd5e1; }
         .error-card { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 14px; border-radius: 12px; text-align: center; font-size: 14px; font-weight: 600; }
 
-        /* Login Screen */
         #loginError { color: #dc2626; font-size: 13px; text-align: center; margin-top: 10px; display: none; font-weight: 600; }
         #mainApp { display: none; }
 
-        /* FORCE INSTALL OVERLAY */
         #installOverlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(15, 76, 129, 0.95); z-index: 9999;
@@ -69,7 +63,7 @@
 <!-- FORCE INSTALL OVERLAY -->
 <div id="installOverlay">
     <div class="install-box">
-        <img src="logo.png" alt="APDCL Logo" style="height: 60px; margin-bottom: 15px;" onerror="this.style.display='none'">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo" style="height: 60px; margin-bottom: 15px;">
         <h2>Install Application</h2>
         <p>To use the GESD Location Tracker securely, you must install it to your home screen.</p>
         <button id="forceInstallBtn" class="btn-install">📲 Install App Now</button>
@@ -80,7 +74,7 @@
 <!-- LOGIN SCREEN -->
 <div class="app-card" id="loginScreen">
     <div class="brand-header">
-        <img src="logo.png" alt="APDCL Logo" class="brand-logo" onerror="this.style.display='none'">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo" class="brand-logo">
         <h1>Authorized Access</h1>
         <p>Goalpara ESD Location Tracker</p>
     </div>
@@ -93,7 +87,7 @@
 <!-- MAIN APP SCREEN -->
 <div class="app-card" id="mainApp">
     <div class="brand-header">
-        <img src="logo.png" alt="APDCL Logo" class="brand-logo" onerror="this.style.display='none'">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo" class="brand-logo">
         <h1>Location Tracker</h1>
         <button id="logoutBtn" style="background:none; border:none; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:12px; margin-top:5px;">Lock App</button>
     </div>
@@ -113,9 +107,6 @@
 </div>
 
 <script>
-    // ==========================================
-    // 0. PWA INSTALLATION LOGIC
-    // ==========================================
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js');
     }
@@ -124,18 +115,13 @@
     const installOverlay = document.getElementById('installOverlay');
     const isAppInstalled = localStorage.getItem('gesd_app_installed_v2');
 
-    // Only listen for the prompt if it hasn't been installed yet
     if (!isAppInstalled) {
         window.addEventListener('beforeinstallprompt', (e) => {
-            // Prevent the mini-infobar from appearing on mobile
             e.preventDefault();
-            // Stash the event so it can be triggered later.
             deferredPrompt = e;
-            // Display the Full Screen Install Overlay
             installOverlay.style.display = 'flex';
         });
 
-        // Trigger the install when they click the big green button
         document.getElementById('forceInstallBtn').addEventListener('click', async () => {
             if (deferredPrompt) {
                 deferredPrompt.prompt();
@@ -148,23 +134,17 @@
             }
         });
 
-        // Allow iOS users (who don't get the auto-prompt) to skip
         document.getElementById('skipInstallBtn').addEventListener('click', () => {
             installOverlay.style.display = 'none';
         });
 
-        // If the OS successfully installs the app, hide the overlay forever
         window.addEventListener('appinstalled', () => {
             localStorage.setItem('gesd_app_installed_v2', 'true');
             installOverlay.style.display = 'none';
         });
     }
 
-    // ==========================================
-    // 1. SECURITY & LOGIN LOGIC
-    // ==========================================
     const CORRECT_PASSWORD = "gesd2026"; 
-
     const loginScreen = document.getElementById('loginScreen');
     const mainApp = document.getElementById('mainApp');
     const passInput = document.getElementById('passInput');
@@ -199,9 +179,6 @@
         passInput.value = "";
     });
 
-    // ==========================================
-    // 2. DATABASE & SEARCH LOGIC
-    // ==========================================
     let consumerDatabase = {};
 
     function loadDatabase() {
