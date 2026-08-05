@@ -18,9 +18,10 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         body { background-color: var(--bg); color: var(--text-main); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 12px; }
 
+        .hidden { display: none !important; }
+
         /* Install Banner */
         #installAppBtn {
-            display: none; /* Hidden by default, JS reveals it */
             width: 100%;
             max-width: 480px;
             padding: 14px;
@@ -68,13 +69,13 @@
 </head>
 <body>
 
-<!-- INBUILT INSTALL BUTTON (Appears only when in browser) -->
-<button id="installAppBtn">📲 Install App to Home Screen</button>
+<!-- INBUILT INSTALL BUTTON (Uses the exact .hidden logic from your working app) -->
+<button id="installAppBtn" class="hidden">📲 Install App to Home Screen</button>
 
 <!-- LOGIN SCREEN -->
 <div class="app-card" id="loginScreen">
     <div class="brand-header">
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo" class="brand-logo">
+        <img src="logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
         <h1>Authorized Access</h1>
         <p>Goalpara ESD Location Tracker</p>
     </div>
@@ -87,7 +88,7 @@
 <!-- MAIN APP SCREEN -->
 <div class="app-card" id="mainApp">
     <div class="brand-header">
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo" class="brand-logo">
+        <img src="logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
         <h1>Location Tracker</h1>
         <button id="logoutBtn" style="background:none; border:none; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:12px; margin-top:5px;">Lock App</button>
     </div>
@@ -108,7 +109,7 @@
 
 <script>
     // ==========================================
-    // 0. PERSISTENT PWA INSTALL BUTTON
+    // 1. EXTRACTED PWA INSTALLATION LOGIC
     // ==========================================
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js');
@@ -116,34 +117,37 @@
 
     let deferredPrompt;
     const installBtn = document.getElementById('installAppBtn');
+    
+    // Check if installed using a new unique key to prevent cache overlap
+    const hasInstalled = localStorage.getItem('gesd_tracker_installed_v3');
 
-    // This event fires if the browser detects the app can be installed
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        // Reveal the top install button
-        installBtn.style.display = 'block';
-    });
+    if (!hasInstalled) {
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            // Reveal the button exactly like your Indexing app
+            installBtn.classList.remove('hidden');
+        });
 
-    installBtn.addEventListener('click', async () => {
-        if (deferredPrompt) {
+        installBtn.addEventListener('click', async () => {
+            installBtn.classList.add('hidden');
             deferredPrompt.prompt();
+            
             const { outcome } = await deferredPrompt.userChoice;
             if (outcome === 'accepted') {
-                installBtn.style.display = 'none'; // Hide button once installed
+                localStorage.setItem('gesd_tracker_installed_v3', 'true');
             }
             deferredPrompt = null;
-        }
-    });
+        });
 
-    // Hide the button permanently if the OS confirms it's installed
-    window.addEventListener('appinstalled', () => {
-        installBtn.style.display = 'none';
-    });
-
+        window.addEventListener('appinstalled', () => {
+            localStorage.setItem('gesd_tracker_installed_v3', 'true');
+            installBtn.classList.add('hidden');
+        });
+    }
 
     // ==========================================
-    // 1. SECURITY & LOGIN LOGIC
+    // 2. SECURITY & LOGIN LOGIC
     // ==========================================
     const CORRECT_PASSWORD = "gesd2026"; 
     const loginScreen = document.getElementById('loginScreen');
@@ -180,9 +184,8 @@
         passInput.value = "";
     });
 
-
     // ==========================================
-    // 2. DATABASE & SEARCH LOGIC
+    // 3. DATABASE & SEARCH LOGIC
     // ==========================================
     let consumerDatabase = {};
 
