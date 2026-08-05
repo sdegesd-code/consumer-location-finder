@@ -16,7 +16,24 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background-color: var(--bg); color: var(--text-main); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px 12px; }
+        body { background-color: var(--bg); color: var(--text-main); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 12px; }
+
+        /* Install Banner */
+        #installAppBtn {
+            display: none; /* Hidden by default, JS reveals it */
+            width: 100%;
+            max-width: 480px;
+            padding: 14px;
+            background-color: #10b981;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
 
         .app-card { background: var(--card-bg); width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); padding: 28px 24px; border: 1px solid #f1f5f9; }
         
@@ -27,13 +44,16 @@
 
         .styled-input { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #e2e8f0; font-size: 16px; outline: none; transition: all 0.2s ease; background: #fafafa; margin-bottom: 12px; }
         .styled-input:focus { border-color: var(--primary); background: #ffffff; box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1); }
+        
         .btn-primary { width: 100%; padding: 14px; border-radius: 12px; border: none; background-color: var(--primary); color: white; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25); }
         .btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
         .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
 
         .status-badge { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 6px 12px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 0 auto; }
+        
         .results-section { margin-top: 24px; display: none; }
         .consumer-chip { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; font-family: monospace; font-size: 16px; font-weight: 700; text-align: center; padding: 10px; border-radius: 10px; margin-bottom: 18px; }
+        
         .links-grid { display: flex; flex-direction: column; gap: 12px; }
         .map-card { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; border-radius: 12px; text-decoration: none; color: white; font-size: 14px; font-weight: 600; }
         .card-smart { background: linear-gradient(135deg, #10b981, #059669); }
@@ -44,32 +64,12 @@
 
         #loginError { color: #dc2626; font-size: 13px; text-align: center; margin-top: 10px; display: none; font-weight: 600; }
         #mainApp { display: none; }
-
-        #installOverlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 76, 129, 0.95); z-index: 9999;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            padding: 20px; display: none;
-        }
-        .install-box { background: white; padding: 30px 24px; border-radius: 16px; max-width: 350px; width: 100%; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
-        .install-box h2 { color: var(--primary); margin-bottom: 8px; font-size: 22px; }
-        .install-box p { color: var(--text-muted); margin-bottom: 24px; font-size: 14px; line-height: 1.5; }
-        .btn-install { background: #10b981; color: white; padding: 14px; border: none; border-radius: 12px; width: 100%; font-size: 16px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
-        .btn-skip { background: transparent; border: none; color: #94a3b8; margin-top: 16px; font-size: 13px; cursor: pointer; text-decoration: underline; }
     </style>
 </head>
 <body>
 
-<!-- FORCE INSTALL OVERLAY -->
-<div id="installOverlay">
-    <div class="install-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo" style="height: 60px; margin-bottom: 15px;">
-        <h2>Install Application</h2>
-        <p>To use the GESD Location Tracker securely, you must install it to your home screen.</p>
-        <button id="forceInstallBtn" class="btn-install">📲 Install App Now</button>
-        <button id="skipInstallBtn" class="btn-skip">I'm on an iPhone (Skip)</button>
-    </div>
-</div>
+<!-- INBUILT INSTALL BUTTON (Appears only when in browser) -->
+<button id="installAppBtn">📲 Install App to Home Screen</button>
 
 <!-- LOGIN SCREEN -->
 <div class="app-card" id="loginScreen">
@@ -107,43 +107,44 @@
 </div>
 
 <script>
+    // ==========================================
+    // 0. PERSISTENT PWA INSTALL BUTTON
+    // ==========================================
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js');
     }
 
     let deferredPrompt;
-    const installOverlay = document.getElementById('installOverlay');
-    const isAppInstalled = localStorage.getItem('gesd_app_installed_v2');
+    const installBtn = document.getElementById('installAppBtn');
 
-    if (!isAppInstalled) {
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            installOverlay.style.display = 'flex';
-        });
+    // This event fires if the browser detects the app can be installed
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        // Reveal the top install button
+        installBtn.style.display = 'block';
+    });
 
-        document.getElementById('forceInstallBtn').addEventListener('click', async () => {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                const { outcome } = await deferredPrompt.userChoice;
-                if (outcome === 'accepted') {
-                    localStorage.setItem('gesd_app_installed_v2', 'true');
-                    installOverlay.style.display = 'none';
-                }
-                deferredPrompt = null;
+    installBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                installBtn.style.display = 'none'; // Hide button once installed
             }
-        });
+            deferredPrompt = null;
+        }
+    });
 
-        document.getElementById('skipInstallBtn').addEventListener('click', () => {
-            installOverlay.style.display = 'none';
-        });
+    // Hide the button permanently if the OS confirms it's installed
+    window.addEventListener('appinstalled', () => {
+        installBtn.style.display = 'none';
+    });
 
-        window.addEventListener('appinstalled', () => {
-            localStorage.setItem('gesd_app_installed_v2', 'true');
-            installOverlay.style.display = 'none';
-        });
-    }
 
+    // ==========================================
+    // 1. SECURITY & LOGIN LOGIC
+    // ==========================================
     const CORRECT_PASSWORD = "gesd2026"; 
     const loginScreen = document.getElementById('loginScreen');
     const mainApp = document.getElementById('mainApp');
@@ -179,6 +180,10 @@
         passInput.value = "";
     });
 
+
+    // ==========================================
+    // 2. DATABASE & SEARCH LOGIC
+    // ==========================================
     let consumerDatabase = {};
 
     function loadDatabase() {
