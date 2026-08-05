@@ -1,3 +1,7 @@
-// Required empty service worker to trigger the PWA Install prompt
-self.addEventListener('fetch', function(event) {
+self.addEventListener('install', (e) => {
+    self.skipWaiting();
+});
+
+self.addEventListener('fetch', (e) => {
+    // This minimal fetch listener is strictly required by Chrome to trigger the install prompt.
 });
