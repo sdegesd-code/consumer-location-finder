@@ -25,30 +25,31 @@
 
         .app-card { background: var(--card-bg); width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); padding: 28px 24px; border: 1px solid #f1f5f9; position: relative; }
         
-        .brand-header { text-align: center; margin-bottom: 24px; }
-        .brand-logo { height: 65px; width: auto; object-fit: contain; margin-bottom: 12px; }
+        .brand-header { text-align: center; margin-bottom: 20px; }
+        .brand-logo { height: 60px; width: auto; object-fit: contain; margin-bottom: 10px; }
         .brand-header h1 { font-size: 20px; font-weight: 700; color: var(--primary); }
         .brand-header p { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 
         /* Mode Switcher */
-        .mode-toggle { display: flex; background: #f1f5f9; border-radius: 10px; margin-bottom: 20px; overflow: hidden; }
-        .mode-btn { flex: 1; padding: 10px; text-align: center; font-size: 13px; font-weight: 600; cursor: pointer; color: #64748b; transition: 0.2s; }
-        .mode-btn.active { background: var(--primary); color: white; }
+        .mode-toggle { display: flex; background: #f1f5f9; border-radius: 12px; margin-bottom: 20px; padding: 4px; }
+        .mode-btn { flex: 1; padding: 10px; text-align: center; font-size: 13px; font-weight: 700; cursor: pointer; color: #64748b; border-radius: 8px; transition: 0.2s; }
+        .mode-btn.active { background: var(--primary); color: white; box-shadow: 0 2px 8px rgba(15, 76, 129, 0.2); }
 
         /* Inputs */
         .styled-input { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #e2e8f0; font-size: 16px; outline: none; transition: all 0.2s ease; background: #fafafa; margin-bottom: 12px; }
         .styled-input:focus { border-color: var(--primary); background: #ffffff; box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1); }
-        textarea.styled-input { resize: vertical; min-height: 120px; font-family: monospace; font-size: 14px; }
+        textarea.styled-input { resize: vertical; min-height: 100px; font-family: monospace; font-size: 14px; }
         
         .btn-primary { width: 100%; padding: 14px; border-radius: 12px; border: none; background-color: var(--primary); color: white; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25); }
         .btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
         .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
         .btn-success { background-color: #10b981; }
+        .btn-secondary { background-color: #64748b; }
 
         .status-badge { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 6px 12px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 0 auto; }
         
-        .results-section { margin-top: 24px; display: none; }
-        .consumer-chip { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; font-family: monospace; font-size: 16px; font-weight: 700; text-align: center; padding: 10px; border-radius: 10px; margin-bottom: 18px; }
+        .results-section { margin-top: 20px; display: none; }
+        .consumer-chip { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; font-family: monospace; font-size: 16px; font-weight: 700; text-align: center; padding: 10px; border-radius: 10px; margin-bottom: 16px; }
         
         /* TABS UI */
         .tabs-container { display: flex; border-bottom: 2px solid #e2e8f0; margin-bottom: 16px; }
@@ -57,27 +58,31 @@
         .tab-content { display: none; }
         .tab-content.active { display: block; }
 
-        /* DTR Cards */
-        .location-group { border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; background: #fafafa; }
-        .map-card { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; text-decoration: none; color: white; font-size: 14px; font-weight: 600; }
-        
+        /* Map Links Grid */
+        .links-grid { display: flex; flex-direction: column; gap: 12px; }
+        .map-card { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; border-radius: 12px; text-decoration: none; color: white; font-size: 14px; font-weight: 600; }
         .card-smart { background: linear-gradient(135deg, #10b981, #059669); }
         .card-arms { background: linear-gradient(135deg, #0284c7, #0369a1); }
         .card-prepaid { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
-        
-        .dtr-list { padding: 12px 16px; }
-        .dtr-header { font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; }
-        .dtr-item { padding: 12px 0; border-bottom: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 6px; }
-        .dtr-item:last-child { border-bottom: none; padding-bottom: 4px; }
-        .dtr-main-row { display: flex; justify-content: space-between; align-items: center; }
+
+        /* DTR Cards */
+        .dtr-section-title { font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; margin: 12px 0 6px 0; letter-spacing: 0.5px; }
+        .dtr-block { border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 14px; background: #fafafa; margin-bottom: 10px; }
+        .dtr-item { padding: 10px 0; border-bottom: 1px dashed #cbd5e1; }
+        .dtr-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .dtr-main-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
         .dtr-name { font-weight: 700; color: #1e293b; font-size: 14px; }
-        .dtr-dist { font-weight: 700; color: #ef4444; font-family: monospace; font-size: 14px; background: #fee2e2; padding: 2px 6px; border-radius: 6px; }
+        .dtr-dist { font-weight: 700; color: #ef4444; font-family: monospace; font-size: 13px; background: #fee2e2; padding: 2px 6px; border-radius: 6px; }
         .dtr-details { font-size: 12px; color: #475569; line-height: 1.5; }
         .dtr-details span.label { font-weight: 600; color: #1e293b; }
-        .dtr-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; padding-top: 8px; border-top: 1px dashed #cbd5e1; font-size: 12px; }
-        .consumer-val { font-weight: 700; color: #1e293b; font-size: 13px; }
+        .dtr-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 12px; }
+        .consumer-val { font-weight: 700; color: #1e293b; }
 
-        .badge-missing { background: #f1f5f9; color: #94a3b8; font-size: 13px; padding: 20px; border-radius: 12px; text-align: center; border: 1px dashed #cbd5e1; font-weight: 600; }
+        /* Batch Results Preview */
+        .batch-output-box { background: #1e293b; color: #38bdf8; padding: 12px; border-radius: 10px; font-family: monospace; font-size: 12px; max-height: 180px; overflow-y: auto; white-space: pre; margin-top: 12px; display: none; }
+        .batch-actions { display: flex; gap: 10px; margin-top: 12px; }
+
+        .badge-missing { background: #f1f5f9; color: #94a3b8; font-size: 13px; padding: 14px; border-radius: 12px; text-align: center; border: 1px dashed #cbd5e1; font-weight: 500; }
         .error-card { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 14px; border-radius: 12px; text-align: center; font-size: 14px; font-weight: 600; }
 
         #loginError { color: #dc2626; font-size: 13px; text-align: center; margin-top: 10px; display: none; font-weight: 600; }
@@ -105,10 +110,10 @@
     <div class="brand-header">
         <img src="logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
         <h1>Location & DTR Tracker</h1>
-        <button id="logoutBtn" style="background:none; border:none; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:12px; margin-top:5px;">Lock App</button>
+        <button id="logoutBtn" style="background:none; border:none; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:12px; margin-top:4px;">Lock App</button>
     </div>
 
-    <!-- Mode Toggle -->
+    <!-- Mode Switcher -->
     <div class="mode-toggle">
         <div class="mode-btn active" id="btnSingleMode">Single Search</div>
         <div class="mode-btn" id="btnBatchMode">Batch Process</div>
@@ -116,7 +121,7 @@
 
     <!-- SINGLE SEARCH MODE -->
     <div id="modeSingle">
-        <div style="margin-bottom: 16px;">
+        <div style="margin-bottom: 12px;">
             <label style="font-size: 13px; font-weight: 600; margin-bottom: 6px; display:block;">Consumer No. (Last 5 Digits)</label>
             <input type="number" id="shortInput" class="styled-input" placeholder="e.g. 72136" autocomplete="off">
             <button id="searchBtn" class="btn-primary" disabled>Search Location</button>
@@ -125,17 +130,17 @@
         <div id="resultsArea" class="results-section">
             <div class="consumer-chip" id="displayFullNumber"></div>
             
-            <!-- TABS -->
+            <!-- CORRECTED TABS -->
             <div class="tabs-container">
-                <div class="tab" data-target="tab-smart">Smart Meter</div>
-                <div class="tab" data-target="tab-arms">ARMS</div>
-                <div class="tab" data-target="tab-arms-prepaid">Prepaid</div>
+                <div class="tab" data-target="tab-locations">📍 Meter Locations</div>
+                <div class="tab" data-target="tab-dtrs">⚡ Nearest DTRs</div>
             </div>
 
-            <!-- TAB CONTENTS -->
-            <div id="tab-smart" class="tab-content"></div>
-            <div id="tab-arms" class="tab-content"></div>
-            <div id="tab-arms-prepaid" class="tab-content"></div>
+            <!-- TAB 1: LOCATIONS -->
+            <div id="tab-locations" class="tab-content"></div>
+
+            <!-- TAB 2: NEAREST DTRS -->
+            <div id="tab-dtrs" class="tab-content"></div>
         </div>
     </div>
 
@@ -143,7 +148,16 @@
     <div id="modeBatch" class="hidden">
         <label style="font-size: 13px; font-weight: 600; margin-bottom: 6px; display:block;">Paste Consumer Numbers (One per line)</label>
         <textarea id="batchInput" class="styled-input" placeholder="72136&#10;54321&#10;98765"></textarea>
-        <button id="batchProcessBtn" class="btn-primary btn-success" disabled>Process & Export Excel</button>
+        <button id="batchProcessBtn" class="btn-primary btn-success" disabled>⚡ Process Batch Data</button>
+
+        <!-- Preview Box & Direct Copy Options -->
+        <div id="batchResultsContainer" style="display: none;">
+            <div class="batch-output-box" id="batchOutputPreview"></div>
+            <div class="batch-actions">
+                <button id="copyBatchBtn" class="btn-primary btn-secondary" style="flex: 1;">📋 Copy to Clipboard</button>
+                <button id="downloadBatchBtn" class="btn-primary btn-success" style="flex: 1;">⬇ Download CSV</button>
+            </div>
+        </div>
     </div>
 
     <div id="statusMessage" class="status-badge" style="margin-top: 15px;">⏳ Loading databases...</div>
@@ -151,7 +165,7 @@
 
 <script>
     // ==========================================
-    // 1. UI LOGIC (Tabs & Modes)
+    // 1. UI MODE & TAB NAVIGATION
     // ==========================================
     const btnSingle = document.getElementById('btnSingleMode');
     const btnBatch = document.getElementById('btnBatchMode');
@@ -172,13 +186,14 @@
         modeSingle.classList.add('hidden');
     });
 
+    // Tab Logic with Memory
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
     
-    // Restore saved tab
-    const savedTab = localStorage.getItem('gesd_active_tab') || 'tab-smart';
-    document.querySelector(`[data-target="${savedTab}"]`).classList.add('active');
-    document.getElementById(savedTab).classList.add('active');
+    const savedTab = localStorage.getItem('gesd_active_tab_v2') || 'tab-locations';
+    const initialTab = document.querySelector(`[data-target="${savedTab}"]`) || tabs[0];
+    initialTab.classList.add('active');
+    document.getElementById(initialTab.getAttribute('data-target')).classList.add('active');
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -189,12 +204,12 @@
             const targetId = tab.getAttribute('data-target');
             document.getElementById(targetId).classList.add('active');
             
-            localStorage.setItem('gesd_active_tab', targetId);
+            localStorage.setItem('gesd_active_tab_v2', targetId);
         });
     });
 
     // ==========================================
-    // 2. DATABASES & LOGIN
+    // 2. DATABASES & LOGIN LOGIC
     // ==========================================
     let consumerDatabase = {};
     let dtrDatabase = [];
@@ -251,7 +266,7 @@
     });
 
     // ==========================================
-    // 3. MATH ENGINE
+    // 3. HAVERSINE & CALCULATIONS
     // ==========================================
     function haversine(lat1, lon1, lat2, lon2) {
         const R = 6371000; 
@@ -296,42 +311,8 @@
     }
 
     // ==========================================
-    // 4. SINGLE SEARCH ENGINE
+    // 4. SINGLE SEARCH LOGIC
     // ==========================================
-    function renderBlock(title, lat, long, cssClass) {
-        if (!isValidCoordinate(lat, long)) {
-            return `<div class="badge-missing">✕ No location data available for this meter type.</div>`;
-        }
-        let nearest = getNearestDTRs(parseFloat(lat), parseFloat(long), 3);
-        let dtrHtml = nearest.map((dtr, i) => `
-            <div class="dtr-item">
-                <div class="dtr-main-row">
-                    <div class="dtr-name">${i + 1}. ${dtr.name}</div>
-                    <div class="dtr-dist">${dtr.dist.toFixed(1)}m</div>
-                </div>
-                <div class="dtr-details">
-                    <div><span class="label">DTR No:</span> ${dtr.dtrNo} &nbsp;|&nbsp; <span class="label">Cap:</span> ${dtr.capacity}</div>
-                    <div><span class="label">Feeder:</span> ${dtr.feeder}</div>
-                </div>
-                <div class="dtr-footer">
-                    <div><span class="label">Consumers:</span> <span class="consumer-val">${dtr.consumers}</span></div>
-                    <div style="color: ${dtr.loadColor}; font-weight: 700; font-size: 13px;">${dtr.loadStatus}</div>
-                </div>
-            </div>
-        `).join('');
-
-        return `
-            <div class="location-group">
-                <a href="https://www.google.com/maps?q=${lat},${long}" target="_blank" class="map-card ${cssClass}">
-                    <span>📍 ${title}</span><span>Open Map ↗</span>
-                </a>
-                <div class="dtr-list">
-                    <div class="dtr-header">Nearest DTRs (Approximate):</div>
-                    ${dtrHtml}
-                </div>
-            </div>`;
-    }
-
     document.getElementById('searchBtn').addEventListener('click', function() {
         let inputVal = document.getElementById('shortInput').value.trim();
         if (!inputVal) return;
@@ -342,28 +323,103 @@
         document.getElementById('resultsArea').style.display = "block";
 
         let result = consumerDatabase[fullNo];
-        if (result) {
-            document.getElementById('tab-smart').innerHTML = renderBlock("Smart Meter", result.SmartLat, result.SmartLong, "card-smart");
-            document.getElementById('tab-arms').innerHTML = renderBlock("ARMS Postpaid", result.ArmsLat, result.ArmsLong, "card-arms");
-            document.getElementById('tab-arms-prepaid').innerHTML = renderBlock("Prepaid Meter", result.PrepaidLat, result.PrepaidLong, "card-prepaid");
-        } else {
+        const tabLocations = document.getElementById('tab-locations');
+        const tabDtrs = document.getElementById('tab-dtrs');
+
+        if (!result) {
             let err = `<div class="error-card">No consumer record found for ${fullNo}</div>`;
-            document.getElementById('tab-smart').innerHTML = err;
-            document.getElementById('tab-arms').innerHTML = err;
-            document.getElementById('tab-arms-prepaid').innerHTML = err;
+            tabLocations.innerHTML = err;
+            tabDtrs.innerHTML = err;
+            return;
+        }
+
+        // --- POPULATE TAB 1: LOCATIONS ---
+        let mapLinksHtml = '<div class="links-grid">';
+        let hasMap = false;
+
+        if (isValidCoordinate(result.SmartLat, result.SmartLong)) {
+            hasMap = true;
+            mapLinksHtml += `<a href="https://www.google.com/maps?q=${result.SmartLat},${result.SmartLong}" target="_blank" class="map-card card-smart"><span>📍 Smart Meter Location</span><span>Open ↗</span></a>`;
+        } else {
+            mapLinksHtml += `<div class="badge-missing">✕ Smart Meter: Not Available</div>`;
+        }
+
+        if (isValidCoordinate(result.ArmsLat, result.ArmsLong)) {
+            hasMap = true;
+            mapLinksHtml += `<a href="https://www.google.com/maps?q=${result.ArmsLat},${result.ArmsLong}" target="_blank" class="map-card card-arms"><span>📍 ARMS Postpaid Location</span><span>Open ↗</span></a>`;
+        } else {
+            mapLinksHtml += `<div class="badge-missing">✕ ARMS Postpaid: Not Available</div>`;
+        }
+
+        if (isValidCoordinate(result.PrepaidLat, result.PrepaidLong)) {
+            hasMap = true;
+            mapLinksHtml += `<a href="https://www.google.com/maps?q=${result.PrepaidLat},${result.PrepaidLong}" target="_blank" class="map-card card-prepaid"><span>📍 Prepaid Meter Location</span><span>Open ↗</span></a>`;
+        } else {
+            mapLinksHtml += `<div class="badge-missing">✕ Prepaid Meter: Not Available</div>`;
+        }
+
+        mapLinksHtml += '</div>';
+        tabLocations.innerHTML = mapLinksHtml;
+
+        // --- POPULATE TAB 2: NEAREST DTRS ---
+        let dtrHtml = '';
+        
+        function buildDtrBlock(typeLabel, lat, lon) {
+            if (!isValidCoordinate(lat, lon)) return '';
+            let nearest = getNearestDTRs(parseFloat(lat), parseFloat(lon), 3);
+            let items = nearest.map((dtr, i) => `
+                <div class="dtr-item">
+                    <div class="dtr-main-row">
+                        <div class="dtr-name">${i + 1}. ${dtr.name}</div>
+                        <div class="dtr-dist">${dtr.dist.toFixed(1)}m</div>
+                    </div>
+                    <div class="dtr-details">
+                        <div><span class="label">DTR No:</span> ${dtr.dtrNo} &nbsp;|&nbsp; <span class="label">Cap:</span> ${dtr.capacity}</div>
+                        <div><span class="label">Feeder:</span> ${dtr.feeder}</div>
+                    </div>
+                    <div class="dtr-footer">
+                        <div><span class="label">Consumers (11/08/2026):</span> <span class="consumer-val">${dtr.consumers}</span></div>
+                        <div style="color: ${dtr.loadColor}; font-weight: 700;">${dtr.loadStatus}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            return `
+                <div class="dtr-section-title">${typeLabel} Coordinates</div>
+                <div class="dtr-block">${items}</div>
+            `;
+        }
+
+        dtrHtml += buildDtrBlock("Smart Meter", result.SmartLat, result.SmartLong);
+        dtrHtml += buildDtrBlock("ARMS Postpaid", result.ArmsLat, result.ArmsLong);
+        dtrHtml += buildDtrBlock("Prepaid Meter", result.PrepaidLat, result.PrepaidLong);
+
+        if (dtrHtml === '') {
+            tabDtrs.innerHTML = `<div class="badge-missing">✕ Cannot calculate nearest DTRs without valid consumer coordinates.</div>`;
+        } else {
+            tabDtrs.innerHTML = dtrHtml;
         }
     });
 
+    document.getElementById('shortInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') document.getElementById('searchBtn').click();
+    });
+
     // ==========================================
-    // 5. BATCH EXPORT ENGINE
+    // 5. BATCH PROCESSING & DIRECT COPY/EXPORT
     // ==========================================
+    let generatedBatchCSV = "";
+    let generatedBatchTSV = ""; // TSV is ideal for direct clipboard-to-Excel copy
+
     document.getElementById('batchProcessBtn').addEventListener('click', () => {
         let rawInput = document.getElementById('batchInput').value;
-        // Split by lines or commas
         let numbers = rawInput.split(/[\n,]+/).map(n => n.trim()).filter(n => n !== "");
-        if (numbers.length === 0) return alert("Please enter consumer numbers.");
+        if (numbers.length === 0) return alert("Please paste consumer numbers first.");
 
-        let csv = "Consumer_No,Source_Found,Latitude,Longitude,Nearest_DTR_Name,DTR_Capacity,Distance_Meters,Load_Status\n";
+        generatedBatchCSV = "Consumer_No,Source,Latitude,Longitude,Nearest_DTR_Name,DTR_Capacity,Distance_Meters,Load_Status\n";
+        generatedBatchTSV = "Consumer No\tSource\tLatitude\tLongitude\tNearest DTR\tCapacity\tDistance (m)\tLoad Status\n";
+
+        let previewText = "RESULTS PREVIEW:\n-----------------------------------------\n";
 
         numbers.forEach(num => {
             let last5 = num.slice(-5).padStart(5, '0');
@@ -371,39 +427,65 @@
             let row = consumerDatabase[fullNo];
 
             if (!row) {
-                csv += `${fullNo},Not Found In DB,,,,,,\n`;
+                generatedBatchCSV += `${fullNo},Not Found,,,,,\n`;
+                generatedBatchTSV += `${fullNo}\tNot Found\t\t\t\t\t\t\n`;
+                previewText += `${fullNo} -> ❌ Not Found in DB\n`;
                 return;
             }
 
-            // Find best coordinate priority
             let bestLat = null, bestLon = null, source = "";
             if (isValidCoordinate(row.SmartLat, row.SmartLong)) { bestLat = row.SmartLat; bestLon = row.SmartLong; source = "Smart"; }
             else if (isValidCoordinate(row.ArmsLat, row.ArmsLong)) { bestLat = row.ArmsLat; bestLon = row.ArmsLong; source = "ARMS"; }
             else if (isValidCoordinate(row.PrepaidLat, row.PrepaidLong)) { bestLat = row.PrepaidLat; bestLon = row.PrepaidLong; source = "Prepaid"; }
 
             if (bestLat === null) {
-                csv += `${fullNo},No Coordinates Found,,,,,,\n`;
+                generatedBatchCSV += `${fullNo},No Coords,,,,,\n`;
+                generatedBatchTSV += `${fullNo}\tNo Coords\t\t\t\t\t\t\n`;
+                previewText += `${fullNo} -> ✕ No GPS Coordinates\n`;
                 return;
             }
 
             let nearest = getNearestDTRs(parseFloat(bestLat), parseFloat(bestLon), 1)[0];
             if (nearest) {
-                csv += `${fullNo},${source},${bestLat},${bestLon},"${nearest.name}",${nearest.capacity},${nearest.dist.toFixed(1)},${nearest.loadStatus}\n`;
-            } else {
-                csv += `${fullNo},${source},${bestLat},${bestLon},No DTRs In Range,,,\n`;
+                generatedBatchCSV += `${fullNo},${source},${bestLat},${bestLon},"${nearest.name}",${nearest.capacity},${nearest.dist.toFixed(1)},${nearest.loadStatus}\n`;
+                generatedBatchTSV += `${fullNo}\t${source}\t${bestLat}\t${bestLon}\t${nearest.name}\t${nearest.capacity}\t${nearest.dist.toFixed(1)}\t${nearest.loadStatus}\n`;
+                previewText += `${fullNo} -> ${nearest.name} (${nearest.dist.toFixed(1)}m)\n`;
             }
         });
 
-        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        document.getElementById('batchOutputPreview').textContent = previewText;
+        document.getElementById('batchResultsContainer').style.display = 'block';
+    });
+
+    // DIRECT COPY TO CLIPBOARD
+    document.getElementById('copyBatchBtn').addEventListener('click', () => {
+        if (!generatedBatchTSV) return;
+        navigator.clipboard.writeText(generatedBatchTSV).then(() => {
+            const btn = document.getElementById('copyBatchBtn');
+            btn.textContent = "✅ Copied to Clipboard!";
+            setTimeout(() => btn.textContent = "📋 Copy to Clipboard", 2000);
+        }).catch(err => {
+            alert("Copy failed. Please use the Download CSV option.");
+        });
+    });
+
+    // DOWNLOAD CSV EXCEL FILE
+    document.getElementById('downloadBatchBtn').addEventListener('click', () => {
+        if (!generatedBatchCSV) return;
+        const blob = new Blob([generatedBatchCSV], { type: 'text/csv;charset=utf-8;' });
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
-        link.download = `Batch_DTR_Export_${new Date().getTime()}.csv`;
+        link.download = `GESD_Batch_DTR_${new Date().getTime()}.csv`;
         link.style.display = "none";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
     });
 
+    // PWA Service Worker Registration
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+    }
 </script>
 </body>
 </html>
