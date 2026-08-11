@@ -65,7 +65,7 @@
         .card-arms { background: linear-gradient(135deg, #0284c7, #0369a1); }
         .card-prepaid { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
 
-        /* DTR Cards & Headers - REDESIGNED */
+        /* DTR Cards & Headers */
         .dtr-section-title { 
             font-size: 13px; font-weight: 700; color: #ffffff; background: var(--primary);
             padding: 10px 14px; border-radius: 10px 10px 0 0; margin: 16px 0 0 0;
@@ -197,7 +197,7 @@
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
     
-    const savedTab = localStorage.getItem('gesd_active_tab_v2') || 'tab-locations';
+    const savedTab = localStorage.getItem('gesd_active_tab_v3') || 'tab-locations';
     const initialTab = document.querySelector(`[data-target="${savedTab}"]`) || tabs[0];
     initialTab.classList.add('active');
     document.getElementById(initialTab.getAttribute('data-target')).classList.add('active');
@@ -211,7 +211,7 @@
             const targetId = tab.getAttribute('data-target');
             document.getElementById(targetId).classList.add('active');
             
-            localStorage.setItem('gesd_active_tab_v2', targetId);
+            localStorage.setItem('gesd_active_tab_v3', targetId);
         });
     });
 
@@ -385,7 +385,6 @@
                 </div>
             `).join('');
 
-            // Add specific icon based on meter type for better styling
             let icon = typeLabel.includes("Smart") ? "🟢" : typeLabel.includes("ARMS") ? "🔵" : "🟣";
 
             return `
@@ -410,21 +409,48 @@
     });
 
     // ==========================================
-    // 5. BATCH PROCESSING & DIRECT COPY/EXPORT
+    // 5. BATCH PROCESSING & EXPORT W/ ALL COORDS
     // ==========================================
     let generatedBatchCSV = "";
     let generatedBatchTSV = ""; 
+
+    function getBatchDataString(lat, lon, isCsv = true) {
+        let sep = isCsv ? "," : "\t";
+        if (!isValidCoordinate(lat, lon)) {
+            return `N/A${sep}N/A${sep}N/A${sep}N/A${sep}N/A${sep}N/A`;
+        }
+        let nearest = getNearestDTRs(parseFloat(lat), parseFloat(lon), 1)[0];
+        if (nearest) {
+            let name = isCsv ? `"${nearest.name}"` : nearest.name;
+            return `${lat}${sep}${lon}${sep}${nearest.dtrNo}${sep}${name}${sep}${nearest.dist.toFixed(1)}${sep}${nearest.loadStatus}`;
+        }
+        return `${lat}${sep}${lon}${sep}No DTRs${sep}No DTRs${sep}N/A${sep}N/A`;
+    }
 
     document.getElementById('batchProcessBtn').addEventListener('click', () => {
         let rawInput = document.getElementById('batchInput').value;
         let numbers = rawInput.split(/[\n,]+/).map(n => n.trim()).filter(n => n !== "");
         if (numbers.length === 0) return alert("Please paste consumer numbers first.");
 
-        // Added DTR_No to both outputs
-        generatedBatchCSV = "Consumer_No,Source,Latitude,Longitude,Nearest_DTR_No,Nearest_DTR_Name,DTR_Capacity,Distance_Meters,Load_Status\n";
-        generatedBatchTSV = "Consumer No\tSource\tLatitude\tLongitude\tDTR No\tNearest DTR\tCapacity\tDistance (m)\tLoad Status\n";
+        // New Headers for ALL THREE coordinate types side-by-side
+        let csvHeaders = [
+            "Consumer_No", 
+            "Smart_Lat", "Smart_Lon", "Smart_DTR_No", "Smart_DTR_Name", "Smart_Dist(m)", "Smart_Load",
+            "ARMS_Lat", "ARMS_Lon", "ARMS_DTR_No", "ARMS_DTR_Name", "ARMS_Dist(m)", "ARMS_Load",
+            "Prepaid_Lat", "Prepaid_Lon", "Prepaid_DTR_No", "Prepaid_DTR_Name", "Prepaid_Dist(m)", "Prepaid_Load"
+        ];
+        
+        let tsvHeaders = [
+            "Consumer No", 
+            "Smart Lat", "Smart Lon", "Smart DTR No", "Smart DTR Name", "Smart Dist(m)", "Smart Load",
+            "ARMS Lat", "ARMS Lon", "ARMS DTR No", "ARMS DTR Name", "ARMS Dist(m)", "ARMS Load",
+            "Prepaid Lat", "Prepaid Lon", "Prepaid DTR No", "Prepaid DTR Name", "Prepaid Dist(m)", "Prepaid Load"
+        ];
 
-        let previewText = "RESULTS PREVIEW:\n-----------------------------------------\n";
+        generatedBatchCSV = csvHeaders.join(",") + "\n";
+        generatedBatchTSV = tsvHeaders.join("\t") + "\n";
+
+        let previewText = `Processed ${numbers.length} records. Ready for export.\n\nRESULTS PREVIEW:\n-----------------------------------------\n`;
 
         numbers.forEach(num => {
             let last5 = num.slice(-5).padStart(5, '0');
@@ -432,31 +458,25 @@
             let row = consumerDatabase[fullNo];
 
             if (!row) {
-                generatedBatchCSV += `${fullNo},Not Found,,,,,,,\n`;
-                generatedBatchTSV += `${fullNo}\tNot Found\t\t\t\t\t\t\t\n`;
+                // 18 empty separators after Consumer No
+                generatedBatchCSV += `${fullNo},,,,,,,,,,,,,,,,,,\n`;
+                generatedBatchTSV += `${fullNo}\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n`;
                 previewText += `${fullNo} -> ❌ Not Found in DB\n`;
                 return;
             }
 
-            let bestLat = null, bestLon = null, source = "";
-            if (isValidCoordinate(row.SmartLat, row.SmartLong)) { bestLat = row.SmartLat; bestLon = row.SmartLong; source = "Smart"; }
-            else if (isValidCoordinate(row.ArmsLat, row.ArmsLong)) { bestLat = row.ArmsLat; bestLon = row.ArmsLong; source = "ARMS"; }
-            else if (isValidCoordinate(row.PrepaidLat, row.PrepaidLong)) { bestLat = row.PrepaidLat; bestLon = row.PrepaidLong; source = "Prepaid"; }
+            // Generate string blocks for each coordinate type
+            let smartCSV = getBatchDataString(row.SmartLat, row.SmartLong, true);
+            let armsCSV = getBatchDataString(row.ArmsLat, row.ArmsLong, true);
+            let prepCSV = getBatchDataString(row.PrepaidLat, row.PrepaidLong, true);
 
-            if (bestLat === null) {
-                generatedBatchCSV += `${fullNo},No Coords,,,,,,,\n`;
-                generatedBatchTSV += `${fullNo}\tNo Coords\t\t\t\t\t\t\t\n`;
-                previewText += `${fullNo} -> ✕ No GPS Coordinates\n`;
-                return;
-            }
+            let smartTSV = getBatchDataString(row.SmartLat, row.SmartLong, false);
+            let armsTSV = getBatchDataString(row.ArmsLat, row.ArmsLong, false);
+            let prepTSV = getBatchDataString(row.PrepaidLat, row.PrepaidLong, false);
 
-            let nearest = getNearestDTRs(parseFloat(bestLat), parseFloat(bestLon), 1)[0];
-            if (nearest) {
-                // Now actively extracting the dtrNo and slotting it into the strings
-                generatedBatchCSV += `${fullNo},${source},${bestLat},${bestLon},"${nearest.dtrNo}","${nearest.name}",${nearest.capacity},${nearest.dist.toFixed(1)},${nearest.loadStatus}\n`;
-                generatedBatchTSV += `${fullNo}\t${source}\t${bestLat}\t${bestLon}\t${nearest.dtrNo}\t${nearest.name}\t${nearest.capacity}\t${nearest.dist.toFixed(1)}\t${nearest.loadStatus}\n`;
-                previewText += `${fullNo} -> DTR: ${nearest.dtrNo} (${nearest.dist.toFixed(1)}m)\n`;
-            }
+            generatedBatchCSV += `${fullNo},${smartCSV},${armsCSV},${prepCSV}\n`;
+            generatedBatchTSV += `${fullNo}\t${smartTSV}\t${armsTSV}\t${prepTSV}\n`;
+            previewText += `${fullNo} -> Analyzed successfully\n`;
         });
 
         document.getElementById('batchOutputPreview').textContent = previewText;
@@ -481,7 +501,7 @@
         const blob = new Blob([generatedBatchCSV], { type: 'text/csv;charset=utf-8;' });
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
-        link.download = `GESD_Batch_DTR_${new Date().getTime()}.csv`;
+        link.download = `GESD_Detailed_Batch_DTR_${new Date().getTime()}.csv`;
         link.style.display = "none";
         document.body.appendChild(link);
         link.click();
