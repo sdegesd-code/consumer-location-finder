@@ -65,9 +65,18 @@
         .card-arms { background: linear-gradient(135deg, #0284c7, #0369a1); }
         .card-prepaid { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
 
-        /* DTR Cards */
-        .dtr-section-title { font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; margin: 12px 0 6px 0; letter-spacing: 0.5px; }
-        .dtr-block { border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 14px; background: #fafafa; margin-bottom: 10px; }
+        /* DTR Cards & Headers - REDESIGNED */
+        .dtr-section-title { 
+            font-size: 13px; font-weight: 700; color: #ffffff; background: var(--primary);
+            padding: 10px 14px; border-radius: 10px 10px 0 0; margin: 16px 0 0 0;
+            text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px;
+        }
+        .dtr-block { 
+            border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 10px 10px;
+            padding: 12px 14px; background: #fafafa; margin-bottom: 16px; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        
         .dtr-item { padding: 10px 0; border-bottom: 1px dashed #cbd5e1; }
         .dtr-item:last-child { border-bottom: none; padding-bottom: 0; }
         .dtr-main-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
@@ -130,7 +139,6 @@
         <div id="resultsArea" class="results-section">
             <div class="consumer-chip" id="displayFullNumber"></div>
             
-            <!-- CORRECTED TABS -->
             <div class="tabs-container">
                 <div class="tab" data-target="tab-locations">📍 Meter Locations</div>
                 <div class="tab" data-target="tab-dtrs">⚡ Nearest DTRs</div>
@@ -150,7 +158,6 @@
         <textarea id="batchInput" class="styled-input" placeholder="72136&#10;54321&#10;98765"></textarea>
         <button id="batchProcessBtn" class="btn-primary btn-success" disabled>⚡ Process Batch Data</button>
 
-        <!-- Preview Box & Direct Copy Options -->
         <div id="batchResultsContainer" style="display: none;">
             <div class="batch-output-box" id="batchOutputPreview"></div>
             <div class="batch-actions">
@@ -335,29 +342,23 @@
 
         // --- POPULATE TAB 1: LOCATIONS ---
         let mapLinksHtml = '<div class="links-grid">';
-        let hasMap = false;
-
         if (isValidCoordinate(result.SmartLat, result.SmartLong)) {
-            hasMap = true;
             mapLinksHtml += `<a href="https://www.google.com/maps?q=${result.SmartLat},${result.SmartLong}" target="_blank" class="map-card card-smart"><span>📍 Smart Meter Location</span><span>Open ↗</span></a>`;
         } else {
             mapLinksHtml += `<div class="badge-missing">✕ Smart Meter: Not Available</div>`;
         }
 
         if (isValidCoordinate(result.ArmsLat, result.ArmsLong)) {
-            hasMap = true;
             mapLinksHtml += `<a href="https://www.google.com/maps?q=${result.ArmsLat},${result.ArmsLong}" target="_blank" class="map-card card-arms"><span>📍 ARMS Postpaid Location</span><span>Open ↗</span></a>`;
         } else {
             mapLinksHtml += `<div class="badge-missing">✕ ARMS Postpaid: Not Available</div>`;
         }
 
         if (isValidCoordinate(result.PrepaidLat, result.PrepaidLong)) {
-            hasMap = true;
             mapLinksHtml += `<a href="https://www.google.com/maps?q=${result.PrepaidLat},${result.PrepaidLong}" target="_blank" class="map-card card-prepaid"><span>📍 Prepaid Meter Location</span><span>Open ↗</span></a>`;
         } else {
             mapLinksHtml += `<div class="badge-missing">✕ Prepaid Meter: Not Available</div>`;
         }
-
         mapLinksHtml += '</div>';
         tabLocations.innerHTML = mapLinksHtml;
 
@@ -384,8 +385,11 @@
                 </div>
             `).join('');
 
+            // Add specific icon based on meter type for better styling
+            let icon = typeLabel.includes("Smart") ? "🟢" : typeLabel.includes("ARMS") ? "🔵" : "🟣";
+
             return `
-                <div class="dtr-section-title">${typeLabel} Coordinates</div>
+                <div class="dtr-section-title">${icon} Based on ${typeLabel}</div>
                 <div class="dtr-block">${items}</div>
             `;
         }
@@ -409,15 +413,16 @@
     // 5. BATCH PROCESSING & DIRECT COPY/EXPORT
     // ==========================================
     let generatedBatchCSV = "";
-    let generatedBatchTSV = ""; // TSV is ideal for direct clipboard-to-Excel copy
+    let generatedBatchTSV = ""; 
 
     document.getElementById('batchProcessBtn').addEventListener('click', () => {
         let rawInput = document.getElementById('batchInput').value;
         let numbers = rawInput.split(/[\n,]+/).map(n => n.trim()).filter(n => n !== "");
         if (numbers.length === 0) return alert("Please paste consumer numbers first.");
 
-        generatedBatchCSV = "Consumer_No,Source,Latitude,Longitude,Nearest_DTR_Name,DTR_Capacity,Distance_Meters,Load_Status\n";
-        generatedBatchTSV = "Consumer No\tSource\tLatitude\tLongitude\tNearest DTR\tCapacity\tDistance (m)\tLoad Status\n";
+        // Added DTR_No to both outputs
+        generatedBatchCSV = "Consumer_No,Source,Latitude,Longitude,Nearest_DTR_No,Nearest_DTR_Name,DTR_Capacity,Distance_Meters,Load_Status\n";
+        generatedBatchTSV = "Consumer No\tSource\tLatitude\tLongitude\tDTR No\tNearest DTR\tCapacity\tDistance (m)\tLoad Status\n";
 
         let previewText = "RESULTS PREVIEW:\n-----------------------------------------\n";
 
@@ -427,8 +432,8 @@
             let row = consumerDatabase[fullNo];
 
             if (!row) {
-                generatedBatchCSV += `${fullNo},Not Found,,,,,\n`;
-                generatedBatchTSV += `${fullNo}\tNot Found\t\t\t\t\t\t\n`;
+                generatedBatchCSV += `${fullNo},Not Found,,,,,,,\n`;
+                generatedBatchTSV += `${fullNo}\tNot Found\t\t\t\t\t\t\t\n`;
                 previewText += `${fullNo} -> ❌ Not Found in DB\n`;
                 return;
             }
@@ -439,17 +444,18 @@
             else if (isValidCoordinate(row.PrepaidLat, row.PrepaidLong)) { bestLat = row.PrepaidLat; bestLon = row.PrepaidLong; source = "Prepaid"; }
 
             if (bestLat === null) {
-                generatedBatchCSV += `${fullNo},No Coords,,,,,\n`;
-                generatedBatchTSV += `${fullNo}\tNo Coords\t\t\t\t\t\t\n`;
+                generatedBatchCSV += `${fullNo},No Coords,,,,,,,\n`;
+                generatedBatchTSV += `${fullNo}\tNo Coords\t\t\t\t\t\t\t\n`;
                 previewText += `${fullNo} -> ✕ No GPS Coordinates\n`;
                 return;
             }
 
             let nearest = getNearestDTRs(parseFloat(bestLat), parseFloat(bestLon), 1)[0];
             if (nearest) {
-                generatedBatchCSV += `${fullNo},${source},${bestLat},${bestLon},"${nearest.name}",${nearest.capacity},${nearest.dist.toFixed(1)},${nearest.loadStatus}\n`;
-                generatedBatchTSV += `${fullNo}\t${source}\t${bestLat}\t${bestLon}\t${nearest.name}\t${nearest.capacity}\t${nearest.dist.toFixed(1)}\t${nearest.loadStatus}\n`;
-                previewText += `${fullNo} -> ${nearest.name} (${nearest.dist.toFixed(1)}m)\n`;
+                // Now actively extracting the dtrNo and slotting it into the strings
+                generatedBatchCSV += `${fullNo},${source},${bestLat},${bestLon},"${nearest.dtrNo}","${nearest.name}",${nearest.capacity},${nearest.dist.toFixed(1)},${nearest.loadStatus}\n`;
+                generatedBatchTSV += `${fullNo}\t${source}\t${bestLat}\t${bestLon}\t${nearest.dtrNo}\t${nearest.name}\t${nearest.capacity}\t${nearest.dist.toFixed(1)}\t${nearest.loadStatus}\n`;
+                previewText += `${fullNo} -> DTR: ${nearest.dtrNo} (${nearest.dist.toFixed(1)}m)\n`;
             }
         });
 
