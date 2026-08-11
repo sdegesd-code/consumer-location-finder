@@ -57,11 +57,21 @@
         
         .dtr-list { padding: 12px 16px; }
         .dtr-header { font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; }
-        .dtr-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px dashed #e2e8f0; font-size: 13px; }
-        .dtr-item:last-child { border-bottom: none; }
-        .dtr-name { font-weight: 600; color: #1e293b; }
-        .dtr-cap { color: #64748b; font-size: 11px; background: #e2e8f0; padding: 2px 6px; border-radius: 4px; margin-left: 6px; }
-        .dtr-dist { font-weight: 700; color: #ef4444; font-family: monospace; font-size: 14px; }
+        
+        /* Expanded DTR Item details */
+        .dtr-item { padding: 12px 0; border-bottom: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 6px; }
+        .dtr-item:last-child { border-bottom: none; padding-bottom: 4px; }
+        
+        .dtr-main-row { display: flex; justify-content: space-between; align-items: center; }
+        .dtr-name { font-weight: 700; color: #1e293b; font-size: 14px; }
+        .dtr-dist { font-weight: 700; color: #ef4444; font-family: monospace; font-size: 14px; background: #fee2e2; padding: 2px 6px; border-radius: 6px; }
+        
+        .dtr-details { font-size: 12px; color: #475569; line-height: 1.5; }
+        .dtr-details span.label { font-weight: 600; color: #1e293b; }
+        
+        .dtr-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; padding-top: 8px; border-top: 1px dashed #cbd5e1; font-size: 12px; }
+        .consumer-date { font-style: italic; color: #64748b; }
+        .consumer-val { font-weight: 700; color: #1e293b; font-size: 13px; }
 
         .badge-missing { background: #f1f5f9; color: #94a3b8; font-size: 13px; padding: 12px; border-radius: 12px; text-align: center; border: 1px dashed #cbd5e1; }
         .error-card { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 14px; border-radius: 12px; text-align: center; font-size: 14px; font-weight: 600; }
@@ -111,7 +121,7 @@
 
 <script>
     // ==========================================
-    // 1. PWA INSTALLATION LOGIC (Preserved)
+    // 1. PWA INSTALLATION LOGIC
     // ==========================================
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js');
@@ -119,7 +129,7 @@
 
     let deferredPrompt;
     const installBtn = document.getElementById('installAppBtn');
-    const hasInstalled = localStorage.getItem('gesd_tracker_installed_v9'); // Bumped to v9
+    const hasInstalled = localStorage.getItem('gesd_tracker_installed_v9'); 
 
     if (!hasInstalled) {
         window.addEventListener('beforeinstallprompt', (e) => {
@@ -145,7 +155,7 @@
     }
 
     // ==========================================
-    // 2. SECURITY & LOGIN LOGIC (Preserved)
+    // 2. SECURITY & LOGIN LOGIC
     // ==========================================
     const CORRECT_PASSWORD = "gesd2026"; 
     const loginScreen = document.getElementById('loginScreen');
@@ -183,7 +193,7 @@
     });
 
     // ==========================================
-    // 3. DATABASE LOADING (Consumers + DTRs)
+    // 3. DATABASE LOADING
     // ==========================================
     let consumerDatabase = {};
     let dtrDatabase = [];
@@ -218,10 +228,10 @@
     }
 
     // ==========================================
-    // 4. HAVERSINE & SPATIAL MATH
+    // 4. HAVERSINE & DTR MATH ENGINE
     // ==========================================
     function haversine(lat1, lon1, lat2, lon2) {
-        const R = 6371000; // Earth radius in meters
+        const R = 6371000; 
         const toRad = Math.PI / 180;
         const dLat = (lat2 - lat1) * toRad;
         const dLon = (lon2 - lon1) * toRad;
@@ -239,17 +249,41 @@
             if (isNaN(dLat) || isNaN(dLon)) return null;
             
             let dist = haversine(targetLat, targetLon, dLat, dLon);
+            
+            // Analyze Load Status
+            let capacityStr = dtr.Capacity || "0";
+            let numericCapacity = parseInt(capacityStr.replace(/\D/g, '')) || 0; // Strips text to get number
+            let consumerCount = parseInt(dtr["Consumer Count"]) || 0;
+            
+            let loadStatus = "Unknown";
+            let loadColor = "#64748b";
+            
+            if (numericCapacity > 0) {
+                // Logic: If consumer count exceeds total capacity, it's flagged as overloaded
+                if (consumerCount > numericCapacity) {
+                    loadStatus = "⚠️ Overloaded";
+                    loadColor = "#dc2626"; // Red
+                } else {
+                    loadStatus = "✅ Optimal";
+                    loadColor = "#059669"; // Green
+                }
+            }
+
             return {
-                name: dtr["DTR Name"] || dtr.DTR_Name || "Unknown DTR",
-                capacity: dtr.Capacity || "N/A",
+                slNo: dtr["SL No"] || "-",
+                dtrNo: dtr["DTR No"] || "N/A",
+                name: dtr["DTR Name"] || "Unknown",
+                capacity: capacityStr,
+                feeder: (dtr["Feeder Name"] || "N/A").trim(), // .trim() removes \n linebreaks
+                consumers: consumerCount,
+                loadStatus: loadStatus,
+                loadColor: loadColor,
                 dist: dist
             };
         }).filter(item => item !== null);
 
         // Sort closest to furthest
         distances.sort((a, b) => a.dist - b.dist);
-        
-        // Return top 3
         return distances.slice(0, maxCount);
     }
 
@@ -271,23 +305,32 @@
 
         let targetLat = parseFloat(lat);
         let targetLon = parseFloat(long);
-        
-        // Calculate nearest DTRs for this specific coordinate
         let nearestDTRs = getNearestDTRs(targetLat, targetLon, 3);
         
-        // Build the HTML list of DTRs
+        // Build the HTML list of Detailed DTR Cards
         let dtrHtml = nearestDTRs.map((dtr, index) => `
             <div class="dtr-item">
-                <div>
-                    <span style="color:#94a3b8; margin-right:4px;">${index + 1}.</span>
-                    <span class="dtr-name">${dtr.name}</span>
-                    <span class="dtr-cap">${dtr.capacity}</span>
+                <div class="dtr-main-row">
+                    <div class="dtr-name">${index + 1}. ${dtr.name}</div>
+                    <div class="dtr-dist">${dtr.dist.toFixed(1)}m</div>
                 </div>
-                <div class="dtr-dist">${dtr.dist.toFixed(1)}m</div>
+                
+                <div class="dtr-details">
+                    <div><span class="label">DTR No:</span> ${dtr.dtrNo} &nbsp;|&nbsp; <span class="label">Capacity:</span> ${dtr.capacity}</div>
+                    <div><span class="label">Feeder:</span> ${dtr.feeder}</div>
+                </div>
+                
+                <div class="dtr-footer">
+                    <div>
+                        <span class="label">Consumers </span> 
+                        <span class="consumer-date">(as on 11/08/2026):</span> 
+                        <span class="consumer-val">${dtr.consumers}</span>
+                    </div>
+                    <div style="color: ${dtr.loadColor}; font-weight: 700; font-size: 13px;">${dtr.loadStatus}</div>
+                </div>
             </div>
         `).join('');
 
-        // Return the full block (Map Button + DTR List)
         return `
             <div class="location-group">
                 <a href="https://www.google.com/maps?q=${targetLat},${targetLon}" target="_blank" class="map-card ${cssClass}">
@@ -317,7 +360,6 @@
         let container = document.getElementById('linksContainer');
 
         if (result) {
-            // Generate blocks for any available coordinates
             let smartHtml = renderLocationBlock("Smart Meter Location", result.SmartLat, result.SmartLong, "card-smart");
             let armsHtml = renderLocationBlock("ARMS Postpaid Location", result.ArmsLat, result.ArmsLong, "card-arms");
             let prepaidHtml = renderLocationBlock("Prepaid Meter Location", result.PrepaidLat, result.PrepaidLong, "card-prepaid");
