@@ -1,0 +1,6792 @@
+[
+ {
+   "SL No": 1,
+   "DTR No": "2062",
+   "DTR Name": "POWER HOUSE 750kVA",
+   "Capacity": "750 kVA",
+   "Feeder Name": "040-TILAPARA 11 KV\n",
+   "Consumer Count": 298,
+   "Latitude": 26.1784833,
+   "Longitude": 90.6230067
+ },
+ {
+   "SL No": 2,
+   "DTR No": "2898",
+   "DTR Name": "SAMAGURI 16 kVA NEAR SAMAGURI LP SCHOOL",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 61,
+   "Latitude": 26.1079277,
+   "Longitude": 90.5815105
+ },
+ {
+   "SL No": 3,
+   "DTR No": "2063",
+   "DTR Name": "SONBARI",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BARPUKHURI 11 KV\n",
+   "Consumer Count": 201,
+   "Latitude": 26.1784467,
+   "Longitude": 90.6262217
+ },
+ {
+   "SL No": 4,
+   "DTR No": "2064",
+   "DTR Name": "J N ROAD",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BARPUKHURI 11 KV\n",
+   "Consumer Count": 246,
+   "Latitude": 26.1787,
+   "Longitude": 90.6293717
+ },
+ {
+   "SL No": 5,
+   "DTR No": "2645",
+   "DTR Name": "ALIPARA",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BARPUKHURI 11 KV\n",
+   "Consumer Count": 181,
+   "Latitude": 26.1829088,
+   "Longitude": 90.6265064
+ },
+ {
+   "SL No": 6,
+   "DTR No": "A02C",
+   "DTR Name": "KALIBARI",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BOROBAZAAR 11 KV\n",
+   "Consumer Count": 242,
+   "Latitude": 26.1833367,
+   "Longitude": 90.6235033
+ },
+ {
+   "SL No": 7,
+   "DTR No": "A029",
+   "DTR Name": "BHATI PARA",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BOROBAZAAR 11 KV\n",
+   "Consumer Count": 283,
+   "Latitude": 26.1819654,
+   "Longitude": 90.6200524
+ },
+ {
+   "SL No": 8,
+   "DTR No": "2650",
+   "DTR Name": "BANIYAPARA",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BOROBAZAAR 11 KV\n",
+   "Consumer Count": 609,
+   "Latitude": 26.1807833,
+   "Longitude": 90.6154483
+ },
+ {
+   "SL No": 9,
+   "DTR No": "2651",
+   "DTR Name": "K P ROAD",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-KARBALA 11 KV\n",
+   "Consumer Count": 88,
+   "Latitude": 26.177945,
+   "Longitude": 90.61852
+ },
+ {
+   "SL No": 10,
+   "DTR No": "2652",
+   "DTR Name": "HASILAPARA KABARISTAN",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-KARBALA 11 KV\n",
+   "Consumer Count": 288,
+   "Latitude": 26.177714,
+   "Longitude": 90.6173842
+ },
+ {
+   "SL No": 11,
+   "DTR No": "2653",
+   "DTR Name": "HASILAPARA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-KARBALA 11 KV\n",
+   "Consumer Count": 146,
+   "Latitude": 26.1776009,
+   "Longitude": 90.6161155
+ },
+ {
+   "SL No": 12,
+   "DTR No": "A01K",
+   "DTR Name": "KISMATPUR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 156,
+   "Latitude": 26.1639737,
+   "Longitude": 90.6199068
+ },
+ {
+   "SL No": 13,
+   "DTR No": "2663",
+   "DTR Name": "CHANDARI PATHAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 185,
+   "Latitude": 26.1630609,
+   "Longitude": 90.6191026
+ },
+ {
+   "SL No": 14,
+   "DTR No": "2665",
+   "DTR Name": "JYOTI NAGAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 161,
+   "Latitude": 26.1536833,
+   "Longitude": 90.6155567
+ },
+ {
+   "SL No": 15,
+   "DTR No": "2655",
+   "DTR Name": "DHUBRI BUS STAND",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-TILAPARA 11 KV\n",
+   "Consumer Count": 323,
+   "Latitude": 26.1726133,
+   "Longitude": 90.6204067
+ },
+ {
+   "SL No": 16,
+   "DTR No": "2654",
+   "DTR Name": "BAKURPARA",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-TILAPARA 11 KV\n",
+   "Consumer Count": 320,
+   "Latitude": 26.175393,
+   "Longitude": 90.6199667
+ },
+ {
+   "SL No": 17,
+   "DTR No": "2659",
+   "DTR Name": "BIRCHILARAY PATH",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-TILAPARA 11 KV\n",
+   "Consumer Count": 11,
+   "Latitude": 26.1742273,
+   "Longitude": 90.6236883
+ },
+ {
+   "SL No": 18,
+   "DTR No": "2676",
+   "DTR Name": "TILAPARA 750KVA",
+   "Capacity": "750 kVA",
+   "Feeder Name": "040-BARPUKHURI 11 KV\n",
+   "Consumer Count": 493,
+   "Latitude": 26.1749357,
+   "Longitude": 90.6267804
+ },
+ {
+   "SL No": 19,
+   "DTR No": "2065",
+   "DTR Name": "RAASMELA PATHAR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BARPUKHURI 11 KV\n",
+   "Consumer Count": 40,
+   "Latitude": 26.1734764,
+   "Longitude": 90.6305879
+ },
+ {
+   "SL No": 20,
+   "DTR No": "2796",
+   "DTR Name": "SONAPUR BAZAR 25 kVA NEAR KABARSTHAN",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 37,
+   "Latitude": 26.1190861,
+   "Longitude": 90.7013024
+ },
+ {
+   "SL No": 21,
+   "DTR No": "2755",
+   "DTR Name": "NEPALIKHUTI PASCHIM 25 kVA NEAR BILLAL ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-NEPALI KUTHI/MONAKOCHA 11 KV",
+   "Consumer Count": 50,
+   "Latitude": 26.0845816,
+   "Longitude": 90.7474794
+ },
+ {
+   "SL No": 22,
+   "DTR No": "2759",
+   "DTR Name": "MORNOI MAZIPARA 16 kVA NEAR JYOTSNA THAKUR",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 75,
+   "Latitude": 26.1024306,
+   "Longitude": 90.7494408
+ },
+ {
+   "SL No": 23,
+   "DTR No": "2758",
+   "DTR Name": "MORNOI 100 kVA NEAR TINIALI BAZAR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 264,
+   "Latitude": 26.1041921,
+   "Longitude": 90.7468448
+ },
+ {
+   "SL No": 24,
+   "DTR No": "2757",
+   "DTR Name": "MORNOI 250 kVA NEAR HARMOHAN HOUSE",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 313,
+   "Latitude": 26.1025963,
+   "Longitude": 90.7462652
+ },
+ {
+   "SL No": 25,
+   "DTR No": "2761",
+   "DTR Name": "DAKAIDOL 25 kVA NEAR JAMEN ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 42,
+   "Latitude": 26.1096087,
+   "Longitude": 90.7347335
+ },
+ {
+   "SL No": 26,
+   "DTR No": "2760",
+   "DTR Name": "DAKAIDOL 16 kVA NEAR KABARSTHAN",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 65,
+   "Latitude": 26.1101483,
+   "Longitude": 90.73405
+ },
+ {
+   "SL No": 27,
+   "DTR No": "2762",
+   "DTR Name": "DAKAIDOL 25 kVA NEAR SOLIMUDDIN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 84,
+   "Latitude": 26.1080303,
+   "Longitude": 90.7330076
+ },
+ {
+   "SL No": 28,
+   "DTR No": "2767",
+   "DTR Name": "TINKONIAPARA 25 KVA NEAR AZIR HUSSAIN HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 79,
+   "Latitude": 26.10305,
+   "Longitude": 90.7321883
+ },
+ {
+   "SL No": 29,
+   "DTR No": "2763",
+   "DTR Name": "DAKAIDOL 25 kVA NEAR MOJBUL HOQUE HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 26,
+   "Latitude": 26.1094733,
+   "Longitude": 90.7291133
+ },
+ {
+   "SL No": 30,
+   "DTR No": "2765",
+   "DTR Name": "DAKAIDOL 100 kVA NEAR MOTIN HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 161,
+   "Latitude": 26.1154233,
+   "Longitude": 90.7272333
+ },
+ {
+   "SL No": 31,
+   "DTR No": "2766",
+   "DTR Name": "DAKAIDOL 63 kVA NEAR DULU DRIVER HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 82,
+   "Latitude": 26.1130546,
+   "Longitude": 90.7269835
+ },
+ {
+   "SL No": 32,
+   "DTR No": "2764",
+   "DTR Name": "DAKAIDOL 25 kVA NEAR RAHABUDDIN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 56,
+   "Latitude": 26.1098163,
+   "Longitude": 90.7273184
+ },
+ {
+   "SL No": 33,
+   "DTR No": "2790",
+   "DTR Name": "AMTOLI 25 kVA NEAR MANOJ MASTER HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 44,
+   "Latitude": 26.1095667,
+   "Longitude": 90.7213733
+ },
+ {
+   "SL No": 34,
+   "DTR No": "2769",
+   "DTR Name": "TINKONIAPARA 63 kVA NEAR BAREK ALI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 137,
+   "Latitude": 26.1052767,
+   "Longitude": 90.725075
+ },
+ {
+   "SL No": 35,
+   "DTR No": "2771",
+   "DTR Name": "KODALDHOWA 16 kVA NEAR SATISH HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 37,
+   "Latitude": 26.1049117,
+   "Longitude": 90.7273233
+ },
+ {
+   "SL No": 36,
+   "DTR No": "2756",
+   "DTR Name": "NEPALIKHUTI 25 kVA NEAR AIDC",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-NEPALI KUTHI/MONAKOCHA 11 KV",
+   "Consumer Count": 40,
+   "Latitude": 26.0879833,
+   "Longitude": 90.745645
+ },
+ {
+   "SL No": 37,
+   "DTR No": "2815",
+   "DTR Name": "PAHARSHINGPARA 16 kVA NEAR HAKIM ALI HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 57,
+   "Latitude": 26.1331836,
+   "Longitude": 90.6712139
+ },
+ {
+   "SL No": 38,
+   "DTR No": "2816",
+   "DTR Name": "PAHARSHINGPARA 25 kVA NEAR HABIZUL ISLAM HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 34,
+   "Latitude": 26.1317473,
+   "Longitude": 90.6696996
+ },
+ {
+   "SL No": 39,
+   "DTR No": "2630",
+   "DTR Name": "NOBINAGAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 232,
+   "Latitude": 26.1554023,
+   "Longitude": 90.637741
+ },
+ {
+   "SL No": 40,
+   "DTR No": "2076",
+   "DTR Name": "BIDYA NAGAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 217,
+   "Latitude": 26.1598642,
+   "Longitude": 90.6331205
+ },
+ {
+   "SL No": 41,
+   "DTR No": "2088",
+   "DTR Name": "BALADMARI CHAR 2",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 125,
+   "Latitude": 26.1672669,
+   "Longitude": 90.6360743
+ },
+ {
+   "SL No": 42,
+   "DTR No": "2087",
+   "DTR Name": "BALADMARI CHAR 1",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 345,
+   "Latitude": 26.1678058,
+   "Longitude": 90.6335952
+ },
+ {
+   "SL No": 43,
+   "DTR No": "A01F",
+   "DTR Name": "GOALTOLI",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 104,
+   "Latitude": 26.1691221,
+   "Longitude": 90.6300565
+ },
+ {
+   "SL No": 44,
+   "DTR No": "2812",
+   "DTR Name": "PAHARSHINGPARA 250 kVA NEAR NATUN BAZAR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 102,
+   "Latitude": 26.1292069,
+   "Longitude": 90.6752216
+ },
+ {
+   "SL No": 45,
+   "DTR No": "2086",
+   "DTR Name": "CHANDARIA RIVER SIDE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 156,
+   "Latitude": 26.1716271,
+   "Longitude": 90.6308585
+ },
+ {
+   "SL No": 46,
+   "DTR No": "2811",
+   "DTR Name": "PAHARSHINGPARA 100 kVA NEAR PAHARSHINGPARA LP SCHOOL",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 217,
+   "Latitude": 26.1317267,
+   "Longitude": 90.6781317
+ },
+ {
+   "SL No": 47,
+   "DTR No": "2813",
+   "DTR Name": "PAHARSHINGPARA 25 kVA NEAR FOZOR ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 28,
+   "Latitude": 26.1336583,
+   "Longitude": 90.6784633
+ },
+ {
+   "SL No": 48,
+   "DTR No": "2084",
+   "DTR Name": "D.B. MILL GAULTULI",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 340,
+   "Latitude": 26.167235,
+   "Longitude": 90.6293933
+ },
+ {
+   "SL No": 49,
+   "DTR No": "2819",
+   "DTR Name": "DEKDHOWA 100 kVA NEAR ABDUL DRIVER HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 67,
+   "Latitude": 26.143465,
+   "Longitude": 90.6804567
+ },
+ {
+   "SL No": 50,
+   "DTR No": "2083",
+   "DTR Name": "HOLLYWOOD CLUB",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 75,
+   "Latitude": 26.16777,
+   "Longitude": 90.6274667
+ },
+ {
+   "SL No": 51,
+   "DTR No": "2818",
+   "DTR Name": "DEKDHOWA 16 kVA NEAR JONGSER ALI GP PRESIDENT",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 70,
+   "Latitude": 26.143915,
+   "Longitude": 90.67935
+ },
+ {
+   "SL No": 52,
+   "DTR No": "2082",
+   "DTR Name": "E&amp;D",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 333,
+   "Latitude": 26.1685032,
+   "Longitude": 90.625866
+ },
+ {
+   "SL No": 53,
+   "DTR No": "2814",
+   "DTR Name": "PAHARSHINGPARA 25 kVA NEAR AYNAL BEPARI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 7,
+   "Latitude": 26.1398798,
+   "Longitude": 90.6762681
+ },
+ {
+   "SL No": 54,
+   "DTR No": "2817",
+   "DTR Name": "PAHARSHINGPARA 63 kVA NEAR RABHAPARA LP SCHOOL",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 123,
+   "Latitude": 26.135815,
+   "Longitude": 90.6727101
+ },
+ {
+   "SL No": 55,
+   "DTR No": "2810",
+   "DTR Name": "PAHARSHINGPARA 25 kVA NEAR ZINARI BRIDGE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 84,
+   "Latitude": 26.1295283,
+   "Longitude": 90.6810833
+ },
+ {
+   "SL No": 56,
+   "DTR No": "2795",
+   "DTR Name": "SONAPUR 63 kVA NEAR NASIR ALI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 236,
+   "Latitude": 26.1210051,
+   "Longitude": 90.7028933
+ },
+ {
+   "SL No": 57,
+   "DTR No": "2797",
+   "DTR Name": "SONAPUR 25 kVA NEAR MOYJUDDIN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 62,
+   "Latitude": 26.1164932,
+   "Longitude": 90.7006465
+ },
+ {
+   "SL No": 58,
+   "DTR No": "2798",
+   "DTR Name": "SONAPUR 25 kVA NEAR KHADEM ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 51,
+   "Latitude": 26.1142967,
+   "Longitude": 90.6992701
+ },
+ {
+   "SL No": 59,
+   "DTR No": "2799",
+   "DTR Name": "SONAPUR 25 kVA NEAR GAROPARA LP SCHOOL",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1097243,
+   "Longitude": 90.6955961
+ },
+ {
+   "SL No": 60,
+   "DTR No": "2832",
+   "DTR Name": "LESUBAGAN MAJORTILA 25 kVA NEAR SURMAN ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 55,
+   "Latitude": 26.1134392,
+   "Longitude": 90.6929654
+ },
+ {
+   "SL No": 61,
+   "DTR No": "2831",
+   "DTR Name": "LESUBAGAN MAJORTILA 25 kVA NEAR MOYZUDDIN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 61,
+   "Latitude": 26.1155856,
+   "Longitude": 90.6934669
+ },
+ {
+   "SL No": 62,
+   "DTR No": "2830",
+   "DTR Name": "LESUBAGAN 25 kVA NEAR AZMOT ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 56,
+   "Latitude": 26.1167934,
+   "Longitude": 90.6957157
+ },
+ {
+   "SL No": 63,
+   "DTR No": "2829",
+   "DTR Name": "LESUBAGAN 25 kVA NEAR ANOWAR ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 30,
+   "Latitude": 26.1193506,
+   "Longitude": 90.6966891
+ },
+ {
+   "SL No": 64,
+   "DTR No": "2658",
+   "DTR Name": "GOALPARA COLLEGE",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-TILAPARA 11 KV\n",
+   "Consumer Count": 158,
+   "Latitude": 26.171745,
+   "Longitude": 90.6252667
+ },
+ {
+   "SL No": 65,
+   "DTR No": "2080",
+   "DTR Name": "KISMOTPUR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 433,
+   "Latitude": 26.1673845,
+   "Longitude": 90.6238385
+ },
+ {
+   "SL No": 66,
+   "DTR No": "2081",
+   "DTR Name": "KISMOTPUR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 10,
+   "Latitude": 26.1663367,
+   "Longitude": 90.6233118
+ },
+ {
+   "SL No": 67,
+   "DTR No": "A013",
+   "DTR Name": "BOC",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 238,
+   "Latitude": 26.1637768,
+   "Longitude": 90.6252321
+ },
+ {
+   "SL No": 68,
+   "DTR No": "2078",
+   "DTR Name": "GEETA NAGAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 59,
+   "Latitude": 26.1629844,
+   "Longitude": 90.6240253
+ },
+ {
+   "SL No": 69,
+   "DTR No": "A012",
+   "DTR Name": "BOC",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 192,
+   "Latitude": 26.1605417,
+   "Longitude": 90.62112
+ },
+ {
+   "SL No": 70,
+   "DTR No": "2070",
+   "DTR Name": "MILON NAGAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 245,
+   "Latitude": 26.1587569,
+   "Longitude": 90.6189049
+ },
+ {
+   "SL No": 71,
+   "DTR No": "2069",
+   "DTR Name": "HEDAYATPUR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 120,
+   "Latitude": 26.157581,
+   "Longitude": 90.6191677
+ },
+ {
+   "SL No": 72,
+   "DTR No": "A005",
+   "DTR Name": "BAPUJI NAGAR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 389,
+   "Latitude": 26.1534339,
+   "Longitude": 90.6187732
+ },
+ {
+   "SL No": 73,
+   "DTR No": "2067",
+   "DTR Name": "LACHIT NAGAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 235,
+   "Latitude": 26.1491033,
+   "Longitude": 90.6158733
+ },
+ {
+   "SL No": 74,
+   "DTR No": "2066",
+   "DTR Name": "MAHATMA GANDHI COLLEGE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 54,
+   "Latitude": 26.1457068,
+   "Longitude": 90.6120339
+ },
+ {
+   "SL No": 75,
+   "DTR No": "2873",
+   "DTR Name": "BALIZANA BAZAAR 250 kVA NEAR SHIV MANDIR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 215,
+   "Latitude": 26.0820131,
+   "Longitude": 90.5499343
+ },
+ {
+   "SL No": 76,
+   "DTR No": "2874",
+   "DTR Name": "AGIA BAZAAR 63 kVA NEAR AGIA PHC",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 38,
+   "Latitude": 26.0840809,
+   "Longitude": 90.5558389
+ },
+ {
+   "SL No": 77,
+   "DTR No": "2875",
+   "DTR Name": "AGIA 63 kVA NEAR PANCHAYAT",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 8,
+   "Latitude": 26.083743,
+   "Longitude": 90.5573735
+ },
+ {
+   "SL No": 78,
+   "DTR No": "2876",
+   "DTR Name": "AGIA BAZAAR 250 kVA NEAR AGIA POLICE STATION",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 131,
+   "Latitude": 26.0866751,
+   "Longitude": 90.5610559
+ },
+ {
+   "SL No": 79,
+   "DTR No": "2878",
+   "DTR Name": "DORAPARA 63 kVA NEAR KRISHNA MANDIR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 125,
+   "Latitude": 26.0897481,
+   "Longitude": 90.5543848
+ },
+ {
+   "SL No": 80,
+   "DTR No": "2877",
+   "DTR Name": "DORAPARA 100 kVA NEAR RAMPUR-BARDAMAL ROAD",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 45,
+   "Latitude": 26.0900123,
+   "Longitude": 90.550564
+ },
+ {
+   "SL No": 81,
+   "DTR No": "2880",
+   "DTR Name": "ULUPARA 63 kVA NEAR RELIANCE PETROL PUMP",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 93,
+   "Latitude": 26.0907807,
+   "Longitude": 90.5618618
+ },
+ {
+   "SL No": 82,
+   "DTR No": "2881",
+   "DTR Name": "ULUPARA CHOWKAPARA 100 kVA NEAR SERICULTURE FARM",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 10,
+   "Latitude": 26.0934039,
+   "Longitude": 90.562418
+ },
+ {
+   "SL No": 83,
+   "DTR No": "2886",
+   "DTR Name": "NICHINTA 100 kVA NEAR VILLAGE ROAD",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 90,
+   "Latitude": 26.1074818,
+   "Longitude": 90.5554607
+ },
+ {
+   "SL No": 84,
+   "DTR No": "2887",
+   "DTR Name": "NICHINTA KHOLBHANGA 16 kVA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.1063683,
+   "Longitude": 90.5489635
+ },
+ {
+   "SL No": 85,
+   "DTR No": "2889",
+   "DTR Name": "BUDHIPARA SEGUNBAHI 25 kVA NEAR NATHPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 8,
+   "Latitude": 26.1075085,
+   "Longitude": 90.5636657
+ },
+ {
+   "SL No": 86,
+   "DTR No": "2891",
+   "DTR Name": "BUDHIPARA NATHPARA 63 kVA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 59,
+   "Latitude": 26.105087,
+   "Longitude": 90.5677409
+ },
+ {
+   "SL No": 87,
+   "DTR No": "2781",
+   "DTR Name": "DASHABHUJA DEBASTHAN 25 kVA NEAR SOSHAN GHAT",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 75,
+   "Latitude": 26.10664,
+   "Longitude": 90.7130123
+ },
+ {
+   "SL No": 88,
+   "DTR No": "2789",
+   "DTR Name": "TINKONIAPARA 25 kVA NEAR NUR HUSSAIN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 81,
+   "Latitude": 26.1040441,
+   "Longitude": 90.7133235
+ },
+ {
+   "SL No": 89,
+   "DTR No": "2791",
+   "DTR Name": "BANIAPARA 25 kVA NEAR SURJYOGIRI LP SCHOOL",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 83,
+   "Latitude": 26.1016167,
+   "Longitude": 90.7125733
+ },
+ {
+   "SL No": 90,
+   "DTR No": "2792",
+   "DTR Name": "NEPALPARA 25 kVA NEAR HEMANTA HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 43,
+   "Latitude": 26.1009567,
+   "Longitude": 90.714575
+ },
+ {
+   "SL No": 91,
+   "DTR No": "2793",
+   "DTR Name": "GAROPARA 25 kVA NEAR BIREN MARAK",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 46,
+   "Latitude": 26.096025,
+   "Longitude": 90.71054
+ },
+ {
+   "SL No": 92,
+   "DTR No": "2782",
+   "DTR Name": "DASHABHUJA DEBASTHAN 25 kVA NEAR LP SCHOOL",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 19,
+   "Latitude": 26.1090383,
+   "Longitude": 90.7114351
+ },
+ {
+   "SL No": 93,
+   "DTR No": "2783",
+   "DTR Name": "SRI SURJYA PAHAR 25 kVA NEAR ARCHEOLOGICAL",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.10804,
+   "Longitude": 90.7100533
+ },
+ {
+   "SL No": 94,
+   "DTR No": "2784",
+   "DTR Name": "SRI SURJYA PAHAR 63 kVA NEAR COMMITTEE HALL",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 1,
+   "Latitude": 26.108187,
+   "Longitude": 90.7100167
+ },
+ {
+   "SL No": 95,
+   "DTR No": "2780",
+   "DTR Name": "DASHABHUJA DEBASTHAN 63 kVA NEAR MINOTI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 55,
+   "Latitude": 26.109376,
+   "Longitude": 90.7136978
+ },
+ {
+   "SL No": 96,
+   "DTR No": "2770",
+   "DTR Name": "KODALDHOWA 63 kVA NEAR BEEL",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 50,
+   "Latitude": 26.1036883,
+   "Longitude": 90.728145
+ },
+ {
+   "SL No": 97,
+   "DTR No": "2768",
+   "DTR Name": "TINKONIAPARA 16 kVA NEAR ABDUL HAI VDP HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 96,
+   "Latitude": 26.1003664,
+   "Longitude": 90.731007
+ },
+ {
+   "SL No": 98,
+   "DTR No": "2772",
+   "DTR Name": "HASHDOBA 16 kVA NEAR SOBHAN ALI HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 31,
+   "Latitude": 26.1140583,
+   "Longitude": 90.7223867
+ },
+ {
+   "SL No": 99,
+   "DTR No": "2773",
+   "DTR Name": "DAROGER ALGA 16 kVA NEAR MONNAF ALI HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 30,
+   "Latitude": 26.1164377,
+   "Longitude": 90.7233191
+ },
+ {
+   "SL No": 100,
+   "DTR No": "2774",
+   "DTR Name": "DAROGER ALGA 25 kVA NEAR HABIBOR RAHMAN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.1173867,
+   "Longitude": 90.7216067
+ },
+ {
+   "SL No": 101,
+   "DTR No": "2775",
+   "DTR Name": "LUPTOCHAR 25 kVA NEAR RIVERGHAT",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 68,
+   "Latitude": 26.1195933,
+   "Longitude": 90.7184767
+ },
+ {
+   "SL No": 102,
+   "DTR No": "2778",
+   "DTR Name": "BHATIPARA 63 kVA NEAR NAAMGHAR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 141,
+   "Latitude": 26.1149783,
+   "Longitude": 90.717735
+ },
+ {
+   "SL No": 103,
+   "DTR No": "2777",
+   "DTR Name": "LUPTOCHAR 25 KVA NEAR LATIF ADVOCATE HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 41,
+   "Latitude": 26.118325,
+   "Longitude": 90.709275
+ },
+ {
+   "SL No": 104,
+   "DTR No": "2776",
+   "DTR Name": "LUPTOCHAR 25 kVA NEAR SOLEMAN MASTER HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 89,
+   "Latitude": 26.1203303,
+   "Longitude": 90.7089525
+ },
+ {
+   "SL No": 105,
+   "DTR No": "2794",
+   "DTR Name": "CAMP BAZAR HAJONGPARA 16 kVA NEAR AMZAD ALI HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 78,
+   "Latitude": 26.116785,
+   "Longitude": 90.707725
+ },
+ {
+   "SL No": 106,
+   "DTR No": "2806",
+   "DTR Name": "UDAYPUR 25 kVA NEAR KAMALA RABHA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 18,
+   "Latitude": 26.1112667,
+   "Longitude": 90.6862183
+ },
+ {
+   "SL No": 107,
+   "DTR No": "2807",
+   "DTR Name": "UDAYPUR 25 kVA NEAR UDAYPUR LP SCHOOL",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 25,
+   "Latitude": 26.1064796,
+   "Longitude": 90.6773371
+ },
+ {
+   "SL No": 108,
+   "DTR No": "2808",
+   "DTR Name": "UDAYPUR 25 kVA NEAR DURGA TAILOR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.1031667,
+   "Longitude": 90.6758183
+ },
+ {
+   "SL No": 109,
+   "DTR No": "2809",
+   "DTR Name": "UDAYPUR 25 kVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 53,
+   "Latitude": 26.101185,
+   "Longitude": 90.6723083
+ },
+ {
+   "SL No": 110,
+   "DTR No": "2800",
+   "DTR Name": "DUBAPARA 250 kVA NEAR BUS STATION",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 327,
+   "Latitude": 26.1251717,
+   "Longitude": 90.6918783
+ },
+ {
+   "SL No": 111,
+   "DTR No": "2785",
+   "DTR Name": "TINKONIAPARA 25 KVA NEAR SHOHID ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 51,
+   "Latitude": 26.1061567,
+   "Longitude": 90.7186033
+ },
+ {
+   "SL No": 112,
+   "DTR No": "2786",
+   "DTR Name": "TINKONIAPARA 25 kVA NEAR RAHUL PHARMACY",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 64,
+   "Latitude": 26.1063667,
+   "Longitude": 90.7186433
+ },
+ {
+   "SL No": 113,
+   "DTR No": "2787",
+   "DTR Name": "TINKONIAPARA BOROPARA 25 KVA NEAR MAHEN BORO HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 26,
+   "Latitude": 26.1037383,
+   "Longitude": 90.7208833
+ },
+ {
+   "SL No": 114,
+   "DTR No": "2788",
+   "DTR Name": "TINKONIAPARA 63 kVA NEAR NAZIR ALI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 42,
+   "Latitude": 26.1053167,
+   "Longitude": 90.7224317
+ },
+ {
+   "SL No": 115,
+   "DTR No": "2047",
+   "DTR Name": "SALBARI",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 401,
+   "Latitude": 26.1470161,
+   "Longitude": 90.6159887
+ },
+ {
+   "SL No": 116,
+   "DTR No": "2048",
+   "DTR Name": "BAPUJINAGAR DUSTBIN",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 276,
+   "Latitude": 26.1471779,
+   "Longitude": 90.616009
+ },
+ {
+   "SL No": 117,
+   "DTR No": "2049",
+   "DTR Name": "BAPUJINAGAR NAAMGHAR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 326,
+   "Latitude": 26.1483139,
+   "Longitude": 90.621878
+ },
+ {
+   "SL No": 118,
+   "DTR No": "2050",
+   "DTR Name": "BAPUJINAGAR L.P.SCHOOL",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 117,
+   "Latitude": 26.1483867,
+   "Longitude": 90.624135
+ },
+ {
+   "SL No": 119,
+   "DTR No": "2051",
+   "DTR Name": "SHASTRINAGAR 1",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 290,
+   "Latitude": 26.1475826,
+   "Longitude": 90.6280417
+ },
+ {
+   "SL No": 120,
+   "DTR No": "2052",
+   "DTR Name": "SHASTRINAGAR 2",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 229,
+   "Latitude": 26.1470152,
+   "Longitude": 90.6295617
+ },
+ {
+   "SL No": 121,
+   "DTR No": "2053",
+   "DTR Name": "SWEEPER BASTI",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 178,
+   "Latitude": 26.1452433,
+   "Longitude": 90.6289814
+ },
+ {
+   "SL No": 122,
+   "DTR No": "2054",
+   "DTR Name": "MOILAPATAHAR CRPF CAMP",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 115,
+   "Latitude": 26.1439175,
+   "Longitude": 90.6330418
+ },
+ {
+   "SL No": 123,
+   "DTR No": "2779",
+   "DTR Name": "BHATIPARA 25 kVA NEAR MADRASSA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 25,
+   "Latitude": 26.1133277,
+   "Longitude": 90.7146235
+ },
+ {
+   "SL No": 124,
+   "DTR No": "2821",
+   "DTR Name": "DEKDHOWA 100 kVA NEAR ABU SHAMA RICE MILL",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 99,
+   "Latitude": 26.1437119,
+   "Longitude": 90.6679512
+ },
+ {
+   "SL No": 125,
+   "DTR No": "2822",
+   "DTR Name": "DEKDHOWA BORTILA 63 kVA NEAR AZAHAR ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1448417,
+   "Longitude": 90.66424
+ },
+ {
+   "SL No": 126,
+   "DTR No": "2824",
+   "DTR Name": "DEKDHOWA 63 kVA NEAR BADSHA ALOM HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 163,
+   "Latitude": 26.142875,
+   "Longitude": 90.65817
+ },
+ {
+   "SL No": 127,
+   "DTR No": "2826",
+   "DTR Name": "AMBIYA NAGAR 25 kVA NEAR MOZID HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 99,
+   "Latitude": 26.1432299,
+   "Longitude": 90.654504
+ },
+ {
+   "SL No": 128,
+   "DTR No": "2820",
+   "DTR Name": "KOMOLAR BAGAN 63 kVA NEAR AJIT DEWANI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 64,
+   "Latitude": 26.1408467,
+   "Longitude": 90.6650517
+ },
+ {
+   "SL No": 129,
+   "DTR No": "2825",
+   "DTR Name": "DEKDHOWA 25 kVA NEAR MOTIN COUNCILLOR HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.1403543,
+   "Longitude": 90.6684809
+ },
+ {
+   "SL No": 130,
+   "DTR No": "2823",
+   "DTR Name": "DEKDHOWA 63 kVA NEAR MOTIN RICE MILL",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 81,
+   "Latitude": 26.1394117,
+   "Longitude": 90.6718733
+ },
+ {
+   "SL No": 131,
+   "DTR No": "2803",
+   "DTR Name": "DUBAPARA PAULPARA 63 kVA NEAR POLICE STATION",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 108,
+   "Latitude": 26.1267633,
+   "Longitude": 90.6831833
+ },
+ {
+   "SL No": 132,
+   "DTR No": "2801",
+   "DTR Name": "DUBAPARA 25 kVA NEAR KAKOTI GRAM SEVAK",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 48,
+   "Latitude": 26.1267733,
+   "Longitude": 90.688085
+ },
+ {
+   "SL No": 133,
+   "DTR No": "2805",
+   "DTR Name": "DUBAPARA 25 KVA NEAR DASPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 90,
+   "Latitude": 26.1206767,
+   "Longitude": 90.6772567
+ },
+ {
+   "SL No": 134,
+   "DTR No": "2804",
+   "DTR Name": "DUBAPARA 25 kVA NEAR RESERVE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 67,
+   "Latitude": 26.1206381,
+   "Longitude": 90.6830132
+ },
+ {
+   "SL No": 135,
+   "DTR No": "2055",
+   "DTR Name": "LANGRA BAZAR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 175,
+   "Latitude": 26.1468512,
+   "Longitude": 90.6317899
+ },
+ {
+   "SL No": 136,
+   "DTR No": "2056",
+   "DTR Name": "RUPNAGAR 1",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 298,
+   "Latitude": 26.14598,
+   "Longitude": 90.6344283
+ },
+ {
+   "SL No": 137,
+   "DTR No": "2057",
+   "DTR Name": "RUPNAGAR 2",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 237,
+   "Latitude": 26.150123,
+   "Longitude": 90.6347889
+ },
+ {
+   "SL No": 138,
+   "DTR No": "2058",
+   "DTR Name": "BELTOLA BAZAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 280,
+   "Latitude": 26.1521217,
+   "Longitude": 90.6314
+ },
+ {
+   "SL No": 139,
+   "DTR No": "2059",
+   "DTR Name": "SANTINAGAR CRPF CAMP",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 138,
+   "Latitude": 26.1535419,
+   "Longitude": 90.6272622
+ },
+ {
+   "SL No": 140,
+   "DTR No": "2060",
+   "DTR Name": "SANTINAGAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 209,
+   "Latitude": 26.15366,
+   "Longitude": 90.6261633
+ },
+ {
+   "SL No": 141,
+   "DTR No": "2061",
+   "DTR Name": "BALIJANA CIRCLE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 166,
+   "Latitude": 26.1541504,
+   "Longitude": 90.6306858
+ },
+ {
+   "SL No": 142,
+   "DTR No": "2074",
+   "DTR Name": "POULTRY FARM",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 157,
+   "Latitude": 26.1574533,
+   "Longitude": 90.6293117
+ },
+ {
+   "SL No": 143,
+   "DTR No": "2802",
+   "DTR Name": "DUBAPARA 25 KVA NEAR RIVERGHAT BAZAR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 28,
+   "Latitude": 26.129985,
+   "Longitude": 90.685165
+ },
+ {
+   "SL No": 144,
+   "DTR No": "2075",
+   "DTR Name": "NEW GOALPARA SCHOOL",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 87,
+   "Latitude": 26.1599363,
+   "Longitude": 90.62944
+ },
+ {
+   "SL No": 145,
+   "DTR No": "2073",
+   "DTR Name": "BIHUFIELD",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 138,
+   "Latitude": 26.1587898,
+   "Longitude": 90.6248098
+ },
+ {
+   "SL No": 146,
+   "DTR No": "2072",
+   "DTR Name": "MECHANICAL PWD",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 211,
+   "Latitude": 26.1584909,
+   "Longitude": 90.6227247
+ },
+ {
+   "SL No": 147,
+   "DTR No": "2071",
+   "DTR Name": "DURGA MANDIR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 331,
+   "Latitude": 26.1593196,
+   "Longitude": 90.6202332
+ },
+ {
+   "SL No": 148,
+   "DTR No": "2657",
+   "DTR Name": "AMLA TOWER MARKET",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-TILAPARA 11 KV\n",
+   "Consumer Count": 200,
+   "Latitude": 26.1689522,
+   "Longitude": 90.6244144
+ },
+ {
+   "SL No": 149,
+   "DTR No": "2879",
+   "DTR Name": "DORAPARA KORUNAPARA 16 kVA NEAR KALI MANDIR",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 113,
+   "Latitude": 26.0873804,
+   "Longitude": 90.5569279
+ },
+ {
+   "SL No": 150,
+   "DTR No": "2882",
+   "DTR Name": "ULUPARA PT II 25 kVA NEAR BEELOR PAAR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 31,
+   "Latitude": 26.0903036,
+   "Longitude": 90.5671172
+ },
+ {
+   "SL No": 151,
+   "DTR No": "2883",
+   "DTR Name": "AGIA PT II 16 kVA NEAR SUTRADHARPARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 32,
+   "Latitude": 26.0889115,
+   "Longitude": 90.5682677
+ },
+ {
+   "SL No": 152,
+   "DTR No": "2890",
+   "DTR Name": "NICHINTA 25 kVA NEAR AGIA COLLEGE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 37,
+   "Latitude": 26.099176,
+   "Longitude": 90.5708979
+ },
+ {
+   "SL No": 153,
+   "DTR No": "2895",
+   "DTR Name": "BUDHIPARA JUNGLE BLOCK 16 kVA NEAR BENGALIPARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.1052172,
+   "Longitude": 90.5761331
+ },
+ {
+   "SL No": 154,
+   "DTR No": "2897",
+   "DTR Name": "BUDHIPARA JUNGLE BLOCK 16 kVA NEAR BENGALIPARA BEELOR PAR",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 21,
+   "Latitude": 26.1028461,
+   "Longitude": 90.5767321
+ },
+ {
+   "SL No": 155,
+   "DTR No": "2899",
+   "DTR Name": "SAMAGURI 16 kVA NEAR SAMAGURI BEELOR PAAR",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 31,
+   "Latitude": 26.1074697,
+   "Longitude": 90.5838079
+ },
+ {
+   "SL No": 156,
+   "DTR No": "2901",
+   "DTR Name": "SAMAGURI 63 kVA NEAR BEELOR PAAR SOLMARI ROAD",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 41,
+   "Latitude": 26.1106457,
+   "Longitude": 90.5891357
+ },
+ {
+   "SL No": 157,
+   "DTR No": "2902",
+   "DTR Name": "SOLMARI 100 kVA NEAR SOLMARI BAZAAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 229,
+   "Latitude": 26.1143256,
+   "Longitude": 90.5778223
+ },
+ {
+   "SL No": 158,
+   "DTR No": "2903",
+   "DTR Name": "SOLMARI 16 kVA NEAR AUXILIUM JUNIOR COLLEGE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 51,
+   "Latitude": 26.1153403,
+   "Longitude": 90.5699198
+ },
+ {
+   "SL No": 159,
+   "DTR No": "2892",
+   "DTR Name": "BUDHIPARA SUTRADHARPARA 16 kVA NEAR SAGURI ROAD",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.108617,
+   "Longitude": 90.5731821
+ },
+ {
+   "SL No": 160,
+   "DTR No": "2905",
+   "DTR Name": "KOCHPARA 63 kVA NEAR KALI MANDIR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 63,
+   "Latitude": 26.1162769,
+   "Longitude": 90.5541065
+ },
+ {
+   "SL No": 161,
+   "DTR No": "2909",
+   "DTR Name": "SARAPARA 25 kVA NEAR NAYAPARA PLAY GROUND",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 61,
+   "Latitude": 26.1224676,
+   "Longitude": 90.5502014
+ },
+ {
+   "SL No": 162,
+   "DTR No": "2906",
+   "DTR Name": "KOCHPARA 25 kVA NEAR BAPTIST CHURCH GAROPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 23,
+   "Latitude": 26.1211567,
+   "Longitude": 90.5562437
+ },
+ {
+   "SL No": 163,
+   "DTR No": "2907",
+   "DTR Name": "KOCHPARA 25 kVA NEAR GAROPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 36,
+   "Latitude": 26.1203419,
+   "Longitude": 90.558029
+ },
+ {
+   "SL No": 164,
+   "DTR No": "2912",
+   "DTR Name": "SARAPARA 25 kVA NEAR SARAPARA VILL BAMUNGHOPA ROAD",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 24,
+   "Latitude": 26.128711,
+   "Longitude": 90.5473356
+ },
+ {
+   "SL No": 165,
+   "DTR No": "2910",
+   "DTR Name": "SARAPARA 16 kVA NEAR KAMAL JYOTI FOOTBALL PLAY GROUND",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 25,
+   "Latitude": 26.1243117,
+   "Longitude": 90.5459093
+ },
+ {
+   "SL No": 166,
+   "DTR No": "2911",
+   "DTR Name": "SARAPARA 25 kVA NEAR SARAPARA VILL ROAD",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 36,
+   "Latitude": 26.1211887,
+   "Longitude": 90.5455627
+ },
+ {
+   "SL No": 167,
+   "DTR No": "2908",
+   "DTR Name": "SARAPARA 16 kVA NEAR LP SCHOOL",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 14,
+   "Latitude": 26.1170577,
+   "Longitude": 90.5453743
+ },
+ {
+   "SL No": 168,
+   "DTR No": "2914",
+   "DTR Name": "KALYANPUR 63 kVA NEAR PANCHAYAT",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 69,
+   "Latitude": 26.1199525,
+   "Longitude": 90.5793317
+ },
+ {
+   "SL No": 169,
+   "DTR No": "2913",
+   "DTR Name": "KALYANPUR 25 kVA NEAR NEW BAZAAR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 18,
+   "Latitude": 26.1208409,
+   "Longitude": 90.5773403
+ },
+ {
+   "SL No": 170,
+   "DTR No": "2915",
+   "DTR Name": "KALYANPUR 63 kVA NEAR ASHOK LEYLAND SERVICE CENTRE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.1244075,
+   "Longitude": 90.5741938
+ },
+ {
+   "SL No": 171,
+   "DTR No": "2918",
+   "DTR Name": "KALYANPUR NAMAPARA 25 kVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 51,
+   "Latitude": 26.1288893,
+   "Longitude": 90.5731342
+ },
+ {
+   "SL No": 172,
+   "DTR No": "2920",
+   "DTR Name": "HADLAPARA 16 kVA NEAR KALI MANDIR",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 1,
+   "Latitude": 26.1309019,
+   "Longitude": 90.5656473
+ },
+ {
+   "SL No": 173,
+   "DTR No": "2923",
+   "DTR Name": "HADLAPARA 25 kVA NEAR BAGAPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 3,
+   "Latitude": 26.1345178,
+   "Longitude": 90.5612233
+ },
+ {
+   "SL No": 174,
+   "DTR No": "2922",
+   "DTR Name": "HADLAPARA 25 kVA NEAR FOOTBALL PLAY GROUND",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.1365662,
+   "Longitude": 90.5637227
+ },
+ {
+   "SL No": 175,
+   "DTR No": "2921",
+   "DTR Name": "HADLAPARA 16 kVA NEAR HADLAPARA LP SCHOOL",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1264842,
+   "Longitude": 90.5681055
+ },
+ {
+   "SL No": 176,
+   "DTR No": "2917",
+   "DTR Name": "KALYANPUR 25 kVA NEAR INDIAN OIL PETROL PUMP",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 54,
+   "Latitude": 26.1240871,
+   "Longitude": 90.5727189
+ },
+ {
+   "SL No": 177,
+   "DTR No": "2916",
+   "DTR Name": "KALYANPUR 63 kVA NEAR AAGEPARA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 125,
+   "Latitude": 26.1250545,
+   "Longitude": 90.580023
+ },
+ {
+   "SL No": 178,
+   "DTR No": "2904",
+   "DTR Name": "KOCHPARA 25 kVA NEAR BARDAMAL ROAD",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 43,
+   "Latitude": 26.118178,
+   "Longitude": 90.5655699
+ },
+ {
+   "SL No": 179,
+   "DTR No": "2884",
+   "DTR Name": "UTTAR PAHARKATA 16 kVA NEAR AGIA BAPTIST CHURCH",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.0882318,
+   "Longitude": 90.5736756
+ },
+ {
+   "SL No": 180,
+   "DTR No": "2885",
+   "DTR Name": "UTTAR PAHARKATA 25 kVA NEAR GAROPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 6,
+   "Latitude": 26.086781,
+   "Longitude": 90.5732806
+ },
+ {
+   "SL No": 181,
+   "DTR No": "2924",
+   "DTR Name": "GENDERA 63 kVA GENDERAPARA BAZAAR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 77,
+   "Latitude": 26.118285,
+   "Longitude": 90.5899173
+ },
+ {
+   "SL No": 182,
+   "DTR No": "2925",
+   "DTR Name": "GENDERA 16 kVA NEAR GENDERAPARA GAROPARA ROAD",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 21,
+   "Latitude": 26.1139541,
+   "Longitude": 90.599876
+ },
+ {
+   "SL No": 183,
+   "DTR No": "2926",
+   "DTR Name": "GAROKUTA 25 kVA NEAR KURUWABHASA ROAD",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 53,
+   "Latitude": 26.1108003,
+   "Longitude": 90.6089549
+ },
+ {
+   "SL No": 184,
+   "DTR No": "2927",
+   "DTR Name": "KURUWABHASA SUTRADHARPARA 25 kVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 32,
+   "Latitude": 26.1084553,
+   "Longitude": 90.6149307
+ },
+ {
+   "SL No": 185,
+   "DTR No": "2928",
+   "DTR Name": "KURUWABHASA 25 kVA NEAR BANGALBORI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 32,
+   "Latitude": 26.1040485,
+   "Longitude": 90.6173652
+ },
+ {
+   "SL No": 186,
+   "DTR No": "2930",
+   "DTR Name": "KURUWABHASA PURONAPARA 63 kVA NEAR PHE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 68,
+   "Latitude": 26.1150034,
+   "Longitude": 90.6164114
+ },
+ {
+   "SL No": 187,
+   "DTR No": "2929",
+   "DTR Name": "KURUWABHASA 63 kVA NEAR GOROIMARI ROAD",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 34,
+   "Latitude": 26.1107689,
+   "Longitude": 90.6165239
+ },
+ {
+   "SL No": 188,
+   "DTR No": "2932",
+   "DTR Name": "KURUWABHASA 16 kVA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.1126615,
+   "Longitude": 90.620577
+ },
+ {
+   "SL No": 189,
+   "DTR No": "2938",
+   "DTR Name": "KURUWABHASA SANTIBAZAAR 63 kVA NEAR MARKET",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 76,
+   "Latitude": 26.110565,
+   "Longitude": 90.6250967
+ },
+ {
+   "SL No": 190,
+   "DTR No": "2939",
+   "DTR Name": "GORAIMARI 25 kVA NEAR ROAD",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 37,
+   "Latitude": 26.1112166,
+   "Longitude": 90.6304585
+ },
+ {
+   "SL No": 191,
+   "DTR No": "2940",
+   "DTR Name": "GOROIMARI 25 kVA NEAR BAZAAR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 59,
+   "Latitude": 26.1107308,
+   "Longitude": 90.6359759
+ },
+ {
+   "SL No": 192,
+   "DTR No": "2941",
+   "DTR Name": "GORAIMARI 25 kVA NEAR KALI MANDIR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.1039924,
+   "Longitude": 90.6386416
+ },
+ {
+   "SL No": 193,
+   "DTR No": "2936",
+   "DTR Name": "BHOISHKHULI 63 kVA NEAR GOROIMARI PWD ROAD",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 41,
+   "Latitude": 26.1235982,
+   "Longitude": 90.6163511
+ },
+ {
+   "SL No": 194,
+   "DTR No": "2937",
+   "DTR Name": "BHOISHKHULI 25 kVA NEAR ANANDA BAZAAR RAILWAY STATION",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 13,
+   "Latitude": 26.1267723,
+   "Longitude": 90.6192889
+ },
+ {
+   "SL No": 195,
+   "DTR No": "2935",
+   "DTR Name": "BHOISHKHULI 63 kVA NEAR ROAD",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 61,
+   "Latitude": 26.1257735,
+   "Longitude": 90.6131666
+ },
+ {
+   "SL No": 196,
+   "DTR No": "2934",
+   "DTR Name": "DOSORAPARA MATIA 25 kVA NEAR MATIA BAZAAR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 61,
+   "Latitude": 26.1239382,
+   "Longitude": 90.6091078
+ },
+ {
+   "SL No": 197,
+   "DTR No": "2933",
+   "DTR Name": "BANATOLI 63 kVA NEAR BANATOLI BAZAAR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 57,
+   "Latitude": 26.1167174,
+   "Longitude": 90.6092336
+ },
+ {
+   "SL No": 198,
+   "DTR No": "2894",
+   "DTR Name": "BUDHIPARA JUNGLE BLOCK 16 kVA NEAR SAMAGURI ROAD",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.1085301,
+   "Longitude": 90.5749283
+ },
+ {
+   "SL No": 199,
+   "DTR No": "2896",
+   "DTR Name": "BUDHIPARA JUNGLE BLOCK 25 kVA NEAR BENGALIPARA SANTIPUR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 89,
+   "Latitude": 26.1031515,
+   "Longitude": 90.5753992
+ },
+ {
+   "SL No": 200,
+   "DTR No": "2839",
+   "DTR Name": "BAPUPARA 100 kVA NEAR FATEHPUR KALI MANDIR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 187,
+   "Latitude": 26.0805517,
+   "Longitude": 90.5455476
+ },
+ {
+   "SL No": 201,
+   "DTR No": "2840",
+   "DTR Name": "BAPUPARA 100 kVA NEAR FATEHPUR KALI MANDIR (2nd)",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 219,
+   "Latitude": 26.0806091,
+   "Longitude": 90.5455239
+ },
+ {
+   "SL No": 202,
+   "DTR No": "2841",
+   "DTR Name": "BAPUPARA 63 kVA NEAR FATEHPUR MANASHA MANDIR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.081057,
+   "Longitude": 90.5446228
+ },
+ {
+   "SL No": 203,
+   "DTR No": "2842",
+   "DTR Name": "BAPUPARA 25 kVA NEAR SINGIMARI ROKHAPARA ROAD",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.0823172,
+   "Longitude": 90.541493
+ },
+ {
+   "SL No": 204,
+   "DTR No": "2844",
+   "DTR Name": "BAPUPARA GAROPARA 16 kVA NEAR KALI MANDIR",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 8,
+   "Latitude": 26.0849927,
+   "Longitude": 90.5418064
+ },
+ {
+   "SL No": 205,
+   "DTR No": "2843",
+   "DTR Name": "BAPUPARA 25 kVA NEAR SINGIMARI RANGSAPARA ROAD",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.0858277,
+   "Longitude": 90.5383515
+ },
+ {
+   "SL No": 206,
+   "DTR No": "2845",
+   "DTR Name": "FATEHPUR 100 kVA NEAR KETEKIBARI DAMAL ROAD",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 163,
+   "Latitude": 26.0781922,
+   "Longitude": 90.5470898
+ },
+ {
+   "SL No": 207,
+   "DTR No": "2846",
+   "DTR Name": "BHANDARA 63 kVA NEAR BALIJANA KRISHNA MANDIR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 71,
+   "Latitude": 26.0790189,
+   "Longitude": 90.5508219
+ },
+ {
+   "SL No": 208,
+   "DTR No": "2847",
+   "DTR Name": "BHANDARA 63 kVA NEAR DEREK ROAD RIVER SIDE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 50,
+   "Latitude": 26.0725239,
+   "Longitude": 90.5504692
+ },
+ {
+   "SL No": 209,
+   "DTR No": "2850",
+   "DTR Name": "BHANDARA LAWSI 16 kVA NEAR DEREK ROAD",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 18,
+   "Latitude": 26.0698517,
+   "Longitude": 90.5487976
+ },
+ {
+   "SL No": 210,
+   "DTR No": "2849",
+   "DTR Name": "DEREK SHILDUBI 25 kVA NEAR SHILDUBI RIVER DEREK ROAD",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 16,
+   "Latitude": 26.0677988,
+   "Longitude": 90.5453385
+ },
+ {
+   "SL No": 211,
+   "DTR No": "2851",
+   "DTR Name": "DEREK 100 kVA NEAR DEREK BAPTIST CHURCH",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 153,
+   "Latitude": 26.0607356,
+   "Longitude": 90.5488406
+ },
+ {
+   "SL No": 212,
+   "DTR No": "2853",
+   "DTR Name": "DEREK NAYAPARA 16 kVA NEAR DEREK SCHOOL",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 30,
+   "Latitude": 26.0659524,
+   "Longitude": 90.5513017
+ },
+ {
+   "SL No": 213,
+   "DTR No": "2852",
+   "DTR Name": "DALOK TILAPARA 25 kVA NEAR JOGONA RAJBONGSHIPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 14,
+   "Latitude": 26.0681375,
+   "Longitude": 90.5545988
+ },
+ {
+   "SL No": 214,
+   "DTR No": "2848",
+   "DTR Name": "DALOK 16 kVA NEAR JOGONA RAJBONGSHIPARA NAMAPARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 30,
+   "Latitude": 26.0709367,
+   "Longitude": 90.5529886
+ },
+ {
+   "SL No": 215,
+   "DTR No": "2860",
+   "DTR Name": "ROKHAPARA 25 kVA NEAR BAIKHO MANDIR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 26,
+   "Latitude": 26.096962,
+   "Longitude": 90.5235145
+ },
+ {
+   "SL No": 216,
+   "DTR No": "2859",
+   "DTR Name": "ROKHAPARA 63 kVA NEAR ROKHAPARA LP SCHOOL",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 53,
+   "Latitude": 26.096418,
+   "Longitude": 90.5277512
+ },
+ {
+   "SL No": 217,
+   "DTR No": "2858",
+   "DTR Name": "ROKHAPARA MOUPUR 16 kVA NEAR MOUPUR-ROKHAPARA ROAD",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 29,
+   "Latitude": 26.0984421,
+   "Longitude": 90.5292728
+ },
+ {
+   "SL No": 218,
+   "DTR No": "2857",
+   "DTR Name": "RAMPUR 25 kVA NEAR RAMPUR-ROKHAPARA ROAD",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 29,
+   "Latitude": 26.1036078,
+   "Longitude": 90.5318223
+ },
+ {
+   "SL No": 219,
+   "DTR No": "2861",
+   "DTR Name": "RAMPUR NATHPARA 16 kVA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.11205,
+   "Longitude": 90.5316139
+ },
+ {
+   "SL No": 220,
+   "DTR No": "2862",
+   "DTR Name": "RAMPUR 25 kVA NEAR LP SCHOOL",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 30,
+   "Latitude": 26.1114277,
+   "Longitude": 90.5292021
+ },
+ {
+   "SL No": 221,
+   "DTR No": "2863",
+   "DTR Name": "RAMPUR 25 kVA NEAR MAHANTA KHEL PATHAR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.1117245,
+   "Longitude": 90.5243163
+ },
+ {
+   "SL No": 222,
+   "DTR No": "2865",
+   "DTR Name": "GHENGAMARI 25 kVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 11,
+   "Latitude": 26.1014526,
+   "Longitude": 90.5149074
+ },
+ {
+   "SL No": 223,
+   "DTR No": "2864",
+   "DTR Name": "ROKHAPARA GAROPARA 16 kVA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 13,
+   "Latitude": 26.1032573,
+   "Longitude": 90.5212573
+ },
+ {
+   "SL No": 224,
+   "DTR No": "2856",
+   "DTR Name": "TOKORAPARA NATHPARA 25 kVA NEAR JAGANNATH MANDIR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.0981393,
+   "Longitude": 90.5416619
+ },
+ {
+   "SL No": 225,
+   "DTR No": "2855",
+   "DTR Name": "TOKORAPARA 100 kVA NEAR RAMPUR-BARDAMAL ROAD",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 108,
+   "Latitude": 26.0966574,
+   "Longitude": 90.5418272
+ },
+ {
+   "SL No": 226,
+   "DTR No": "2854",
+   "DTR Name": "DORAPARA 25 kVA NEAR KRISHNA MANDIR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 79,
+   "Latitude": 26.0923381,
+   "Longitude": 90.5466307
+ },
+ {
+   "SL No": 227,
+   "DTR No": "3079",
+   "DTR Name": "Goroimari 63KVA (Near LP School)",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 103,
+   "Latitude": 26.1111966,
+   "Longitude": 90.6333009
+ },
+ {
+   "SL No": 228,
+   "DTR No": "3080",
+   "DTR Name": "Goroimari 25KVA (Near LP School)",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 12,
+   "Latitude": 26.1014298,
+   "Longitude": 90.6319858
+ },
+ {
+   "SL No": 229,
+   "DTR No": "3081",
+   "DTR Name": "Goroimari 25KVA (Near Ulupara Bazar)",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 69,
+   "Latitude": 26.1065223,
+   "Longitude": 90.6322573
+ },
+ {
+   "SL No": 230,
+   "DTR No": "3078",
+   "DTR Name": "Gendrapara 25KVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1160364,
+   "Longitude": 90.5959677
+ },
+ {
+   "SL No": 231,
+   "DTR No": "3077",
+   "DTR Name": "Kalyanpur 16KVA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1211897,
+   "Longitude": 90.5769967
+ },
+ {
+   "SL No": 232,
+   "DTR No": "2866",
+   "DTR Name": "RAMPUR BARBAKHRA 25 kVA NEAR PLAYGROUND",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 3,
+   "Latitude": 26.1184828,
+   "Longitude": 90.5246958
+ },
+ {
+   "SL No": 233,
+   "DTR No": "2868",
+   "DTR Name": "MAJERBURI GAROPARA 16 kVA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 17,
+   "Latitude": 26.1172946,
+   "Longitude": 90.5299708
+ },
+ {
+   "SL No": 234,
+   "DTR No": "2867",
+   "DTR Name": "MAJERBURI RABHAPARA 25 kVA NEAR LP SCHOOL",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 34,
+   "Latitude": 26.118173,
+   "Longitude": 90.5347842
+ },
+ {
+   "SL No": 235,
+   "DTR No": "2869",
+   "DTR Name": "MAJERBURI 16 kVA NEAR RAMPUR PHE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 21,
+   "Latitude": 26.1157493,
+   "Longitude": 90.5385253
+ },
+ {
+   "SL No": 236,
+   "DTR No": "2870",
+   "DTR Name": "MAJERBURI 63 kVA NEAR DON BOSCO SCHOOL",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 25,
+   "Latitude": 26.1188878,
+   "Longitude": 90.5407916
+ },
+ {
+   "SL No": 237,
+   "DTR No": "2871",
+   "DTR Name": "MAJERBURI SARAPARA 25 kVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 52,
+   "Latitude": 26.1238913,
+   "Longitude": 90.5416567
+ },
+ {
+   "SL No": 238,
+   "DTR No": "2656",
+   "DTR Name": "PODDAR MILL",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-TILAPARA 11 KV\n",
+   "Consumer Count": 232,
+   "Latitude": 26.1706104,
+   "Longitude": 90.6222537
+ },
+ {
+   "SL No": 240,
+   "DTR No": "2951",
+   "DTR Name": "BHALUKDUBI KAMARPARA 25 kVA NEAR MONOWAR HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 54,
+   "Latitude": 26.1348838,
+   "Longitude": 90.5955071
+ },
+ {
+   "SL No": 241,
+   "DTR No": "2949",
+   "DTR Name": "ANANDA BANGAR 100 kVA NEAR RINKU ALI HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 110,
+   "Latitude": 26.1317067,
+   "Longitude": 90.5978617
+ },
+ {
+   "SL No": 242,
+   "DTR No": "2950",
+   "DTR Name": "BHALUKDUBI 250 KVA NEAR KIRAN RABHA HOUSE",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 184,
+   "Latitude": 26.1360681,
+   "Longitude": 90.5985093
+ },
+ {
+   "SL No": 243,
+   "DTR No": "2952",
+   "DTR Name": "BHALUKDUBI 100 kVA NEAR SAINT THOMAS SCHOOL",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 172,
+   "Latitude": 26.1363614,
+   "Longitude": 90.5948664
+ },
+ {
+   "SL No": 244,
+   "DTR No": "2953",
+   "DTR Name": "BHALUKDUBI SHANTIPUR 25 kVA NEAR EIDGAH",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 53,
+   "Latitude": 26.1360833,
+   "Longitude": 90.5906783
+ },
+ {
+   "SL No": 245,
+   "DTR No": "2954",
+   "DTR Name": "BHALUKDUBI TATPARA 25 kVA NEAR MOTIOR HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 76,
+   "Latitude": 26.1362202,
+   "Longitude": 90.5880627
+ },
+ {
+   "SL No": 246,
+   "DTR No": "2955",
+   "DTR Name": "BHALUKDUBI 25 kVA NEAR SHIV MANDIR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 63,
+   "Latitude": 26.1384067,
+   "Longitude": 90.58525
+ },
+ {
+   "SL No": 247,
+   "DTR No": "2957",
+   "DTR Name": "BHALUKDUBI BOGOLAMARI 25 kVA NEAR GAON BURA HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 14,
+   "Latitude": 26.1422259,
+   "Longitude": 90.5799889
+ },
+ {
+   "SL No": 248,
+   "DTR No": "2958",
+   "DTR Name": "BHALUKDUBI BOGOLAMARI 25 kVA NEAR NILCHAN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 63,
+   "Latitude": 26.1420875,
+   "Longitude": 90.5802951
+ },
+ {
+   "SL No": 249,
+   "DTR No": "2942",
+   "DTR Name": "BHALUKDUBI 25 kVA BEHIND CIVIL HOSPITAL",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 63,
+   "Latitude": 26.14067,
+   "Longitude": 90.6086464
+ },
+ {
+   "SL No": 250,
+   "DTR No": "2944",
+   "DTR Name": "SHAHID NAGAR 25 kVA NEAR MASJID",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 53,
+   "Latitude": 26.1391443,
+   "Longitude": 90.6049443
+ },
+ {
+   "SL No": 251,
+   "DTR No": "2946",
+   "DTR Name": "JUNGLE BLOCK 100 kVA NEAR BHALUKDUBI POST OFFICE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 111,
+   "Latitude": 26.1362476,
+   "Longitude": 90.6040986
+ },
+ {
+   "SL No": 252,
+   "DTR No": "2947",
+   "DTR Name": "JUNGLE BLOCK 63 kVA NEAR HITESH RABHA HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 30,
+   "Latitude": 26.133489,
+   "Longitude": 90.6051908
+ },
+ {
+   "SL No": 253,
+   "DTR No": "2945",
+   "DTR Name": "BHALUKDUBI 100 kVA NEAR GARO SCHOOL",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 215,
+   "Latitude": 26.1392547,
+   "Longitude": 90.6015376
+ },
+ {
+   "SL No": 254,
+   "DTR No": "2959",
+   "DTR Name": "BHALUKDUBI BOGOLAMARI 25 kVA NEAR BOGOLAMARI LP SCHOOL",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 43,
+   "Latitude": 26.1443117,
+   "Longitude": 90.5870667
+ },
+ {
+   "SL No": 255,
+   "DTR No": "2960",
+   "DTR Name": "BHALUKDUBI BOGOLAMARI 25 kVA NEAR COUNCILOR HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.1466381,
+   "Longitude": 90.5876132
+ },
+ {
+   "SL No": 256,
+   "DTR No": "2961",
+   "DTR Name": "BHALUKDUBI BOGOLAMARI 25 kVA NEAR ABUL MARAK HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 48,
+   "Latitude": 26.1489099,
+   "Longitude": 90.5870794
+ },
+ {
+   "SL No": 257,
+   "DTR No": "2962",
+   "DTR Name": "RABHAPARA 63 kVA NEAR AHENDRA RABHA HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 86,
+   "Latitude": 26.1538588,
+   "Longitude": 90.589545
+ },
+ {
+   "SL No": 258,
+   "DTR No": "2968",
+   "DTR Name": "SONAPUR GOBINDAPUR 25 kVA NEAR DILIP BISWAS HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 21,
+   "Latitude": 26.1570355,
+   "Longitude": 90.5930179
+ },
+ {
+   "SL No": 259,
+   "DTR No": "2965",
+   "DTR Name": "BOGOLAMARI 25 kVA NEAR MAZUMDAR HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 29,
+   "Latitude": 26.1547125,
+   "Longitude": 90.5965095
+ },
+ {
+   "SL No": 261,
+   "DTR No": "2963",
+   "DTR Name": "ALOMPARA 25 kVA NEAR ELECTION RABHA HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 36,
+   "Latitude": 26.1489045,
+   "Longitude": 90.6004255
+ },
+ {
+   "SL No": 262,
+   "DTR No": "3034",
+   "DTR Name": "RAKHYASHINI 100 kVA NEAR SATTAR HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 136,
+   "Latitude": 26.1293705,
+   "Longitude": 90.6534895
+ },
+ {
+   "SL No": 263,
+   "DTR No": "3082",
+   "DTR Name": "PROGOTINAGAR NEAR MAJID",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MEDICAL & RAILWAY 11 KV",
+   "Consumer Count": 173,
+   "Latitude": 26.1371905,
+   "Longitude": 90.6105375
+ },
+ {
+   "SL No": 264,
+   "DTR No": "3083",
+   "DTR Name": "ANANDA BAZAR 16 KVA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-MEDICAL & RAILWAY 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.1346035,
+   "Longitude": 90.6144919
+ },
+ {
+   "SL No": 265,
+   "DTR No": "3084",
+   "DTR Name": "ANANDA BAZAR 63 KVA NEAR MARKET",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MEDICAL & RAILWAY 11 KV",
+   "Consumer Count": 29,
+   "Latitude": 26.1320614,
+   "Longitude": 90.6159842
+ },
+ {
+   "SL No": 266,
+   "DTR No": "2943",
+   "DTR Name": "BHALUKDUBI 100 kVA NEAR ADDITIONAL CIRCUIT HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 71,
+   "Latitude": 26.1405914,
+   "Longitude": 90.6057633
+ },
+ {
+   "SL No": 267,
+   "DTR No": "2969",
+   "DTR Name": "SONAPUR GOBINDAPUR 25 kVA NEAR RATAN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 17,
+   "Latitude": 26.1546958,
+   "Longitude": 90.5858751
+ },
+ {
+   "SL No": 268,
+   "DTR No": "2971",
+   "DTR Name": "DANGERTARI 25 kVA NEAR MANOJ HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 64,
+   "Latitude": 26.1586923,
+   "Longitude": 90.5824853
+ },
+ {
+   "SL No": 269,
+   "DTR No": "2972",
+   "DTR Name": "RANGAGORA 25 kVA NEAR BATTALION TRAINING FIELD",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 53,
+   "Latitude": 26.1584258,
+   "Longitude": 90.5763975
+ },
+ {
+   "SL No": 270,
+   "DTR No": "2973",
+   "DTR Name": "RANGAGORA GOBINDAPUR 25 kVA NEAR RANGAGORA TINIALI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 44,
+   "Latitude": 26.1656654,
+   "Longitude": 90.5773394
+ },
+ {
+   "SL No": 271,
+   "DTR No": "2976",
+   "DTR Name": "GOBINDAPUR SONAPUR 25 kVA NEAR DURGA MANDIR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 129,
+   "Latitude": 26.1739321,
+   "Longitude": 90.5844647
+ },
+ {
+   "SL No": 272,
+   "DTR No": "2998",
+   "DTR Name": "RANGAGORA 100 kVA NEAR RCC BRIDGE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 48,
+   "Latitude": 26.179206,
+   "Longitude": 90.5908898
+ },
+ {
+   "SL No": 273,
+   "DTR No": "2999",
+   "DTR Name": "HURKAKUCHI 100 kVA NEAR ASIRUDDIN HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 8,
+   "Latitude": 26.1847883,
+   "Longitude": 90.5917535
+ },
+ {
+   "SL No": 274,
+   "DTR No": "3002",
+   "DTR Name": "HURKAKUCHI NC 63 kVA NEAR CRUSHER MILL",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 119,
+   "Latitude": 26.192306,
+   "Longitude": 90.5861038
+ },
+ {
+   "SL No": 275,
+   "DTR No": "3003",
+   "DTR Name": "HURKAKUCHI 25 kVA NEAR CIRCUIT HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 13,
+   "Latitude": 26.1979953,
+   "Longitude": 90.5819256
+ },
+ {
+   "SL No": 276,
+   "DTR No": "3004",
+   "DTR Name": "PANCHARATNA 100 kVA NEAR FOREST OFFICE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 88,
+   "Latitude": 26.1984731,
+   "Longitude": 90.577295
+ },
+ {
+   "SL No": 277,
+   "DTR No": "3005",
+   "DTR Name": "PANCHARATNA 63 kVA NEAR POLICE STATION",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 60,
+   "Latitude": 26.1961839,
+   "Longitude": 90.5686679
+ },
+ {
+   "SL No": 279,
+   "DTR No": "2993",
+   "DTR Name": "GOBINDAPUR MUITAPARA 100 kVA NEAR BAZAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 194,
+   "Latitude": 26.1775323,
+   "Longitude": 90.6003628
+ },
+ {
+   "SL No": 280,
+   "DTR No": "2986",
+   "DTR Name": "GOBINDAPUR BAZAR 250 kVA",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 469,
+   "Latitude": 26.1705192,
+   "Longitude": 90.5969051
+ },
+ {
+   "SL No": 281,
+   "DTR No": "2987",
+   "DTR Name": "GOBINDAPUR PT I 25 kVA NEAR TOMSHER ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 33,
+   "Latitude": 26.1718775,
+   "Longitude": 90.5950151
+ },
+ {
+   "SL No": 282,
+   "DTR No": "2988",
+   "DTR Name": "GOBINDAPUR 25 kVA NEAR NURUDDIN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 199,
+   "Latitude": 26.1685407,
+   "Longitude": 90.5925616
+ },
+ {
+   "SL No": 283,
+   "DTR No": "2989",
+   "DTR Name": "GOBINDAPUR 25 kVA NEAR BRICK INDUSTRY",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 1,
+   "Latitude": 26.1694415,
+   "Longitude": 90.5904642
+ },
+ {
+   "SL No": 284,
+   "DTR No": "2983",
+   "DTR Name": "GOBINDAPUR CHALA 25 kVA NEAR GOBINDAPUR LP SCHOOL",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 51,
+   "Latitude": 26.1662902,
+   "Longitude": 90.5906256
+ },
+ {
+   "SL No": 285,
+   "DTR No": "2982",
+   "DTR Name": "GOBINDAPUR CHALA 25 kVA NEAR ZAHIDUL HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 135,
+   "Latitude": 26.1632085,
+   "Longitude": 90.5928481
+ },
+ {
+   "SL No": 286,
+   "DTR No": "2981",
+   "DTR Name": "GOBINDAPUR CHALA 63 kVA NEAR TINIALI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 165,
+   "Latitude": 26.1613142,
+   "Longitude": 90.5975322
+ },
+ {
+   "SL No": 287,
+   "DTR No": "2980",
+   "DTR Name": "GOBINDAPUR CHALA 25 kVA NEAR OHED HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 62,
+   "Latitude": 26.1615074,
+   "Longitude": 90.5999481
+ },
+ {
+   "SL No": 288,
+   "DTR No": "2979",
+   "DTR Name": "GOBINDAPUR CHALA 100 kVA NEAR BAZAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 178,
+   "Latitude": 26.1622622,
+   "Longitude": 90.6015945
+ },
+ {
+   "SL No": 289,
+   "DTR No": "2977",
+   "DTR Name": "HASILABEEL BOR PAHAR 25 kVA NEAR ASIRUDDIN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 63,
+   "Latitude": 26.1607487,
+   "Longitude": 90.6035772
+ },
+ {
+   "SL No": 290,
+   "DTR No": "2991",
+   "DTR Name": "JANNATPUR 25 kVA NEAR ISMAIL HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 107,
+   "Latitude": 26.1644383,
+   "Longitude": 90.5995766
+ },
+ {
+   "SL No": 291,
+   "DTR No": "2992",
+   "DTR Name": "JANNATPUR 25 kVA NEAR SONA MIAH HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 107,
+   "Latitude": 26.1667539,
+   "Longitude": 90.6002042
+ },
+ {
+   "SL No": 292,
+   "DTR No": "2990",
+   "DTR Name": "JANNATPUR 100 kVA NEAR MASJID",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 101,
+   "Latitude": 26.1694423,
+   "Longitude": 90.6003447
+ },
+ {
+   "SL No": 293,
+   "DTR No": "2985",
+   "DTR Name": "GOBINDAPUR CHALA 25 kVA NEAR AMZAD HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 6,
+   "Latitude": 26.1715844,
+   "Longitude": 90.6016565
+ },
+ {
+   "SL No": 294,
+   "DTR No": "2978",
+   "DTR Name": "HASILABEEL BOR PAHAR 25 kVA NEAR BOKKAR HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 131,
+   "Latitude": 26.1672565,
+   "Longitude": 90.5951011
+ },
+ {
+   "SL No": 295,
+   "DTR No": "2748",
+   "DTR Name": "BELTOLA 63 kVA NEAR ALOM GIR HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-NEPALI KUTHI/MONAKOCHA 11 KV",
+   "Consumer Count": 90,
+   "Latitude": 26.0762639,
+   "Longitude": 90.7490065
+ },
+ {
+   "SL No": 296,
+   "DTR No": "2749",
+   "DTR Name": "BELTOLA 63 kVA NEAR TINIALI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-NEPALI KUTHI/MONAKOCHA 11 KV",
+   "Consumer Count": 268,
+   "Latitude": 26.0751894,
+   "Longitude": 90.7469293
+ },
+ {
+   "SL No": 297,
+   "DTR No": "2750",
+   "DTR Name": "TILAPARA 25 kVA NEAR IBRAHIM ALI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-NEPALI KUTHI/MONAKOCHA 11 KV",
+   "Consumer Count": 34,
+   "Latitude": 26.0805669,
+   "Longitude": 90.7540867
+ },
+ {
+   "SL No": 298,
+   "DTR No": "2751",
+   "DTR Name": "NOLDOBA 63 kVA NEAR MOJOR ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-NEPALI KUTHI/MONAKOCHA 11 KV",
+   "Consumer Count": 82,
+   "Latitude": 26.084385,
+   "Longitude": 90.7548267
+ },
+ {
+   "SL No": 299,
+   "DTR No": "2752",
+   "DTR Name": "NOLDOBA 63 kVA NEAR IKRAM ALI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-NEPALI KUTHI/MONAKOCHA 11 KV",
+   "Consumer Count": 109,
+   "Latitude": 26.0864368,
+   "Longitude": 90.7500277
+ },
+ {
+   "SL No": 300,
+   "DTR No": "2753",
+   "DTR Name": "MONAKOCHA 25 kVA NEAR TINIALI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-NEPALI KUTHI/MONAKOCHA 11 KV",
+   "Consumer Count": 68,
+   "Latitude": 26.0906917,
+   "Longitude": 90.7495517
+ },
+ {
+   "SL No": 301,
+   "DTR No": "3045",
+   "DTR Name": "AZAD NAGAR 100 kVA NEAR SAIFUL ISLAM HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 315,
+   "Latitude": 26.140598,
+   "Longitude": 90.6355114
+ },
+ {
+   "SL No": 302,
+   "DTR No": "2754",
+   "DTR Name": "NEPALIKHUTI 63 kVA NEAR MARKET",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-NEPALI KUTHI/MONAKOCHA 11 KV",
+   "Consumer Count": 138,
+   "Latitude": 26.08058,
+   "Longitude": 90.7511083
+ },
+ {
+   "SL No": 303,
+   "DTR No": "3043",
+   "DTR Name": "AZAD NAGAR 100 kVA NEAR RANGE OFFICE",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 159,
+   "Latitude": 26.140974,
+   "Longitude": 90.6439619
+ },
+ {
+   "SL No": 304,
+   "DTR No": "2836",
+   "DTR Name": "NEPALIKHUTI 25KVA NEAR EIDGAH",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-NEPALI KUTHI/MONAKOCHA 11 KV",
+   "Consumer Count": 66,
+   "Latitude": 26.0810017,
+   "Longitude": 90.7465767
+ },
+ {
+   "SL No": 305,
+   "DTR No": "3063",
+   "DTR Name": "GAROBAZAR 100 kVA NEAR JOKEN ALI",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 193,
+   "Latitude": 26.1407883,
+   "Longitude": 90.6466683
+ },
+ {
+   "SL No": 306,
+   "DTR No": "3006",
+   "DTR Name": "HELAPAKHRI JOMER BAZAR 25 kVA NEAR JOMER UDDIN HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 157,
+   "Latitude": 26.1363024,
+   "Longitude": 90.6517126
+ },
+ {
+   "SL No": 307,
+   "DTR No": "3035",
+   "DTR Name": "MAMA BHAGIN SHIL 63 kVA NEAR KABARSTHAN",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 295,
+   "Latitude": 26.1323696,
+   "Longitude": 90.65335
+ },
+ {
+   "SL No": 308,
+   "DTR No": "3033",
+   "DTR Name": "RAKHYASHINI MUSLIMPARA 25 kVA NEAR SHOHIDUL ISLAM HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 201,
+   "Latitude": 26.1294038,
+   "Longitude": 90.6535173
+ },
+ {
+   "SL No": 310,
+   "DTR No": "3085",
+   "DTR Name": "RAKHYASINI GAROPARA PT-II 16 KVA NEAR MOZID ALI HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 63,
+   "Latitude": 26.1245839,
+   "Longitude": 90.6653747
+ },
+ {
+   "SL No": 311,
+   "DTR No": "3028",
+   "DTR Name": "RAKHYASHINI SHOUTARA 63 kVA NEAR PAULTRY FARM",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 36,
+   "Latitude": 26.125947,
+   "Longitude": 90.6706032
+ },
+ {
+   "SL No": 312,
+   "DTR No": "3018",
+   "DTR Name": "RAKHYASHINI GAROPARA PT II 25 kVA NEAR MOJID ALI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 39,
+   "Latitude": 26.122755,
+   "Longitude": 90.6641283
+ },
+ {
+   "SL No": 313,
+   "DTR No": "3024",
+   "DTR Name": "RAKHYASHINI PART II 16 kVA NEAR LEWABARI LP SCHOOL",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 2,
+   "Latitude": 26.1208103,
+   "Longitude": 90.6630771
+ },
+ {
+   "SL No": 314,
+   "DTR No": "3021",
+   "DTR Name": "LEWBARI 100 kVA NEAR AJMUL STORE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 167,
+   "Latitude": 26.1197204,
+   "Longitude": 90.664942
+ },
+ {
+   "SL No": 315,
+   "DTR No": "3022",
+   "DTR Name": "LEWABARI 63 kVA NEAR MASJID",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 143,
+   "Latitude": 26.1170359,
+   "Longitude": 90.6653026
+ },
+ {
+   "SL No": 316,
+   "DTR No": "3013",
+   "DTR Name": "FUTURIPARA 16 kVA NEAR BOGULA SUTRADHAR HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 12,
+   "Latitude": 26.1124538,
+   "Longitude": 90.6652229
+ },
+ {
+   "SL No": 317,
+   "DTR No": "3014",
+   "DTR Name": "FUTUTRIPARA 63 kVA NEAR INDRA MOHAN SUTRADHAR HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 19,
+   "Latitude": 26.1053883,
+   "Longitude": 90.66586
+ },
+ {
+   "SL No": 318,
+   "DTR No": "3016",
+   "DTR Name": "FUTURIPARA 25 kVA NEAR RUBBER BAGAN",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 35,
+   "Latitude": 26.1067448,
+   "Longitude": 90.6702001
+ },
+ {
+   "SL No": 319,
+   "DTR No": "3017",
+   "DTR Name": "LEWABARI KOCHPARA 25 kVA NEAR HASHEM ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 157,
+   "Latitude": 26.1141467,
+   "Longitude": 90.67806
+ },
+ {
+   "SL No": 320,
+   "DTR No": "3026",
+   "DTR Name": "RAKHYASHINI GAROPARA PT I 25 kVA NEAR NUR UDDIN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 190,
+   "Latitude": 26.1232124,
+   "Longitude": 90.6604362
+ },
+ {
+   "SL No": 321,
+   "DTR No": "3011",
+   "DTR Name": "RAKHYASHINI BAZAR 100 kVA NEAR GARO LP SCHOOL",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 300,
+   "Latitude": 26.1205426,
+   "Longitude": 90.6539868
+ },
+ {
+   "SL No": 323,
+   "DTR No": "3057",
+   "DTR Name": "BALADMARI CHAR PT IV 63 kVA NEAR AFZALUR RAHMAN HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 185,
+   "Latitude": 26.1545484,
+   "Longitude": 90.6646584
+ },
+ {
+   "SL No": 324,
+   "DTR No": "2608",
+   "DTR Name": "MUSLIM PARA(B)",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 52,
+   "Latitude": 26.1367267,
+   "Longitude": 90.650715
+ },
+ {
+   "SL No": 325,
+   "DTR No": "2997",
+   "DTR Name": "HASILAPARA 100 kVA NEAR AL-SALAM HOSPITAL",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-KARBALA 11 KV\n",
+   "Consumer Count": 683,
+   "Latitude": 26.1800039,
+   "Longitude": 90.6071819
+ },
+ {
+   "SL No": 327,
+   "DTR No": "2994",
+   "DTR Name": "KARBALA 250 kVA NEAR BAZAR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-KARBALA 11 KV\n",
+   "Consumer Count": 77,
+   "Latitude": 26.1814017,
+   "Longitude": 90.6024283
+ },
+ {
+   "SL No": 328,
+   "DTR No": "3000",
+   "DTR Name": "HURKAKUCHI 25 kVA NEAR ZINNAT HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 153,
+   "Latitude": 26.183903,
+   "Longitude": 90.5873446
+ },
+ {
+   "SL No": 329,
+   "DTR No": "3001",
+   "DTR Name": "AMTOLA 100 kVA NEAR TARAK RABHA HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 60,
+   "Latitude": 26.1824488,
+   "Longitude": 90.5836331
+ },
+ {
+   "SL No": 330,
+   "DTR No": "2176",
+   "DTR Name": "SHILDANGA PART III",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 33,
+   "Latitude": 26.1491443,
+   "Longitude": 90.4903593
+ },
+ {
+   "SL No": 331,
+   "DTR No": "188",
+   "DTR Name": "KHARMUZA 100 KVA",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 322,
+   "Latitude": 26.1438133,
+   "Longitude": 90.4811602
+ },
+ {
+   "SL No": 332,
+   "DTR No": "154",
+   "DTR Name": "KARAIKHOWA",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 264,
+   "Latitude": 26.1336943,
+   "Longitude": 90.4767403
+ },
+ {
+   "SL No": 333,
+   "DTR No": "2199",
+   "DTR Name": "NALBARI PART I",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 82,
+   "Latitude": 26.1279943,
+   "Longitude": 90.4778491
+ },
+ {
+   "SL No": 334,
+   "DTR No": "2967",
+   "DTR Name": "SONAPUR GOBINDAPUR 25 kVA NEAR SONAPUR LP SCHOOL",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 71,
+   "Latitude": 26.1552983,
+   "Longitude": 90.5914367
+ },
+ {
+   "SL No": 335,
+   "DTR No": "2200",
+   "DTR Name": "NALBARI PART II",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 43,
+   "Latitude": 26.1267331,
+   "Longitude": 90.4806096
+ },
+ {
+   "SL No": 336,
+   "DTR No": "2201",
+   "DTR Name": "BILPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 48,
+   "Latitude": 26.1229683,
+   "Longitude": 90.474855
+ },
+ {
+   "SL No": 337,
+   "DTR No": "2203",
+   "DTR Name": "PANIKHETI PART II",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 157,
+   "Latitude": 26.120895,
+   "Longitude": 90.4691933
+ },
+ {
+   "SL No": 338,
+   "DTR No": "2205",
+   "DTR Name": "NOLONGA RESERVE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 123,
+   "Latitude": 26.1158853,
+   "Longitude": 90.4696318
+ },
+ {
+   "SL No": 339,
+   "DTR No": "2948",
+   "DTR Name": "JUNGLE BLOCK 100 kVA BHALUKDUBI BAZAR MASJID",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 193,
+   "Latitude": 26.13573,
+   "Longitude": 90.6011867
+ },
+ {
+   "SL No": 340,
+   "DTR No": "2206",
+   "DTR Name": "NOLONGA RESERVE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 114,
+   "Latitude": 26.116735,
+   "Longitude": 90.473115
+ },
+ {
+   "SL No": 341,
+   "DTR No": "2204",
+   "DTR Name": "NOLONGA MOLA MARKET",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 7,
+   "Latitude": 26.1164577,
+   "Longitude": 90.4663268
+ },
+ {
+   "SL No": 342,
+   "DTR No": "2207",
+   "DTR Name": "NOLONGA UJANPARA",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 110,
+   "Latitude": 26.1148277,
+   "Longitude": 90.4578351
+ },
+ {
+   "SL No": 343,
+   "DTR No": "117",
+   "DTR Name": "SHINGIMARI 63 KVA",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 388,
+   "Latitude": 26.1087326,
+   "Longitude": 90.456273
+ },
+ {
+   "SL No": 344,
+   "DTR No": "374",
+   "DTR Name": "Nolonga Pahar",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 62,
+   "Latitude": 26.1018127,
+   "Longitude": 90.4653113
+ },
+ {
+   "SL No": 345,
+   "DTR No": "2213",
+   "DTR Name": "THEPKAI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 59,
+   "Latitude": 26.0994699,
+   "Longitude": 90.4559605
+ },
+ {
+   "SL No": 346,
+   "DTR No": "2212",
+   "DTR Name": "THEPKAI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 133,
+   "Latitude": 26.1023318,
+   "Longitude": 90.4522541
+ },
+ {
+   "SL No": 347,
+   "DTR No": "2215",
+   "DTR Name": "NOLONGA MAJERPARA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 54,
+   "Latitude": 26.1049207,
+   "Longitude": 90.4493662
+ },
+ {
+   "SL No": 348,
+   "DTR No": "2214",
+   "DTR Name": "NOLONGA MAJERPARA",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 152,
+   "Latitude": 26.1042333,
+   "Longitude": 90.4483383
+ },
+ {
+   "SL No": 349,
+   "DTR No": "2970",
+   "DTR Name": "DANGERTARI 25 kVA NEAR SONU RABHA HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 44,
+   "Latitude": 26.1603259,
+   "Longitude": 90.5866884
+ },
+ {
+   "SL No": 350,
+   "DTR No": "2828",
+   "DTR Name": "FUTURIPARA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 0,
+   "Latitude": 26.1058803,
+   "Longitude": 90.6629397
+ },
+ {
+   "SL No": 351,
+   "DTR No": "3015",
+   "DTR Name": "FUTURIPARA 100 kVA NEAR MANDIR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 31,
+   "Latitude": 26.1052804,
+   "Longitude": 90.6658425
+ },
+ {
+   "SL No": 352,
+   "DTR No": "3106",
+   "DTR Name": "Chandan Bazar 63 kVA near Tiniali",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 1,
+   "Latitude": 26.1149779,
+   "Longitude": 90.6548281
+ },
+ {
+   "SL No": 353,
+   "DTR No": "3012",
+   "DTR Name": "CHANDAN BAZAR 25 kVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 123,
+   "Latitude": 26.1064018,
+   "Longitude": 90.6560267
+ },
+ {
+   "SL No": 354,
+   "DTR No": "3069",
+   "DTR Name": "FUTURIPARA 25 kVA NEAR BISHWANATH URANG HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 109,
+   "Latitude": 26.1037737,
+   "Longitude": 90.6549883
+ },
+ {
+   "SL No": 355,
+   "DTR No": "2731",
+   "DTR Name": "RAKHYASINI JHAR 16 kVA NEAR SUB-CENTRE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 38,
+   "Latitude": 26.1208769,
+   "Longitude": 90.6535399
+ },
+ {
+   "SL No": 356,
+   "DTR No": "3008",
+   "DTR Name": "RAKHYASHINI JHAR PT I 16 kVA NEAR KANAK ROY HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 47,
+   "Latitude": 26.1229722,
+   "Longitude": 90.6494338
+ },
+ {
+   "SL No": 357,
+   "DTR No": "3010",
+   "DTR Name": "MILONPARA 25 kVA NEAR ROMEN HAJONG HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 0,
+   "Latitude": 26.1232689,
+   "Longitude": 90.6440326
+ },
+ {
+   "SL No": 358,
+   "DTR No": "3036",
+   "DTR Name": "HELAPAKHRI 25 kVA NEAR MONOWAR HUSSAIN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 41,
+   "Latitude": 26.1338089,
+   "Longitude": 90.6535893
+ },
+ {
+   "SL No": 359,
+   "DTR No": "2647",
+   "DTR Name": "KACHARI",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BOROBAZAAR 11 KV\n",
+   "Consumer Count": 280,
+   "Latitude": 26.1839916,
+   "Longitude": 90.6318728
+ },
+ {
+   "SL No": 360,
+   "DTR No": "2644",
+   "DTR Name": "AMBARI",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BARPUKHURI 11 KV\n",
+   "Consumer Count": 259,
+   "Latitude": 26.1820633,
+   "Longitude": 90.6280871
+ },
+ {
+   "SL No": 361,
+   "DTR No": "2974",
+   "DTR Name": "MAMAKATA 25 kVA NEAR HAGURIBALA RABHA HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 21,
+   "Latitude": 26.1680446,
+   "Longitude": 90.5737686
+ },
+ {
+   "SL No": 362,
+   "DTR No": "2975",
+   "DTR Name": "MAMAKATA 25 KVA NEAR ANGANWADI CENTRE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 13,
+   "Latitude": 26.1736515,
+   "Longitude": 90.5742757
+ },
+ {
+   "SL No": 363,
+   "DTR No": "2101",
+   "DTR Name": "BARDAMAL BAZAR",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 84,
+   "Latitude": 26.1253107,
+   "Longitude": 90.5151228
+ },
+ {
+   "SL No": 364,
+   "DTR No": "2107",
+   "DTR Name": "DORONI NAMAPARA PART I",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 50,
+   "Latitude": 26.1311104,
+   "Longitude": 90.5036964
+ },
+ {
+   "SL No": 365,
+   "DTR No": "2108",
+   "DTR Name": "DORONI NAMAPARA PART II",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 50,
+   "Latitude": 26.1310275,
+   "Longitude": 90.4998253
+ },
+ {
+   "SL No": 366,
+   "DTR No": "126",
+   "DTR Name": "ROWMARI EAST",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 65,
+   "Latitude": 26.1194755,
+   "Longitude": 90.4558374
+ },
+ {
+   "SL No": 367,
+   "DTR No": "2229",
+   "DTR Name": "SONAHARA PART IV",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 76,
+   "Latitude": 26.1221533,
+   "Longitude": 90.458465
+ },
+ {
+   "SL No": 368,
+   "DTR No": "473",
+   "DTR Name": "JOYPUR 250 KVA",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 446,
+   "Latitude": 26.116409,
+   "Longitude": 90.4510381
+ },
+ {
+   "SL No": 369,
+   "DTR No": "385",
+   "DTR Name": "GORAIMARI CHUTKI NC 16 kVA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 14,
+   "Latitude": 26.1543742,
+   "Longitude": 90.5127335
+ },
+ {
+   "SL No": 370,
+   "DTR No": "130",
+   "DTR Name": "SUTKI GORAIMARI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 20,
+   "Latitude": 26.1525106,
+   "Longitude": 90.5085105
+ },
+ {
+   "SL No": 371,
+   "DTR No": "2174",
+   "DTR Name": "SHILDANGA PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 47,
+   "Latitude": 26.1520071,
+   "Longitude": 90.5032366
+ },
+ {
+   "SL No": 372,
+   "DTR No": "2175",
+   "DTR Name": "SHILDANGA PART II",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 41,
+   "Latitude": 26.1502124,
+   "Longitude": 90.4944085
+ },
+ {
+   "SL No": 373,
+   "DTR No": "2177",
+   "DTR Name": "KHARMUJA GHONAPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.1482235,
+   "Longitude": 90.488083
+ },
+ {
+   "SL No": 374,
+   "DTR No": "2178",
+   "DTR Name": "KHARMUJA GAROPARA I",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.1439619,
+   "Longitude": 90.4858182
+ },
+ {
+   "SL No": 375,
+   "DTR No": "2179",
+   "DTR Name": "KHARMUJA GAROPARA II",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.1424606,
+   "Longitude": 90.4834937
+ },
+ {
+   "SL No": 376,
+   "DTR No": "2233",
+   "DTR Name": "HARIPUR KARAIKHAWA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 69,
+   "Latitude": 26.1367268,
+   "Longitude": 90.4723595
+ },
+ {
+   "SL No": 377,
+   "DTR No": "2234",
+   "DTR Name": "HARIPUR CHAR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 67,
+   "Latitude": 26.1363889,
+   "Longitude": 90.4716723
+ },
+ {
+   "SL No": 378,
+   "DTR No": "2202",
+   "DTR Name": "PANIKHETI PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 37,
+   "Latitude": 26.1257223,
+   "Longitude": 90.4715283
+ },
+ {
+   "SL No": 379,
+   "DTR No": "2208",
+   "DTR Name": "SHINGIMARI BAZAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 9,
+   "Latitude": 26.1144562,
+   "Longitude": 90.4639406
+ },
+ {
+   "SL No": 380,
+   "DTR No": "2209",
+   "DTR Name": "SHINGIMARI BAZAR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 106,
+   "Latitude": 26.1018109,
+   "Longitude": 90.4614097
+ },
+ {
+   "SL No": 381,
+   "DTR No": "2346",
+   "DTR Name": "NOLONGA PAHARTOLI PHC",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 45,
+   "Latitude": 26.0990567,
+   "Longitude": 90.46313
+ },
+ {
+   "SL No": 382,
+   "DTR No": "2169",
+   "DTR Name": "CHUTKI GORAIMARI PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 47,
+   "Latitude": 26.156995,
+   "Longitude": 90.5101083
+ },
+ {
+   "SL No": 383,
+   "DTR No": "2170",
+   "DTR Name": "CHUTKI GORAIMARI PART II",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 16,
+   "Latitude": 26.1608423,
+   "Longitude": 90.5102435
+ },
+ {
+   "SL No": 384,
+   "DTR No": "2171",
+   "DTR Name": "CHUTKI GORAIMARI PART III",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 40,
+   "Latitude": 26.1586576,
+   "Longitude": 90.505575
+ },
+ {
+   "SL No": 385,
+   "DTR No": "2172",
+   "DTR Name": "CHUTKI GORAIMARI PART IV",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 19,
+   "Latitude": 26.1607257,
+   "Longitude": 90.5035169
+ },
+ {
+   "SL No": 386,
+   "DTR No": "2228",
+   "DTR Name": "SONAHARA PART III",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 45,
+   "Latitude": 26.1194919,
+   "Longitude": 90.4602039
+ },
+ {
+   "SL No": 387,
+   "DTR No": "2227",
+   "DTR Name": "SONAHARA PART II",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.1252043,
+   "Longitude": 90.4632762
+ },
+ {
+   "SL No": 388,
+   "DTR No": "2226",
+   "DTR Name": "SONAHARA PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 51,
+   "Latitude": 26.1287543,
+   "Longitude": 90.4679879
+ },
+ {
+   "SL No": 389,
+   "DTR No": "2230",
+   "DTR Name": "SONAHARA PART V",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 162,
+   "Latitude": 26.1293703,
+   "Longitude": 90.4645687
+ },
+ {
+   "SL No": 390,
+   "DTR No": "148",
+   "DTR Name": "SONAHARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 17,
+   "Latitude": 26.1268283,
+   "Longitude": 90.4608707
+ },
+ {
+   "SL No": 391,
+   "DTR No": "2231",
+   "DTR Name": "ROUMARI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 11,
+   "Latitude": 26.1193233,
+   "Longitude": 90.4516223
+ },
+ {
+   "SL No": 392,
+   "DTR No": "2217",
+   "DTR Name": "JOYPUR RAMHARIR I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 91,
+   "Latitude": 26.1203793,
+   "Longitude": 90.4512699
+ },
+ {
+   "SL No": 393,
+   "DTR No": "2218",
+   "DTR Name": "JOYPUR RAMHARIR PART II",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 46,
+   "Latitude": 26.119874,
+   "Longitude": 90.4466963
+ },
+ {
+   "SL No": 394,
+   "DTR No": "2219",
+   "DTR Name": "JOYPUR BAZAR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 33,
+   "Latitude": 26.1201838,
+   "Longitude": 90.4442975
+ },
+ {
+   "SL No": 395,
+   "DTR No": "2220",
+   "DTR Name": "JOYPUR BAZAR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 161,
+   "Latitude": 26.1201965,
+   "Longitude": 90.4436895
+ },
+ {
+   "SL No": 396,
+   "DTR No": "2216",
+   "DTR Name": "JOYPUR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 98,
+   "Latitude": 26.1203374,
+   "Longitude": 90.442638
+ },
+ {
+   "SL No": 397,
+   "DTR No": "2221",
+   "DTR Name": "JOYPUR KALIBARI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 23,
+   "Latitude": 26.1143747,
+   "Longitude": 90.4459993
+ },
+ {
+   "SL No": 398,
+   "DTR No": "2222",
+   "DTR Name": "KALIBARI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 13,
+   "Latitude": 26.1151167,
+   "Longitude": 90.44095
+ },
+ {
+   "SL No": 399,
+   "DTR No": "2225",
+   "DTR Name": "RAKHALDUBI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 104,
+   "Latitude": 26.1128613,
+   "Longitude": 90.4359606
+ },
+ {
+   "SL No": 400,
+   "DTR No": "2224",
+   "DTR Name": "RAKHALDUBI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 155,
+   "Latitude": 26.1163226,
+   "Longitude": 90.4376677
+ },
+ {
+   "SL No": 401,
+   "DTR No": "2223",
+   "DTR Name": "KALIBARI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 25,
+   "Latitude": 26.1165022,
+   "Longitude": 90.4405132
+ },
+ {
+   "SL No": 402,
+   "DTR No": "145",
+   "DTR Name": "KHARMUZA 63 KVA",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 189,
+   "Latitude": 26.150554,
+   "Longitude": 90.4835109
+ },
+ {
+   "SL No": 403,
+   "DTR No": "2182",
+   "DTR Name": "KATLAMARI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 92,
+   "Latitude": 26.1621436,
+   "Longitude": 90.487496
+ },
+ {
+   "SL No": 404,
+   "DTR No": "2183",
+   "DTR Name": "DAKHIN KATLAMARI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 47,
+   "Latitude": 26.1634,
+   "Longitude": 90.49086
+ },
+ {
+   "SL No": 405,
+   "DTR No": "2186",
+   "DTR Name": "BORBHITA MAJERPARA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 67,
+   "Latitude": 26.1707276,
+   "Longitude": 90.4950399
+ },
+ {
+   "SL No": 406,
+   "DTR No": "2185",
+   "DTR Name": "BORBHITA MUNSHIRBHITA",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 58,
+   "Latitude": 26.1806567,
+   "Longitude": 90.5018476
+ },
+ {
+   "SL No": 407,
+   "DTR No": "2187",
+   "DTR Name": "SATRAPUR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 28,
+   "Latitude": 26.1853828,
+   "Longitude": 90.5071743
+ },
+ {
+   "SL No": 408,
+   "DTR No": "2184",
+   "DTR Name": "BORBHITA  KALDANGA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 38,
+   "Latitude": 26.1820317,
+   "Longitude": 90.5034533
+ },
+ {
+   "SL No": 409,
+   "DTR No": "2189",
+   "DTR Name": "SATRAPUR GAROPARA II",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 12,
+   "Latitude": 26.1854066,
+   "Longitude": 90.5071616
+ },
+ {
+   "SL No": 410,
+   "DTR No": "2188",
+   "DTR Name": "SATRAPUR GAROPARA I",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 5,
+   "Latitude": 26.1863843,
+   "Longitude": 90.5100563
+ },
+ {
+   "SL No": 411,
+   "DTR No": "2190",
+   "DTR Name": "PAGLATAK PALCHIGHOPA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 31,
+   "Latitude": 26.1908668,
+   "Longitude": 90.5175107
+ },
+ {
+   "SL No": 412,
+   "DTR No": "2191",
+   "DTR Name": "KHUTAMARI RABHAPARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 15,
+   "Latitude": 26.1893107,
+   "Longitude": 90.5236945
+ },
+ {
+   "SL No": 413,
+   "DTR No": "2192",
+   "DTR Name": "KHUTAMARI",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 231,
+   "Latitude": 26.1946531,
+   "Longitude": 90.5349978
+ },
+ {
+   "SL No": 414,
+   "DTR No": "2193",
+   "DTR Name": "KUMRI BAZAR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 184,
+   "Latitude": 26.1930001,
+   "Longitude": 90.5480951
+ },
+ {
+   "SL No": 415,
+   "DTR No": "2194",
+   "DTR Name": "KUMRI PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 90,
+   "Latitude": 26.1931167,
+   "Longitude": 90.5492397
+ },
+ {
+   "SL No": 416,
+   "DTR No": "2195",
+   "DTR Name": "KUMRI PART II",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 181,
+   "Latitude": 26.1951953,
+   "Longitude": 90.5537365
+ },
+ {
+   "SL No": 417,
+   "DTR No": "2196",
+   "DTR Name": "KHARBOJA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 60,
+   "Latitude": 26.1858267,
+   "Longitude": 90.5590967
+ },
+ {
+   "SL No": 419,
+   "DTR No": "2354",
+   "DTR Name": "KOKIRA PT I",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 29,
+   "Latitude": 26.0691521,
+   "Longitude": 90.5986603
+ },
+ {
+   "SL No": 420,
+   "DTR No": "2356",
+   "DTR Name": "KOKIRA PT I",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 37,
+   "Latitude": 26.0588655,
+   "Longitude": 90.5885135
+ },
+ {
+   "SL No": 421,
+   "DTR No": "2357",
+   "DTR Name": "KOKIRA, GAROPARA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 72,
+   "Latitude": 26.0600512,
+   "Longitude": 90.5809481
+ },
+ {
+   "SL No": 422,
+   "DTR No": "2355",
+   "DTR Name": "KOKIRA, PT II",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 28,
+   "Latitude": 26.0586051,
+   "Longitude": 90.5893144
+ },
+ {
+   "SL No": 423,
+   "DTR No": "2358",
+   "DTR Name": "KOKIRA, BANGAL PARA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 62,
+   "Latitude": 26.0529294,
+   "Longitude": 90.5867225
+ },
+ {
+   "SL No": 424,
+   "DTR No": "2359",
+   "DTR Name": "KOKIRA, BANGAL PARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 63,
+   "Latitude": 26.0504934,
+   "Longitude": 90.5846942
+ },
+ {
+   "SL No": 425,
+   "DTR No": "2360",
+   "DTR Name": "TIAPARA (Near Bazar)",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 97,
+   "Latitude": 26.0448748,
+   "Longitude": 90.5791137
+ },
+ {
+   "SL No": 426,
+   "DTR No": "2362",
+   "DTR Name": "PAGLIJHORA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 108,
+   "Latitude": 26.0410939,
+   "Longitude": 90.5787294
+ },
+ {
+   "SL No": 427,
+   "DTR No": "2361",
+   "DTR Name": "TIAPARA (Near Domosora Village)",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 1,
+   "Latitude": 26.0495741,
+   "Longitude": 90.5781542
+ },
+ {
+   "SL No": 428,
+   "DTR No": "380",
+   "DTR Name": "SAHARI NAYAPARA 16 kVA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 66,
+   "Latitude": 26.1441232,
+   "Longitude": 90.4992038
+ },
+ {
+   "SL No": 429,
+   "DTR No": "3123",
+   "DTR Name": "CHAHARI NAYAPARA NEAR SHIV MANDIR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 16,
+   "Latitude": 26.1446305,
+   "Longitude": 90.5014294
+ },
+ {
+   "SL No": 430,
+   "DTR No": "2089",
+   "DTR Name": "CHUTKI NC",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.1522654,
+   "Longitude": 90.5194327
+ },
+ {
+   "SL No": 431,
+   "DTR No": "2090",
+   "DTR Name": "CHUTKI NC",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 33,
+   "Latitude": 26.1512791,
+   "Longitude": 90.5169522
+ },
+ {
+   "SL No": 432,
+   "DTR No": "2091",
+   "DTR Name": "CHUTKI SAL FOREST",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 29,
+   "Latitude": 26.1481166,
+   "Longitude": 90.5184809
+ },
+ {
+   "SL No": 433,
+   "DTR No": "2095",
+   "DTR Name": "CHUTKI BANGAL PARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.1415909,
+   "Longitude": 90.5121866
+ },
+ {
+   "SL No": 434,
+   "DTR No": "2096",
+   "DTR Name": "CHAHARI UJANPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 41,
+   "Latitude": 26.1378692,
+   "Longitude": 90.5107724
+ },
+ {
+   "SL No": 435,
+   "DTR No": "2097",
+   "DTR Name": "BORJULI 1",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 53,
+   "Latitude": 26.13762,
+   "Longitude": 90.519385
+ },
+ {
+   "SL No": 436,
+   "DTR No": "2098",
+   "DTR Name": "BORCHONG",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 11,
+   "Latitude": 26.1376199,
+   "Longitude": 90.5193949
+ },
+ {
+   "SL No": 437,
+   "DTR No": "219",
+   "DTR Name": "MATIA GAROPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 31,
+   "Latitude": 26.1343151,
+   "Longitude": 90.5244782
+ },
+ {
+   "SL No": 438,
+   "DTR No": "3124",
+   "DTR Name": "MATIA GAROPARA NEAR KEHONI MARAK HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 21,
+   "Latitude": 26.1338283,
+   "Longitude": 90.5266601
+ },
+ {
+   "SL No": 439,
+   "DTR No": "3125",
+   "DTR Name": "MATIA GAROPARA NEAR LP SCHOOL",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 18,
+   "Latitude": 26.1350117,
+   "Longitude": 90.5282805
+ },
+ {
+   "SL No": 440,
+   "DTR No": "658",
+   "DTR Name": "Garopara 25 KVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 17,
+   "Latitude": 26.139426,
+   "Longitude": 90.5312877
+ },
+ {
+   "SL No": 441,
+   "DTR No": "2100",
+   "DTR Name": "BORJULI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 11,
+   "Latitude": 26.1281262,
+   "Longitude": 90.5191448
+ },
+ {
+   "SL No": 442,
+   "DTR No": "2099",
+   "DTR Name": "BORJULI",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 24,
+   "Latitude": 26.1294251,
+   "Longitude": 90.5167504
+ },
+ {
+   "SL No": 443,
+   "DTR No": "2103",
+   "DTR Name": "BARDAMAL KHERABAKHRA -1",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.1261119,
+   "Longitude": 90.5059613
+ },
+ {
+   "SL No": 444,
+   "DTR No": "2105",
+   "DTR Name": "DORONI TILIPARA PART I",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 18,
+   "Latitude": 26.1329996,
+   "Longitude": 90.5059074
+ },
+ {
+   "SL No": 445,
+   "DTR No": "104",
+   "DTR Name": "CHAHARIA 16 KVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 119,
+   "Latitude": 26.1378454,
+   "Longitude": 90.5011079
+ },
+ {
+   "SL No": 446,
+   "DTR No": "3126",
+   "DTR Name": "CHAHARI MAJERPARA NEAR CHARIALI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 1,
+   "Latitude": 26.1364343,
+   "Longitude": 90.496544
+ },
+ {
+   "SL No": 447,
+   "DTR No": "3127",
+   "DTR Name": "CHAHARI NAMAPARA NEAR TARANIKANTA RABHA HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 11,
+   "Latitude": 26.1362985,
+   "Longitude": 90.4919607
+ },
+ {
+   "SL No": 448,
+   "DTR No": "2364",
+   "DTR Name": "SIJUKONA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.032128,
+   "Longitude": 90.5756376
+ },
+ {
+   "SL No": 449,
+   "DTR No": "2366",
+   "DTR Name": "SIJUKONA (Near Hatigaon Road)",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.027855,
+   "Longitude": 90.5720817
+ },
+ {
+   "SL No": 450,
+   "DTR No": "2368",
+   "DTR Name": "BODHAHPUR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.019765,
+   "Longitude": 90.56357
+ },
+ {
+   "SL No": 451,
+   "DTR No": "2370",
+   "DTR Name": "BODHAHPUR",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 16,
+   "Latitude": 26.0167893,
+   "Longitude": 90.5608402
+ },
+ {
+   "SL No": 452,
+   "DTR No": "2371",
+   "DTR Name": "RONGSAI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 26,
+   "Latitude": 26.013286,
+   "Longitude": 90.5582749
+ },
+ {
+   "SL No": 453,
+   "DTR No": "2372",
+   "DTR Name": "RONGSAI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 16,
+   "Latitude": 26.0101389,
+   "Longitude": 90.5559122
+ },
+ {
+   "SL No": 454,
+   "DTR No": "2375",
+   "DTR Name": "RONGSAI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 20,
+   "Latitude": 26.0079214,
+   "Longitude": 90.5471106
+ },
+ {
+   "SL No": 455,
+   "DTR No": "2374",
+   "DTR Name": "RONGSAI, TILAPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 36,
+   "Latitude": 26.0079433,
+   "Longitude": 90.5466416
+ },
+ {
+   "SL No": 456,
+   "DTR No": "2380",
+   "DTR Name": "KHUKSIPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 3,
+   "Latitude": 26.0032699,
+   "Longitude": 90.5415286
+ },
+ {
+   "SL No": 457,
+   "DTR No": "2383",
+   "DTR Name": "BARDAK (Near Hatigaon Road)",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 43,
+   "Latitude": 25.9940061,
+   "Longitude": 90.5347384
+ },
+ {
+   "SL No": 458,
+   "DTR No": "2384",
+   "DTR Name": "BARDAK (Near Nayapara Village)",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 24,
+   "Latitude": 25.9966525,
+   "Longitude": 90.5309118
+ },
+ {
+   "SL No": 459,
+   "DTR No": "2666",
+   "DTR Name": "Bardak (Near Bardak Bazar)",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 25.9918264,
+   "Longitude": 90.5309284
+ },
+ {
+   "SL No": 460,
+   "DTR No": "2386",
+   "DTR Name": "MEGHADAM",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 29,
+   "Latitude": 25.9913407,
+   "Longitude": 90.5231264
+ },
+ {
+   "SL No": 461,
+   "DTR No": "3128",
+   "DTR Name": "CHUTKI KAMARPARA NEAR LP SCHOOL ",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 30,
+   "Latitude": 26.1598405,
+   "Longitude": 90.5206506
+ },
+ {
+   "SL No": 462,
+   "DTR No": "3129",
+   "DTR Name": "CHUTKI KAMARPARA NEAR LAKHI MANDIR ",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.1625328,
+   "Longitude": 90.5204875
+ },
+ {
+   "SL No": 463,
+   "DTR No": "2388",
+   "DTR Name": "MEGHADAM",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 25.99396,
+   "Longitude": 90.5201817
+ },
+ {
+   "SL No": 464,
+   "DTR No": "2387",
+   "DTR Name": "MEGHADAM",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 25,
+   "Latitude": 25.9982112,
+   "Longitude": 90.5214427
+ },
+ {
+   "SL No": 465,
+   "DTR No": "3130",
+   "DTR Name": "CHUTKI KAMARPARA NEAR CHITEN RABHA HOUSE ",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 28,
+   "Latitude": 26.164906,
+   "Longitude": 90.5174256
+ },
+ {
+   "SL No": 466,
+   "DTR No": "2391",
+   "DTR Name": "HATIGAON, 3 NO RABHA PARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 48,
+   "Latitude": 25.9929486,
+   "Longitude": 90.5144116
+ },
+ {
+   "SL No": 467,
+   "DTR No": "3089",
+   "DTR Name": "HATIGAON 25 kva (Near Pubpara Village)",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 49,
+   "Latitude": 25.9873918,
+   "Longitude": 90.522551
+ },
+ {
+   "SL No": 468,
+   "DTR No": "2390",
+   "DTR Name": "HATIGAON (Near School)",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 70,
+   "Latitude": 25.9893488,
+   "Longitude": 90.5183972
+ },
+ {
+   "SL No": 469,
+   "DTR No": "2136",
+   "DTR Name": "DARIDURI BAZAR PART I",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 31,
+   "Latitude": 26.1650733,
+   "Longitude": 90.5274817
+ },
+ {
+   "SL No": 470,
+   "DTR No": "2392",
+   "DTR Name": "HATIGAON BAZAR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 74,
+   "Latitude": 25.9866769,
+   "Longitude": 90.5171686
+ },
+ {
+   "SL No": 471,
+   "DTR No": "2140",
+   "DTR Name": "DARIDURI NAMAPARA I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 54,
+   "Latitude": 26.1698733,
+   "Longitude": 90.5221969
+ },
+ {
+   "SL No": 472,
+   "DTR No": "2393",
+   "DTR Name": "HATIGAON, BELPARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 30,
+   "Latitude": 25.98591,
+   "Longitude": 90.5136689
+ },
+ {
+   "SL No": 473,
+   "DTR No": "2141",
+   "DTR Name": "DARIDURI NAMAPARA II",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 26,
+   "Latitude": 26.1737183,
+   "Longitude": 90.5220883
+ },
+ {
+   "SL No": 474,
+   "DTR No": "2142",
+   "DTR Name": "DARIDURI NAMAPARA III",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 25,
+   "Latitude": 26.1713933,
+   "Longitude": 90.5257967
+ },
+ {
+   "SL No": 475,
+   "DTR No": "2143",
+   "DTR Name": "DARIDURI TILAPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.176295,
+   "Longitude": 90.5293239
+ },
+ {
+   "SL No": 476,
+   "DTR No": "2395",
+   "DTR Name": "BARALI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 43,
+   "Latitude": 25.97782,
+   "Longitude": 90.5285933
+ },
+ {
+   "SL No": 477,
+   "DTR No": "2397",
+   "DTR Name": "BARALI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 62,
+   "Latitude": 25.973324,
+   "Longitude": 90.5255887
+ },
+ {
+   "SL No": 478,
+   "DTR No": "2144",
+   "DTR Name": "DARIDURI TILAPARA UJANPARA I",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 77,
+   "Latitude": 26.167385,
+   "Longitude": 90.5287233
+ },
+ {
+   "SL No": 479,
+   "DTR No": "2394",
+   "DTR Name": "GENDABARI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 69,
+   "Latitude": 25.9758148,
+   "Longitude": 90.5384936
+ },
+ {
+   "SL No": 480,
+   "DTR No": "2145",
+   "DTR Name": "DARIDURI TILAPARA UJANPARA II",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 39,
+   "Latitude": 26.1774031,
+   "Longitude": 90.5392918
+ },
+ {
+   "SL No": 481,
+   "DTR No": "2396",
+   "DTR Name": "SIKISIM",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 53,
+   "Latitude": 25.9866277,
+   "Longitude": 90.5427989
+ },
+ {
+   "SL No": 482,
+   "DTR No": "2146",
+   "DTR Name": "DARIDURI TILAPARA UJANPARA III",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 112,
+   "Latitude": 26.1852923,
+   "Longitude": 90.543007
+ },
+ {
+   "SL No": 483,
+   "DTR No": "2385",
+   "DTR Name": "SIKISM (Near Church)",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 23,
+   "Latitude": 25.9890969,
+   "Longitude": 90.5401176
+ },
+ {
+   "SL No": 484,
+   "DTR No": "387",
+   "DTR Name": "TILAPARA 16 kVA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 33,
+   "Latitude": 26.1734401,
+   "Longitude": 90.5338305
+ },
+ {
+   "SL No": 485,
+   "DTR No": "3131",
+   "DTR Name": "GENDABARI NEAR LP SCHOOL ",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 42,
+   "Latitude": 25.9757312,
+   "Longitude": 90.5376531
+ },
+ {
+   "SL No": 486,
+   "DTR No": "2147",
+   "DTR Name": "TARAIBARI PART 1",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.1662919,
+   "Longitude": 90.5332063
+ },
+ {
+   "SL No": 487,
+   "DTR No": "2149",
+   "DTR Name": "TARAIBARI PART II",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 30,
+   "Latitude": 26.166218,
+   "Longitude": 90.5365685
+ },
+ {
+   "SL No": 488,
+   "DTR No": "2378",
+   "DTR Name": "BAIJURI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 5,
+   "Latitude": 26.0039579,
+   "Longitude": 90.5360082
+ },
+ {
+   "SL No": 489,
+   "DTR No": "2373",
+   "DTR Name": "RONGSAI, SALPARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 37,
+   "Latitude": 26.0090205,
+   "Longitude": 90.5538689
+ },
+ {
+   "SL No": 490,
+   "DTR No": "2137",
+   "DTR Name": "DARIDURI BAZAR PART II",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 72,
+   "Latitude": 26.1591188,
+   "Longitude": 90.5301323
+ },
+ {
+   "SL No": 491,
+   "DTR No": "2148",
+   "DTR Name": "DARIDURI ALUKJHAR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 17,
+   "Latitude": 26.1521877,
+   "Longitude": 90.532467
+ },
+ {
+   "SL No": 492,
+   "DTR No": "2367",
+   "DTR Name": "BODHAHPUR , MAGURMARI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 41,
+   "Latitude": 26.0252091,
+   "Longitude": 90.5701091
+ },
+ {
+   "SL No": 493,
+   "DTR No": "2150",
+   "DTR Name": "TARAIBARI PART III",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 35,
+   "Latitude": 26.1589133,
+   "Longitude": 90.5361733
+ },
+ {
+   "SL No": 494,
+   "DTR No": "162",
+   "DTR Name": "TARAIBARI ",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 9,
+   "Latitude": 26.1614361,
+   "Longitude": 90.5374827
+ },
+ {
+   "SL No": 495,
+   "DTR No": "2151",
+   "DTR Name": "MAKRI PART I",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 38,
+   "Latitude": 26.15916,
+   "Longitude": 90.5442467
+ },
+ {
+   "SL No": 496,
+   "DTR No": "3132",
+   "DTR Name": "TARAIBARI SALDHANDA NEAR LOHIT RABHA HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 14,
+   "Latitude": 26.160889,
+   "Longitude": 90.5429594
+ },
+ {
+   "SL No": 497,
+   "DTR No": "2152",
+   "DTR Name": "MAKRI PART II",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 39,
+   "Latitude": 26.1567867,
+   "Longitude": 90.54584
+ },
+ {
+   "SL No": 498,
+   "DTR No": "2158",
+   "DTR Name": "BORO MAKRI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 11,
+   "Latitude": 26.1674133,
+   "Longitude": 90.5452284
+ },
+ {
+   "SL No": 499,
+   "DTR No": "3133",
+   "DTR Name": "BORO MAKRI NEAR BERA RAM RABHA HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 5,
+   "Latitude": 26.1692411,
+   "Longitude": 90.547313
+ },
+ {
+   "SL No": 500,
+   "DTR No": "3134",
+   "DTR Name": "KHARBOZA GAROPARA (APTF LAST DTR)",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 12,
+   "Latitude": 26.1784793,
+   "Longitude": 90.5541025
+ },
+ {
+   "SL No": 501,
+   "DTR No": "2153",
+   "DTR Name": "MAKRI SHIV MANDIR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 109,
+   "Latitude": 26.1576426,
+   "Longitude": 90.5515996
+ },
+ {
+   "SL No": 502,
+   "DTR No": "2154",
+   "DTR Name": "DAKURBHITA PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 62,
+   "Latitude": 26.1602335,
+   "Longitude": 90.5534433
+ },
+ {
+   "SL No": 503,
+   "DTR No": "2155",
+   "DTR Name": "DAKURBHITA PART II",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.1635055,
+   "Longitude": 90.5569895
+ },
+ {
+   "SL No": 504,
+   "DTR No": "2156",
+   "DTR Name": "DAKURBHITA PART III",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 10,
+   "Latitude": 26.1622519,
+   "Longitude": 90.5585215
+ },
+ {
+   "SL No": 505,
+   "DTR No": "2157",
+   "DTR Name": "DAKURBHITA RABHAPARA PART IV",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.1600132,
+   "Longitude": 90.5595899
+ },
+ {
+   "SL No": 506,
+   "DTR No": "105",
+   "DTR Name": "KHARMUZA",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 102,
+   "Latitude": 26.1478467,
+   "Longitude": 90.4742533
+ },
+ {
+   "SL No": 507,
+   "DTR No": "2161",
+   "DTR Name": "BAMUNGHOPA PART II",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 62,
+   "Latitude": 26.1533597,
+   "Longitude": 90.5498268
+ },
+ {
+   "SL No": 508,
+   "DTR No": "2160",
+   "DTR Name": "BAMUNGHOPA PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 15,
+   "Latitude": 26.1535268,
+   "Longitude": 90.5486387
+ },
+ {
+   "SL No": 509,
+   "DTR No": "2162",
+   "DTR Name": "BAMUNGHOPA PART III",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 21,
+   "Latitude": 26.1471375,
+   "Longitude": 90.556545
+ },
+ {
+   "SL No": 510,
+   "DTR No": "2163",
+   "DTR Name": "BAMUNGHOPA PART IV",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 24,
+   "Latitude": 26.1452321,
+   "Longitude": 90.5604659
+ },
+ {
+   "SL No": 511,
+   "DTR No": "2164",
+   "DTR Name": "BAMUNGHOPA PART V",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 40,
+   "Latitude": 26.1486121,
+   "Longitude": 90.5508731
+ },
+ {
+   "SL No": 512,
+   "DTR No": "128",
+   "DTR Name": "BAMUN GHOPA PT IIIIII",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 29,
+   "Latitude": 26.1467451,
+   "Longitude": 90.5518815
+ },
+ {
+   "SL No": 513,
+   "DTR No": "2165",
+   "DTR Name": "BANKANDA PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 24,
+   "Latitude": 26.1440632,
+   "Longitude": 90.5430651
+ },
+ {
+   "SL No": 514,
+   "DTR No": "2166",
+   "DTR Name": "BANKANDA PART II",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 16,
+   "Latitude": 26.1422676,
+   "Longitude": 90.5429182
+ },
+ {
+   "SL No": 515,
+   "DTR No": "2167",
+   "DTR Name": "BANKANDA PART III",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 21,
+   "Latitude": 26.1380011,
+   "Longitude": 90.5423085
+ },
+ {
+   "SL No": 516,
+   "DTR No": "2109",
+   "DTR Name": "DORONI NAMAPARA PART III",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 68,
+   "Latitude": 26.1299958,
+   "Longitude": 90.4941477
+ },
+ {
+   "SL No": 517,
+   "DTR No": "2110",
+   "DTR Name": "DORONI NAMAPARA PART IV",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 52,
+   "Latitude": 26.1276457,
+   "Longitude": 90.4940031
+ },
+ {
+   "SL No": 518,
+   "DTR No": "2106",
+   "DTR Name": "DORONI TILIPARA PART II",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 47,
+   "Latitude": 26.1253065,
+   "Longitude": 90.4961592
+ },
+ {
+   "SL No": 519,
+   "DTR No": "2111",
+   "DTR Name": "NOLONGA RAVAPARA I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 57,
+   "Latitude": 26.1155063,
+   "Longitude": 90.4831624
+ },
+ {
+   "SL No": 520,
+   "DTR No": "2112",
+   "DTR Name": "NOLONGA RAVAPARA II",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 35,
+   "Latitude": 26.1132825,
+   "Longitude": 90.4814216
+ },
+ {
+   "SL No": 521,
+   "DTR No": "2102",
+   "DTR Name": "BARDAMAL PART",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 46,
+   "Latitude": 26.1243176,
+   "Longitude": 90.5144935
+ },
+ {
+   "SL No": 522,
+   "DTR No": "2104",
+   "DTR Name": "BARDAMAL KHERABAKHRA II",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 61,
+   "Latitude": 26.1210269,
+   "Longitude": 90.5098477
+ },
+ {
+   "SL No": 523,
+   "DTR No": "2113",
+   "DTR Name": "AMGURI PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.1146307,
+   "Longitude": 90.5128179
+ },
+ {
+   "SL No": 524,
+   "DTR No": "2114",
+   "DTR Name": "AMGURI PART II",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 25,
+   "Latitude": 26.1151232,
+   "Longitude": 90.5098141
+ },
+ {
+   "SL No": 525,
+   "DTR No": "2115",
+   "DTR Name": "AMGURI PART III",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.1180275,
+   "Longitude": 90.5027621
+ },
+ {
+   "SL No": 526,
+   "DTR No": "311",
+   "DTR Name": "KAKAPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 36,
+   "Latitude": 26.1111507,
+   "Longitude": 90.5110032
+ },
+ {
+   "SL No": 527,
+   "DTR No": "3135",
+   "DTR Name": "KAKAPARA 16 kVA NEAR MONIBAR RABHA HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 59,
+   "Latitude": 26.1106568,
+   "Longitude": 90.5044148
+ },
+ {
+   "SL No": 528,
+   "DTR No": "2116",
+   "DTR Name": "GHENGAMARI PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.1066121,
+   "Longitude": 90.5101474
+ },
+ {
+   "SL No": 529,
+   "DTR No": "2117",
+   "DTR Name": "GHENGAMARI PART II",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 43,
+   "Latitude": 26.1064425,
+   "Longitude": 90.5081257
+ },
+ {
+   "SL No": 530,
+   "DTR No": "2118",
+   "DTR Name": "GHENGAMARI PART III",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.1023384,
+   "Longitude": 90.5088427
+ },
+ {
+   "SL No": 531,
+   "DTR No": "2119",
+   "DTR Name": "KATHOLGURI PART I",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 42,
+   "Latitude": 26.1137005,
+   "Longitude": 90.4956834
+ },
+ {
+   "SL No": 532,
+   "DTR No": "2120",
+   "DTR Name": "KATHOLGURI PART 11",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 26,
+   "Latitude": 26.1133037,
+   "Longitude": 90.4924067
+ },
+ {
+   "SL No": 533,
+   "DTR No": "2121",
+   "DTR Name": "KATHOLGURI PART III",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 13,
+   "Latitude": 26.1078134,
+   "Longitude": 90.4944753
+ },
+ {
+   "SL No": 534,
+   "DTR No": "2122",
+   "DTR Name": "KATHOLGURI PART IV",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 20,
+   "Latitude": 26.1076488,
+   "Longitude": 90.4973469
+ },
+ {
+   "SL No": 535,
+   "DTR No": "2123",
+   "DTR Name": "BAIRONG PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 38,
+   "Latitude": 26.098449,
+   "Longitude": 90.5019866
+ },
+ {
+   "SL No": 536,
+   "DTR No": "2124",
+   "DTR Name": "BAIRONG PART II",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 23,
+   "Latitude": 26.097689,
+   "Longitude": 90.5021153
+ },
+ {
+   "SL No": 537,
+   "DTR No": "2457",
+   "DTR Name": "BHOISHKHULI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 14,
+   "Latitude": 26.1026448,
+   "Longitude": 90.4971248
+ },
+ {
+   "SL No": 538,
+   "DTR No": "2458",
+   "DTR Name": "BHOISHKHULI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1026925,
+   "Longitude": 90.4971929
+ },
+ {
+   "SL No": 539,
+   "DTR No": "2125",
+   "DTR Name": "CHOTODAMAL I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 52,
+   "Latitude": 26.0999992,
+   "Longitude": 90.4954469
+ },
+ {
+   "SL No": 540,
+   "DTR No": "2126",
+   "DTR Name": "CHOTODAMAL II",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 31,
+   "Latitude": 26.101047,
+   "Longitude": 90.4931972
+ },
+ {
+   "SL No": 541,
+   "DTR No": "596",
+   "DTR Name": "DAMPARA 16 KVA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 1,
+   "Latitude": 26.0924389,
+   "Longitude": 90.4894048
+ },
+ {
+   "SL No": 542,
+   "DTR No": "661",
+   "DTR Name": "Nalonga Pahar Garopara 63 KVA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 66,
+   "Latitude": 26.0939611,
+   "Longitude": 90.4852024
+ },
+ {
+   "SL No": 543,
+   "DTR No": "2129",
+   "DTR Name": "BORJHORA PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 3,
+   "Latitude": 26.0884157,
+   "Longitude": 90.4873093
+ },
+ {
+   "SL No": 544,
+   "DTR No": "2130",
+   "DTR Name": "BORJHORA PART II",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 7,
+   "Latitude": 26.0891283,
+   "Longitude": 90.4911899
+ },
+ {
+   "SL No": 546,
+   "DTR No": "2131",
+   "DTR Name": "BORJHORA PART III",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 19,
+   "Latitude": 26.0859892,
+   "Longitude": 90.4878376
+ },
+ {
+   "SL No": 547,
+   "DTR No": "2132",
+   "DTR Name": "BORJHORA PART IV",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 20,
+   "Latitude": 26.0906538,
+   "Longitude": 90.474414
+ },
+ {
+   "SL No": 548,
+   "DTR No": "2133",
+   "DTR Name": "BORJHORA PART V",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 20,
+   "Latitude": 26.0904565,
+   "Longitude": 90.4743906
+ },
+ {
+   "SL No": 549,
+   "DTR No": "2134",
+   "DTR Name": "BORJHORA PART VI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 21,
+   "Latitude": 26.0844767,
+   "Longitude": 90.4787883
+ },
+ {
+   "SL No": 550,
+   "DTR No": "2135",
+   "DTR Name": "BORJHORA PART VII",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 1,
+   "Latitude": 26.0816972,
+   "Longitude": 90.4814376
+ },
+ {
+   "SL No": 551,
+   "DTR No": "3068",
+   "DTR Name": "MORIOM NAGAR 63 kVA NEAR MOTLEB KHAN HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 7,
+   "Latitude": 26.1443546,
+   "Longitude": 90.6187286
+ },
+ {
+   "SL No": 552,
+   "DTR No": "3065",
+   "DTR Name": "MORIOM NAGAR 100 kVA NEAR SHIV MANDIR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 197,
+   "Latitude": 26.1426706,
+   "Longitude": 90.6243708
+ },
+ {
+   "SL No": 553,
+   "DTR No": "2674",
+   "DTR Name": "MORIOM NAGAR KABARSTAN",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 184,
+   "Latitude": 26.1426135,
+   "Longitude": 90.63002
+ },
+ {
+   "SL No": 554,
+   "DTR No": "2673",
+   "DTR Name": "MORIOM NAGAR  BHANGABASTI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 126,
+   "Latitude": 26.1409234,
+   "Longitude": 90.6313441
+ },
+ {
+   "SL No": 555,
+   "DTR No": "3044",
+   "DTR Name": "EAST MORIOM NAGAR 100 kVA NEAR JOHIRUL ISLAM HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 176,
+   "Latitude": 26.1419477,
+   "Longitude": 90.6345827
+ },
+ {
+   "SL No": 556,
+   "DTR No": "3046",
+   "DTR Name": "MORIOM NAGAR BHANGA BASTI 63 kVA NEAR HAZARAT ALI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 25,
+   "Latitude": 26.1380694,
+   "Longitude": 90.635254
+ },
+ {
+   "SL No": 557,
+   "DTR No": "3064",
+   "DTR Name": "HELAPAKHRI MESPARA 63 kVA NEAR MADRASSA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.1394737,
+   "Longitude": 90.6436895
+ },
+ {
+   "SL No": 558,
+   "DTR No": "3038",
+   "DTR Name": "GAROPARA 25 kVA NEAR RUBBER BAGAN",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 68,
+   "Latitude": 26.1377493,
+   "Longitude": 90.644814
+ },
+ {
+   "SL No": 559,
+   "DTR No": "3042",
+   "DTR Name": "HELAPAKHRI 25 kVA NEAR MOKTAR ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 86,
+   "Latitude": 26.1362587,
+   "Longitude": 90.6469654
+ },
+ {
+   "SL No": 560,
+   "DTR No": "2664",
+   "DTR Name": "MILON NAGAR SANTIPUR",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 109,
+   "Latitude": 26.1568664,
+   "Longitude": 90.6159638
+ },
+ {
+   "SL No": 561,
+   "DTR No": "2639",
+   "DTR Name": "MILON NAGAR (A)",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 119,
+   "Latitude": 26.1578633,
+   "Longitude": 90.6147865
+ },
+ {
+   "SL No": 562,
+   "DTR No": "2640",
+   "DTR Name": "MILON NAGAR (B)",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 136,
+   "Latitude": 26.157844,
+   "Longitude": 90.6130837
+ },
+ {
+   "SL No": 563,
+   "DTR No": "A01S",
+   "DTR Name": "1-NO COLONI",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-TILAPARA 11 KV\n",
+   "Consumer Count": 346,
+   "Latitude": 26.1781915,
+   "Longitude": 90.6224766
+ },
+ {
+   "SL No": 564,
+   "DTR No": "2649",
+   "DTR Name": "BHATIPARA PUKHURI",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BOROBAZAAR 11 KV\n",
+   "Consumer Count": 148,
+   "Latitude": 26.1803806,
+   "Longitude": 90.6243897
+ },
+ {
+   "SL No": 565,
+   "DTR No": "A02D",
+   "DTR Name": "BARA BAZER RIVER SIDE",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-BOROBAZAAR 11 KV\n",
+   "Consumer Count": 369,
+   "Latitude": 26.1844403,
+   "Longitude": 90.6253901
+ },
+ {
+   "SL No": 566,
+   "DTR No": "2550",
+   "DTR Name": "RANGAGORA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 3,
+   "Latitude": 26.1574387,
+   "Longitude": 90.5808233
+ },
+ {
+   "SL No": 567,
+   "DTR No": "2552",
+   "DTR Name": "MAMAKATA, HURKAKUSI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 25,
+   "Latitude": 26.1776783,
+   "Longitude": 90.5727269
+ },
+ {
+   "SL No": 568,
+   "DTR No": "2553",
+   "DTR Name": "MAMAKATA, HURKAKUSI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 26,
+   "Latitude": 26.183147,
+   "Longitude": 90.5779094
+ },
+ {
+   "SL No": 569,
+   "DTR No": "3007",
+   "DTR Name": "HELAPAKHRI 63 kVA NEAR ATOWAR RAHMAN HOUSE",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 134,
+   "Latitude": 26.1375022,
+   "Longitude": 90.6537788
+ },
+ {
+   "SL No": 570,
+   "DTR No": "3031",
+   "DTR Name": "RAKHYASHINI GAROPARA PT I 25 kVA NEAR SHORBESH ALI HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 51,
+   "Latitude": 26.1242614,
+   "Longitude": 90.6565491
+ },
+ {
+   "SL No": 571,
+   "DTR No": "3009",
+   "DTR Name": "RAKHYASHINI JHAR PT II 16 kVA NEAR DONERSHA KOCH HOUSE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 0,
+   "Latitude": 26.1214413,
+   "Longitude": 90.6504842
+ },
+ {
+   "SL No": 572,
+   "DTR No": "3071",
+   "DTR Name": "SHONAJULI 25 kVA NEAR SHUKUMAR ROY HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 23,
+   "Latitude": 26.1123159,
+   "Longitude": 90.646022
+ },
+ {
+   "SL No": 573,
+   "DTR No": "3025",
+   "DTR Name": "RAKHYASHINI GAROPARA PT II 63 kVA NEAR SHUKUR ALI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 29,
+   "Latitude": 26.1189733,
+   "Longitude": 90.6621317
+ },
+ {
+   "SL No": 574,
+   "DTR No": "3023",
+   "DTR Name": "RAKHYASHINI GAROPARA PT II 63 kVA NEAR ATOWAR ALI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 3,
+   "Latitude": 26.1180342,
+   "Longitude": 90.6596617
+ },
+ {
+   "SL No": 575,
+   "DTR No": "3030",
+   "DTR Name": "RAKHYASHINI PAHARTOLI 25 kVA NEAR ALI HOSEN",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 3,
+   "Latitude": 26.1270499,
+   "Longitude": 90.6635066
+ },
+ {
+   "SL No": 576,
+   "DTR No": "3027",
+   "DTR Name": "RAKHYASHINI GAROPARA PT I 25 kVA NEAR MASJID",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 6,
+   "Latitude": 26.1252969,
+   "Longitude": 90.6602378
+ },
+ {
+   "SL No": 577,
+   "DTR No": "2833",
+   "DTR Name": "LEWABARI PAHARSHINGPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 67,
+   "Latitude": 26.1159967,
+   "Longitude": 90.66784
+ },
+ {
+   "SL No": 578,
+   "DTR No": "3142",
+   "DTR Name": "LEWABARI GAROPARA PT II NEAR FIELD",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 72,
+   "Latitude": 26.1189827,
+   "Longitude": 90.6711924
+ },
+ {
+   "SL No": 579,
+   "DTR No": "3143",
+   "DTR Name": "LEWABARI FUTURIPARA GORA PATHAR NEAR ASIYA KHATUN HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 30,
+   "Latitude": 26.1129481,
+   "Longitude": 90.6728745
+ },
+ {
+   "SL No": 580,
+   "DTR No": "2413",
+   "DTR Name": "DALOK",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 34,
+   "Latitude": 26.0796596,
+   "Longitude": 90.5593254
+ },
+ {
+   "SL No": 581,
+   "DTR No": "2414",
+   "DTR Name": "DALOK,LALIPAHAR,",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 15,
+   "Latitude": 26.0782612,
+   "Longitude": 90.5590291
+ },
+ {
+   "SL No": 582,
+   "DTR No": "2411",
+   "DTR Name": "DALOK RAJBONSHIPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 63,
+   "Latitude": 26.0721815,
+   "Longitude": 90.5637309
+ },
+ {
+   "SL No": 583,
+   "DTR No": "2410",
+   "DTR Name": "DALEK",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 106,
+   "Latitude": 26.0697231,
+   "Longitude": 90.5657166
+ },
+ {
+   "SL No": 584,
+   "DTR No": "2416",
+   "DTR Name": "BAKTO",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 32,
+   "Latitude": 26.0760733,
+   "Longitude": 90.5647433
+ },
+ {
+   "SL No": 585,
+   "DTR No": "2415",
+   "DTR Name": "BAKTO",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 14,
+   "Latitude": 26.0795926,
+   "Longitude": 90.5713041
+ },
+ {
+   "SL No": 586,
+   "DTR No": "2412",
+   "DTR Name": "HALDIBARI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 64,
+   "Latitude": 26.0794122,
+   "Longitude": 90.561754
+ },
+ {
+   "SL No": 587,
+   "DTR No": "2408",
+   "DTR Name": "PAHARKATA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 68,
+   "Latitude": 26.081741,
+   "Longitude": 90.5725578
+ },
+ {
+   "SL No": 588,
+   "DTR No": "2405",
+   "DTR Name": "CHANDAMARI  ONKHO",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.0791895,
+   "Longitude": 90.5790388
+ },
+ {
+   "SL No": 589,
+   "DTR No": "2403",
+   "DTR Name": "CHANDAMARI GAROPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 5,
+   "Latitude": 26.0769415,
+   "Longitude": 90.5781768
+ },
+ {
+   "SL No": 590,
+   "DTR No": "3088",
+   "DTR Name": "SATBHONI Borjhora",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.074895,
+   "Longitude": 90.578406
+ },
+ {
+   "SL No": 591,
+   "DTR No": "3087",
+   "DTR Name": "SATBHONI Near Kokira Road",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 1,
+   "Latitude": 26.0716764,
+   "Longitude": 90.5835657
+ },
+ {
+   "SL No": 592,
+   "DTR No": "2401",
+   "DTR Name": "SATBHONI Near LP School",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 22,
+   "Latitude": 26.0696216,
+   "Longitude": 90.5842172
+ },
+ {
+   "SL No": 593,
+   "DTR No": "619",
+   "DTR Name": "Baduasara Garopara 25 KVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.0693501,
+   "Longitude": 90.5879721
+ },
+ {
+   "SL No": 594,
+   "DTR No": "2407",
+   "DTR Name": "CHANDAMARI , MAJERPARA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 258,
+   "Latitude": 26.0765773,
+   "Longitude": 90.5886416
+ },
+ {
+   "SL No": 595,
+   "DTR No": "2406",
+   "DTR Name": "CHANDAMARI , KUSHBARI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 145,
+   "Latitude": 26.0777369,
+   "Longitude": 90.5857822
+ },
+ {
+   "SL No": 596,
+   "DTR No": "3041",
+   "DTR Name": "HELAPAKHRI 100 kVA NEAR LP SCHOOL",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 217,
+   "Latitude": 26.1468719,
+   "Longitude": 90.6490386
+ },
+ {
+   "SL No": 597,
+   "DTR No": "3047",
+   "DTR Name": "BALADMARI CHAR 63 kVA NEAR KALU BAZAR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 76,
+   "Latitude": 26.1511886,
+   "Longitude": 90.6501056
+ },
+ {
+   "SL No": 598,
+   "DTR No": "3062",
+   "DTR Name": "BALADMARI CHAR PT II 63 kVA NEAR EARUDDIN HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 147,
+   "Latitude": 26.1506923,
+   "Longitude": 90.6557272
+ },
+ {
+   "SL No": 599,
+   "DTR No": "2625",
+   "DTR Name": "KARKHANA BAZAAR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 110,
+   "Latitude": 26.149863,
+   "Longitude": 90.6618996
+ },
+ {
+   "SL No": 600,
+   "DTR No": "3055",
+   "DTR Name": "BALADMARI CHAR PT II 63 kVA NEAR AYNAL BAZAR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 40,
+   "Latitude": 26.1474514,
+   "Longitude": 90.6710078
+ },
+ {
+   "SL No": 601,
+   "DTR No": "2679",
+   "DTR Name": "DEKHDHOWA NATUNBASTI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 39,
+   "Latitude": 26.1425567,
+   "Longitude": 90.6757167
+ },
+ {
+   "SL No": 602,
+   "DTR No": "3052",
+   "DTR Name": "BALADMARI CHAR PT III 63 kVA NEAR KARKHANA BAZAR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 96,
+   "Latitude": 26.1484839,
+   "Longitude": 90.6788214
+ },
+ {
+   "SL No": 603,
+   "DTR No": "3053",
+   "DTR Name": "BALADMARI CHAR PT III (BALARBHITA) 25 kVA NEAR MASJID",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 41,
+   "Latitude": 26.153637,
+   "Longitude": 90.6723003
+ },
+ {
+   "SL No": 604,
+   "DTR No": "3054",
+   "DTR Name": "BALADMARI CHAR PT (BALARBHITA) 25 kVA NEAR ROHIMUDDIN HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 0,
+   "Latitude": 26.1548531,
+   "Longitude": 90.6698359
+ },
+ {
+   "SL No": 605,
+   "DTR No": "3050",
+   "DTR Name": "BALADMARI CHAR PT III 63 kVA NEAR AYNAL HOQUE HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 103,
+   "Latitude": 26.148971,
+   "Longitude": 90.6720097
+ },
+ {
+   "SL No": 606,
+   "DTR No": "2624",
+   "DTR Name": "AMHARIPARA (B)",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 70,
+   "Latitude": 26.1496467,
+   "Longitude": 90.6664816
+ },
+ {
+   "SL No": 607,
+   "DTR No": "3048",
+   "DTR Name": "BALADMARI CHAR PT II 25 kVA NEAR MASJID",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 65,
+   "Latitude": 26.1521569,
+   "Longitude": 90.6524411
+ },
+ {
+   "SL No": 608,
+   "DTR No": "3058",
+   "DTR Name": "BALADMARI CHAR PT II 63 kVA NEAR STORE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 125,
+   "Latitude": 26.1573401,
+   "Longitude": 90.6516833
+ },
+ {
+   "SL No": 609,
+   "DTR No": "3059",
+   "DTR Name": "BALADMARI CHAR PT II 25 kVA NEAR JULHOSH DEWANI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 77,
+   "Latitude": 26.1590275,
+   "Longitude": 90.652038
+ },
+ {
+   "SL No": 610,
+   "DTR No": "3061",
+   "DTR Name": "BALADMARI CHAR PT II 25 kVA NEAR KAJOL TARA HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 13,
+   "Latitude": 26.1527408,
+   "Longitude": 90.6471924
+ },
+ {
+   "SL No": 611,
+   "DTR No": "3144",
+   "DTR Name": "MOLLAHPARA NEAR TINIALI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 32,
+   "Latitude": 26.1592725,
+   "Longitude": 90.6417251
+ },
+ {
+   "SL No": 612,
+   "DTR No": "3060",
+   "DTR Name": "BALADMARI CHAR PT II 25 kVA NEAR GP OFFICE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 102,
+   "Latitude": 26.1580725,
+   "Longitude": 90.6360785
+ },
+ {
+   "SL No": 613,
+   "DTR No": "3056",
+   "DTR Name": "BALADMARI CHAR PT II 63 kVA NEAR MUSA HOQUE HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 34,
+   "Latitude": 26.1589637,
+   "Longitude": 90.6388319
+ },
+ {
+   "SL No": 614,
+   "DTR No": "2635",
+   "DTR Name": "ANANDANAGAR (B )",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 154,
+   "Latitude": 26.1554208,
+   "Longitude": 90.6142376
+ },
+ {
+   "SL No": 615,
+   "DTR No": "2634",
+   "DTR Name": "ANANDANAGAR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 122,
+   "Latitude": 26.15414,
+   "Longitude": 90.6092214
+ },
+ {
+   "SL No": 616,
+   "DTR No": "2641",
+   "DTR Name": "MILON NAGAR (C)",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 179,
+   "Latitude": 26.1611541,
+   "Longitude": 90.6157504
+ },
+ {
+   "SL No": 617,
+   "DTR No": "2642",
+   "DTR Name": "BARPAHAR (GHULTUNG BAZAAR)",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 96,
+   "Latitude": 26.1638008,
+   "Longitude": 90.6094862
+ },
+ {
+   "SL No": 618,
+   "DTR No": "2643",
+   "DTR Name": "HASILABILL",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 145,
+   "Latitude": 26.1625875,
+   "Longitude": 90.6114703
+ },
+ {
+   "SL No": 619,
+   "DTR No": "2686",
+   "DTR Name": "DAMKHULI",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 41,
+   "Latitude": 26.0055121,
+   "Longitude": 90.5594405
+ },
+ {
+   "SL No": 620,
+   "DTR No": "2381",
+   "DTR Name": "KHUKSIPARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.0330983,
+   "Longitude": 90.5759117
+ },
+ {
+   "SL No": 621,
+   "DTR No": "3145",
+   "DTR Name": "BAPUPARA SINGIMARI NATHPARA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.0841489,
+   "Longitude": 90.5389832
+ },
+ {
+   "SL No": 622,
+   "DTR No": "2888",
+   "DTR Name": "NICHINTA SEGUNBAHI 16 kVA NEAR SEGUNBAHI GAROPARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 13,
+   "Latitude": 26.1113046,
+   "Longitude": 90.5595212
+ },
+ {
+   "SL No": 623,
+   "DTR No": "2900",
+   "DTR Name": "SAMAGURI 25 kVA NEAR SAMAGURI BEELOR PAAR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.1079618,
+   "Longitude": 90.5862152
+ },
+ {
+   "SL No": 624,
+   "DTR No": "2919",
+   "DTR Name": "KALYANPUR 25 kVA NEAR AAGEPARA VILLAGE",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 28,
+   "Latitude": 26.1261749,
+   "Longitude": 90.5783141
+ },
+ {
+   "SL No": 625,
+   "DTR No": "2931",
+   "DTR Name": "KURUWABHASA 25 kVA NEAR GOROIMARI ROAD",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 34,
+   "Latitude": 26.1115373,
+   "Longitude": 90.6217251
+ },
+ {
+   "SL No": 626,
+   "DTR No": "3147",
+   "DTR Name": "Makri Bazar 63 KVA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1575084,
+   "Longitude": 90.5497328
+ },
+ {
+   "SL No": 627,
+   "DTR No": "2266",
+   "DTR Name": "DAKAIDOL BAZAR",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.150025,
+   "Longitude": 90.6598383
+ },
+ {
+   "SL No": 628,
+   "DTR No": "3192",
+   "DTR Name": "SOUTH HASILA NEAR HAZARAT ALI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 5,
+   "Latitude": 26.1635999,
+   "Longitude": 90.6038784
+ },
+ {
+   "SL No": 729,
+   "DTR No": "3701",
+   "DTR Name": "New Bihi Field 63KVA RDSS",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1566982,
+   "Longitude": 90.6267691
+ },
+ {
+   "SL No": 731,
+   "DTR No": "3703",
+   "DTR Name": "SHANTINAGAR 63KVA RDSS",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1544459,
+   "Longitude": 90.6225745
+ },
+ {
+   "SL No": 853,
+   "DTR No": "2585",
+   "DTR Name": "Helapakhri (B)",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 98,
+   "Latitude": 26.1391217,
+   "Longitude": 90.6554364
+ },
+ {
+   "SL No": 881,
+   "DTR No": "3737",
+   "DTR Name": "CHANDARIA PATHA 100 kVA NEAR LP SCHOOL",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 4,
+   "Latitude": 26.1646468,
+   "Longitude": 90.6172824
+ },
+ {
+   "SL No": 886,
+   "DTR No": "3738",
+   "DTR Name": "PANCHARATNA 100 kVA near Maya Choudhury House",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 1,
+   "Latitude": 26.1991422,
+   "Longitude": 90.5726923
+ },
+ {
+   "SL No": 887,
+   "DTR No": "3740",
+   "DTR Name": "CHANDARIA PATHAR 100 kVA BACKSIDE OF LP SCHOLL",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1631245,
+   "Longitude": 90.6164371
+ },
+ {
+   "SL No": 888,
+   "DTR No": "3715",
+   "DTR Name": "Khutamari  masjid 100KVA_NEW",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 5,
+   "Latitude": 26.1943989,
+   "Longitude": 90.5331384
+ },
+ {
+   "SL No": 909,
+   "DTR No": "3714",
+   "DTR Name": "Dorapara 63KVA RDSS",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 35,
+   "Latitude": 26.0906867,
+   "Longitude": 90.5557788
+ },
+ {
+   "SL No": 919,
+   "DTR No": "2043",
+   "DTR Name": "MAGISTRATE COLONY NEPALI MANDIR",
+   "Capacity": "250 kVA",
+   "Feeder Name": "040-DC 11 KV",
+   "Consumer Count": 52,
+   "Latitude": 26.1605805,
+   "Longitude": 90.628269
+ },
+ {
+   "SL No": 936,
+   "DTR No": "3749",
+   "DTR Name": "JYOTINAGAR_RDSS_NEAR LP SCHOOL",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-GOALPARA TOWN 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.153585,
+   "Longitude": 90.6127862
+ },
+ {
+   "SL No": 940,
+   "DTR No": "438",
+   "DTR Name": "KALU BAZAR 63 KVA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 0,
+   "Latitude": 26.1500802,
+   "Longitude": 90.6606019
+ },
+ {
+   "SL No": 943,
+   "DTR No": "3037",
+   "DTR Name": "AMBIYA NAGAR HELAPAKHRI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-MORIOMNAGAR 11 KV",
+   "Consumer Count": 101,
+   "Latitude": 26.1392315,
+   "Longitude": 90.6554293
+ },
+ {
+   "SL No": 962,
+   "DTR No": "2487",
+   "DTR Name": "BHANDARA (SCHEME)",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-DEREK 11 KV",
+   "Consumer Count": 54,
+   "Latitude": 26.0755773,
+   "Longitude": 90.5502467
+ },
+ {
+   "SL No": 975,
+   "DTR No": "3712",
+   "DTR Name": "Sutradhar Para 100KVA RDSS",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 94,
+   "Latitude": 26.0861204,
+   "Longitude": 90.564278
+ },
+ {
+   "SL No": 982,
+   "DTR No": "3748",
+   "DTR Name": "NAMAPARA_AIIB",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 76,
+   "Latitude": 26.149402,
+   "Longitude": 90.6462978
+ },
+ {
+   "SL No": 983,
+   "DTR No": "3747",
+   "DTR Name": "NABINNAGAR_AIIB",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-CHAR 11 KV\n",
+   "Consumer Count": 98,
+   "Latitude": 26.1463919,
+   "Longitude": 90.6447329
+ },
+ {
+   "SL No": 987,
+   "DTR No": "3708",
+   "DTR Name": "SINGIMARI NEAR KABRISTHAN 63KVA RDSS",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1112376,
+   "Longitude": 90.4597428
+ },
+ {
+   "SL No": 993,
+   "DTR No": "3225",
+   "DTR Name": "Sonapur near Naam ghor 25 KVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.156252,
+   "Longitude": 90.5894288
+ },
+ {
+   "SL No": 998,
+   "DTR No": "3755",
+   "DTR Name": "SARUTARI 25 KVA NR HEDO RABHA HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1606036,
+   "Longitude": 90.5829575
+ },
+ {
+   "SL No": 1005,
+   "DTR No": "3704",
+   "DTR Name": "NOLONGA panikheti 25KVA RDSS",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-JAIPUR 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1166337,
+   "Longitude": 90.4785482
+ },
+ {
+   "SL No": 1012,
+   "DTR No": "3707",
+   "DTR Name": "Mornoi New 100KVA RDSS",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 60,
+   "Latitude": 26.097041,
+   "Longitude": 90.7431614
+ },
+ {
+   "SL No": 1020,
+   "DTR No": "3228",
+   "DTR Name": "HASILAPARA NEAR BPCL (RDSS)",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-KARBALA 11 KV\n",
+   "Consumer Count": 0,
+   "Latitude": 26.177575,
+   "Longitude": 90.6123514
+ },
+ {
+   "SL No": 1028,
+   "DTR No": "3764",
+   "DTR Name": "KHONGRARPAR NR ROHIM ALI HOUSE",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1737855,
+   "Longitude": 90.5972464
+ },
+ {
+   "SL No": 1038,
+   "DTR No": "153",
+   "DTR Name": "SOLMARI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-AGIA 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1122975,
+   "Longitude": 90.5758378
+ },
+ {
+   "SL No": 1044,
+   "DTR No": "3694",
+   "DTR Name": "NADIR PAR 63KVA RDSS",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOROBAZAAR 11 KV\n",
+   "Consumer Count": 0,
+   "Latitude": 26.1837592,
+   "Longitude": 90.6220103
+ },
+ {
+   "SL No": 1051,
+   "DTR No": "2730",
+   "DTR Name": "KALPANI CHANDAMARI",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 228,
+   "Latitude": 26.0740354,
+   "Longitude": 90.5917783
+ },
+ {
+   "SL No": 1052,
+   "DTR No": "3702",
+   "DTR Name": "SHASTRINAGAR 100KVA RDSS",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BAPUJI NAGAR 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1481804,
+   "Longitude": 90.6263222
+ },
+ {
+   "SL No": 1054,
+   "DTR No": "3770",
+   "DTR Name": "BAKKAR BAZAR 63 KVA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 3,
+   "Latitude": 26.159507,
+   "Longitude": 90.6104509
+ },
+ {
+   "SL No": 1055,
+   "DTR No": "2353",
+   "DTR Name": "BENGDAB",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 16,
+   "Latitude": 26.0649968,
+   "Longitude": 90.5903786
+ },
+ {
+   "SL No": 1056,
+   "DTR No": "3752",
+   "DTR Name": "KRISHNA NAGAR_RDSS",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 1,
+   "Latitude": 26.1657238,
+   "Longitude": 90.6280434
+ },
+ {
+   "SL No": 1057,
+   "DTR No": "3769",
+   "DTR Name": "KODALDHOWA_AIIB",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-MORNOI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1030317,
+   "Longitude": 90.7256682
+ },
+ {
+   "SL No": 1063,
+   "DTR No": "2077",
+   "DTR Name": "UDAY NAGAR_RDSS",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 9,
+   "Latitude": 26.1618584,
+   "Longitude": 90.6221674
+ },
+ {
+   "SL No": 1065,
+   "DTR No": "2351",
+   "DTR Name": "KALPANI PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 72,
+   "Latitude": 26.0668041,
+   "Longitude": 90.5950301
+ },
+ {
+   "SL No": 1068,
+   "DTR No": "3768",
+   "DTR Name": "HEDAYETPUR BEHIND NRL_AIIB",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 31,
+   "Latitude": 26.1548417,
+   "Longitude": 90.6196633
+ },
+ {
+   "SL No": 1071,
+   "DTR No": "3767",
+   "DTR Name": "LACHIT NAGAR_AIIB",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1502133,
+   "Longitude": 90.6149967
+ },
+ {
+   "SL No": 1073,
+   "DTR No": "2400",
+   "DTR Name": "SIMLAKANDI",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 44,
+   "Latitude": 26.0792168,
+   "Longitude": 90.5970015
+ },
+ {
+   "SL No": 1082,
+   "DTR No": "2399",
+   "DTR Name": "KHARPARA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 37,
+   "Latitude": 26.0747973,
+   "Longitude": 90.5964014
+ },
+ {
+   "SL No": 1087,
+   "DTR No": "3710",
+   "DTR Name": "BAMUNGHOPA (UJANPARA) 63KVA RDSS",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1512013,
+   "Longitude": 90.5537751
+ },
+ {
+   "SL No": 1104,
+   "DTR No": "3786",
+   "DTR Name": "BOGOLAMARI NR RANJIT MONDAL HOUSE",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 54,
+   "Latitude": 26.1343703,
+   "Longitude": 90.5979001
+ },
+ {
+   "SL No": 1105,
+   "DTR No": "3785",
+   "DTR Name": "CHANDAMARI CHANDARJAN",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 31,
+   "Latitude": 26.0798924,
+   "Longitude": 90.5894935
+ },
+ {
+   "SL No": 1106,
+   "DTR No": "485",
+   "DTR Name": "RAKHYASINI PT-II 100 KVA",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 1,
+   "Latitude": 26.1255217,
+   "Longitude": 90.6499033
+ },
+ {
+   "SL No": 1107,
+   "DTR No": "3706",
+   "DTR Name": "Bhalukdubi Near St. Thomas 100KVA RDSS",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 198,
+   "Latitude": 26.1405609,
+   "Longitude": 90.5906694
+ },
+ {
+   "SL No": 1108,
+   "DTR No": "3787",
+   "DTR Name": "D-MAKRI TOLL PLAZA",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-APTF 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1747593,
+   "Longitude": 90.5487116
+ },
+ {
+   "SL No": 1109,
+   "DTR No": "3788",
+   "DTR Name": "100 kVA NEAR SCIENCE ACADEMY",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BHALUKDUBI & BOGOLAMARI 11 KV",
+   "Consumer Count": 134,
+   "Latitude": 26.1418661,
+   "Longitude": 90.595648
+ },
+ {
+   "SL No": 1111,
+   "DTR No": "3784",
+   "DTR Name": "BAPUJINAGAR NEAR DR SEEMA",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-BALADMARI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1506533,
+   "Longitude": 90.6202892
+ },
+ {
+   "SL No": 1116,
+   "DTR No": "2363",
+   "DTR Name": "KOKIRA PART I",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.055426,
+   "Longitude": 90.5918837
+ },
+ {
+   "SL No": 1117,
+   "DTR No": "2682",
+   "DTR Name": "BORVITA (A)",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 31,
+   "Latitude": 26.0455013,
+   "Longitude": 90.5930676
+ },
+ {
+   "SL No": 1121,
+   "DTR No": "3711",
+   "DTR Name": "KAMARPARA 100KVA RDSS",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1566549,
+   "Longitude": 90.5216574
+ },
+ {
+   "SL No": 1122,
+   "DTR No": "2683",
+   "DTR Name": "BORVITA (B) 25 KVA",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 38,
+   "Latitude": 26.0330172,
+   "Longitude": 90.5914617
+ },
+ {
+   "SL No": 1125,
+   "DTR No": "2684",
+   "DTR Name": "BORVITA (C)",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 32,
+   "Latitude": 26.0316174,
+   "Longitude": 90.5970566
+ },
+ {
+   "SL No": 1133,
+   "DTR No": "2377",
+   "DTR Name": "BAIJURI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 52,
+   "Latitude": 26.0078204,
+   "Longitude": 90.5436914
+ },
+ {
+   "SL No": 1138,
+   "DTR No": "2369",
+   "DTR Name": "BODHAHPUR",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 27,
+   "Latitude": 26.0198955,
+   "Longitude": 90.564191
+ },
+ {
+   "SL No": 1140,
+   "DTR No": "3709",
+   "DTR Name": "DARANI 100KVA RDSS",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1278331,
+   "Longitude": 90.4909554
+ },
+ {
+   "SL No": 1141,
+   "DTR No": "2365",
+   "DTR Name": "SIJUKONA, GAROPARA",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 20,
+   "Latitude": 26.0335867,
+   "Longitude": 90.5725033
+ },
+ {
+   "SL No": 1143,
+   "DTR No": "2042",
+   "DTR Name": "KOKIRA PT-I",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-BOLBOLA 11 KV",
+   "Consumer Count": 2,
+   "Latitude": 26.0617585,
+   "Longitude": 90.5906841
+ },
+ {
+   "SL No": 1157,
+   "DTR No": "3696",
+   "DTR Name": "HARISHOBHA 63KVA RDSS",
+   "Capacity": "63  kVA",
+   "Feeder Name": "040-BARPUKHURI 11 KV\n",
+   "Consumer Count": 0,
+   "Latitude": 26.1817589,
+   "Longitude": 90.6296266
+ },
+ {
+   "SL No": 1160,
+   "DTR No": "2827",
+   "DTR Name": "LEWABARI",
+   "Capacity": "25  kVA",
+   "Feeder Name": "040-DHUPTOLA 11 KV\n",
+   "Consumer Count": 49,
+   "Latitude": 26.1128233,
+   "Longitude": 90.674045
+ },
+ {
+   "SL No": 1163,
+   "DTR No": "3728",
+   "DTR Name": "Dostinagar",
+   "Capacity": "100 kVA",
+   "Feeder Name": "040-TILAPARA 11 KV\n",
+   "Consumer Count": 0,
+   "Latitude": 26.1706613,
+   "Longitude": 90.6208095
+ },
+ {
+   "SL No": 1179,
+   "DTR No": "3210",
+   "DTR Name": "BHOISKHULI NEAR LP SCHOOL",
+   "Capacity": "16  kVA",
+   "Feeder Name": "040-CHUTKI 11 KV",
+   "Consumer Count": 0,
+   "Latitude": 26.1035976,
+   "Longitude": 90.500115
+ }
+]
