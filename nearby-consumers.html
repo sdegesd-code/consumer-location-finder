@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Consumers - GESD</title>
+    <style>
+        :root {
+            --primary: #0f4c81;
+            --primary-hover: #083358;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 30px 12px; }
+
+        .app-card { background: var(--card-bg); width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); padding: 28px 24px; border: 1px solid #f1f5f9; }
+        
+        .brand-header { text-align: center; margin-bottom: 24px; }
+        .brand-logo { height: 60px; width: auto; object-fit: contain; margin-bottom: 12px; }
+        .brand-header h1 { font-size: 20px; font-weight: 700; color: var(--primary); }
+        .brand-header p { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+
+        .btn-primary { width: 100%; padding: 16px; border-radius: 12px; border: none; background-color: #10b981; color: white; font-size: 16px; font-weight: bold; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); display: flex; justify-content: center; align-items: center; gap: 8px; }
+        .btn-primary:hover:not(:disabled) { background-color: #059669; }
+        .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
+
+        .status-badge { text-align: center; font-size: 13px; font-weight: 600; color: var(--text-muted); padding: 8px 16px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 16px auto; }
+        
+        .results-section { margin-top: 20px; display: none; }
+        .results-header { font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 12px; text-align: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+
+        /* Nearby Consumer Cards */
+        .consumer-list { display: flex; flex-direction: column; gap: 12px; }
+        .consumer-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; background: #fafafa; position: relative; overflow: hidden; }
+        .rank-badge { position: absolute; top: 0; left: 0; background: var(--primary); color: white; font-weight: 700; font-size: 12px; padding: 4px 10px; border-radius: 0 0 10px 0; }
+        
+        .c-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; margin-top: 8px; }
+        .c-number { font-size: 18px; font-weight: 800; color: #1e293b; font-family: monospace; }
+        .c-distance { font-size: 15px; font-weight: 700; color: #ef4444; background: #fee2e2; padding: 4px 8px; border-radius: 8px; }
+        
+        .c-details { font-size: 13px; color: #64748b; margin-bottom: 12px; }
+        .c-source { display: inline-block; background: #e2e8f0; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; color: #475569; margin-top: 4px; }
+        
+        .nav-btn { display: block; width: 100%; text-align: center; background: #3b82f6; color: white; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: 0.2s; }
+        .nav-btn:hover { background: #2563eb; }
+
+    </style>
+</head>
+<body>
+
+<div class="app-card">
+    <div class="brand-header">
+        <!-- Assuming you have logo.png in the same folder -->
+        <img src="logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
+        <h1>Consumer Radar</h1>
+        <p>Find the closest meters to your current location</p>
+    </div>
+
+    <button id="locateBtn" class="btn-primary" disabled>
+        <span>📍</span> Find Nearby Consumers
+    </button>
+    
+    <div id="statusMessage" class="status-badge">⏳ Loading database...</div>
+
+    <div id="resultsArea" class="results-section">
+        <div class="results-header">Top 5 Closest Consumers</div>
+        <div class="consumer-list" id="consumerList"></div>
+    </div>
+</div>
+
+<script>
+    let consumerDatabase = [];
+
+    // ==========================================
+    // 1. LOAD DATABASE ON START
+    // ==========================================
+    async function loadDatabase() {
+        try {
+            const res = await fetch('data.json');
+            consumerDatabase = await res.json();
+            
+            const status = document.getElementById('statusMessage');
+            status.textContent = `✅ Loaded ${consumerDatabase.length} records`;
+            status.style.color = "#059669";
+            status.style.background = "#ecfdf5";
+            
+            document.getElementById('locateBtn').disabled = false;
+        } catch (error) {
+            const status = document.getElementById('statusMessage');
+            status.textContent = "❌ Failed to load data.json";
+            status.style.color = "#dc2626";
+            status.style.background = "#fef2f2";
+        }
+    }
+
+    // Initialize
+    loadDatabase();
+
+    // ==========================================
+    // 2. MATH & LOGIC
+    // ==========================================
+    function haversine(lat1, lon1, lat2, lon2) {
+        const R = 6371000; // Earth radius in meters
+        const toRad = Math.PI / 180;
+        const dLat = (lat2 - lat1) * toRad;
+        const dLon = (lon2 - lon1) * toRad;
+        const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                  Math.cos(lat1 * toRad) * Math.cos(lat2 * toRad) *
+                  Math.sin(dLon/2) * Math.sin(dLon/2);
+        return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)));
+    }
+
+    function isValidCoordinate(lat, long) {
+        if (lat == null || long == null) return false;
+        let strLat = lat.toString().trim().toLowerCase();
+        let strLong = long.toString().trim().toLowerCase();
+        if (["", "0", "0.0", "nil", "null", "n/a"].includes(strLat)) return false;
+        return !isNaN(parseFloat(strLat)) && !isNaN(parseFloat(strLong)) && parseFloat(strLat) !== 0;
+    }
+
+    function formatDistance(meters) {
+        if (meters < 1000) return Math.round(meters) + " m";
+        return (meters / 1000).toFixed(2) + " km";
+    }
+
+    // ==========================================
+    // 3. GEOLOCATION & SCANNING
+    // ==========================================
+    document.getElementById('locateBtn').addEventListener('click', () => {
+        const btn = document.getElementById('locateBtn');
+        const status = document.getElementById('statusMessage');
+        
+        if (!navigator.geolocation) {
+            alert("Geolocation is not supported by your browser.");
+            return;
+        }
+
+        btn.disabled = true;
+        btn.innerHTML = "<span>⏳</span> Getting GPS signal...";
+        status.textContent = "Requesting location permissions...";
+        status.style.background = "#fffbeb";
+        status.style.color = "#d97706";
+
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const userLat = position.coords.latitude;
+                const userLon = position.coords.longitude;
+                
+                status.textContent = "📍 Location found! Scanning database...";
+                
+                // Allow UI to update before heavy calculation
+                setTimeout(() => findNearby(userLat, userLon), 50);
+            },
+            (error) => {
+                btn.disabled = false;
+                btn.innerHTML = "<span>📍</span> Find Nearby Consumers";
+                status.textContent = "❌ Error: " + error.message;
+                status.style.color = "#dc2626";
+                status.style.background = "#fef2f2";
+                alert("Please ensure GPS/Location Services are turned on and permissions are granted to your browser.");
+            },
+            { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+        );
+    });
+
+    function findNearby(userLat, userLon) {
+        let distances = [];
+
+        // Scan every consumer
+        consumerDatabase.forEach(row => {
+            if (!row.ConsumerNo) return;
+            let consumerNo = row.ConsumerNo.toString().trim();
+            
+            let bestDist = Infinity;
+            let bestLat = null;
+            let bestLon = null;
+            let bestSource = "";
+
+            // Check Smart
+            if (isValidCoordinate(row.SmartLat, row.SmartLong)) {
+                let d = haversine(userLat, userLon, parseFloat(row.SmartLat), parseFloat(row.SmartLong));
+                if (d < bestDist) { bestDist = d; bestLat = row.SmartLat; bestLon = row.SmartLong; bestSource = "Smart Meter"; }
+            }
+            // Check ARMS
+            if (isValidCoordinate(row.ArmsLat, row.ArmsLong)) {
+                let d = haversine(userLat, userLon, parseFloat(row.ArmsLat), parseFloat(row.ArmsLong));
+                if (d < bestDist) { bestDist = d; bestLat = row.ArmsLat; bestLon = row.ArmsLong; bestSource = "ARMS Postpaid"; }
+            }
+            // Check Prepaid
+            if (isValidCoordinate(row.PrepaidLat, row.PrepaidLong)) {
+                let d = haversine(userLat, userLon, parseFloat(row.PrepaidLat), parseFloat(row.PrepaidLong));
+                if (d < bestDist) { bestDist = d; bestLat = row.PrepaidLat; bestLon = row.PrepaidLong; bestSource = "Prepaid Meter"; }
+            }
+
+            // If we found a valid coordinate, save it
+            if (bestDist !== Infinity) {
+                distances.push({
+                    consumerNo: consumerNo,
+                    dist: bestDist,
+                    lat: bestLat,
+                    lon: bestLon,
+                    source: bestSource
+                });
+            }
+        });
+
+        // Sort by closest distance
+        distances.sort((a, b) => a.dist - b.dist);
+        
+        // Grab top 5
+        let top5 = distances.slice(0, 5);
+        renderResults(top5);
+    }
+
+    // ==========================================
+    // 4. RENDERING RESULTS
+    // ==========================================
+    function renderResults(top5) {
+        const btn = document.getElementById('locateBtn');
+        const status = document.getElementById('statusMessage');
+        const resultsArea = document.getElementById('resultsArea');
+        const listContainer = document.getElementById('consumerList');
+
+        btn.disabled = false;
+        btn.innerHTML = "<span>🔄</span> Refresh Location";
+        
+        status.textContent = "✅ Scan complete";
+        status.style.color = "#059669";
+        status.style.background = "#ecfdf5";
+
+        if (top5.length === 0) {
+            listContainer.innerHTML = `<div style="text-align:center; padding: 20px; color: #64748b;">No consumers with valid GPS data found.</div>`;
+            resultsArea.style.display = "block";
+            return;
+        }
+
+        let html = top5.map((item, index) => `
+            <div class="consumer-card">
+                <div class="rank-badge">#${index + 1}</div>
+                <div class="c-header">
+                    <div class="c-number">${item.consumerNo}</div>
+                    <div class="c-distance">${formatDistance(item.dist)} away</div>
+                </div>
+                <div class="c-details">
+                    Found via: <span class="c-source">${item.source}</span>
+                </div>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lon}" target="_blank" class="nav-btn">
+                    🧭 Navigate in Google Maps
+                </a>
+            </div>
+        `).join('');
+
+        listContainer.innerHTML = html;
+        resultsArea.style.display = "block";
+    }
+</script>
+</body>
+</html>
