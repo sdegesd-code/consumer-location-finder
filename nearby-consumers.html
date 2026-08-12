@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nearby Consumers - GESD</title>
+    <title>Nearby Consumer Radar - GESD</title>
+    
+    <!-- Free Leaflet Map CSS for direct plotting -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
     <style>
         :root {
             --primary: #0f4c81;
@@ -15,93 +19,127 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background-color: var(--bg); color: var(--text-main); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 30px 12px; }
+        body { background-color: var(--bg); color: var(--text-main); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 20px 12px; }
 
-        .app-card { background: var(--card-bg); width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); padding: 28px 24px; border: 1px solid #f1f5f9; }
+        .app-card { background: var(--card-bg); width: 100%; max-width: 520px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); padding: 24px; border: 1px solid #f1f5f9; }
         
-        .brand-header { text-align: center; margin-bottom: 24px; }
-        .brand-logo { height: 60px; width: auto; object-fit: contain; margin-bottom: 12px; }
+        .brand-header { text-align: center; margin-bottom: 20px; }
+        .brand-logo { height: 55px; width: auto; object-fit: contain; margin-bottom: 10px; }
         .brand-header h1 { font-size: 20px; font-weight: 700; color: var(--primary); }
         .brand-header p { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 
-        .btn-primary { width: 100%; padding: 16px; border-radius: 12px; border: none; background-color: #10b981; color: white; font-size: 16px; font-weight: bold; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); display: flex; justify-content: center; align-items: center; gap: 8px; }
-        .btn-primary:hover:not(:disabled) { background-color: #059669; }
-        .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
+        /* Input Controls */
+        .input-group { margin-bottom: 15px; }
+        .styled-input { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1.5px solid #e2e8f0; font-size: 14px; outline: none; transition: all 0.2s ease; background: #fafafa; margin-bottom: 8px; }
+        .styled-input:focus { border-color: var(--primary); background: #ffffff; box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1); }
 
-        .status-badge { text-align: center; font-size: 13px; font-weight: 600; color: var(--text-muted); padding: 8px 16px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 16px auto; }
+        .btn-grid { display: flex; gap: 10px; margin-bottom: 15px; }
+        .btn-primary { flex: 1; padding: 12px; border-radius: 12px; border: none; background-color: var(--primary); color: white; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.2s ease; display: flex; justify-content: center; align-items: center; gap: 6px; }
+        .btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
+        .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; }
+        .btn-gps { background-color: #10b981; }
+        .btn-gps:hover:not(:disabled) { background-color: #059669; }
+
+        .status-badge { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 6px 14px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 10px auto; }
         
+        /* Map Container */
+        #map { width: 100%; height: 320px; border-radius: 14px; margin-top: 15px; display: none; border: 2px solid #cbd5e1; z-index: 1; }
+
         .results-section { margin-top: 20px; display: none; }
-        .results-header { font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 12px; text-align: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+        .results-header { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 14px; text-align: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
 
-        /* Nearby Consumer Cards */
-        .consumer-list { display: flex; flex-direction: column; gap: 12px; }
-        .consumer-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; background: #fafafa; position: relative; overflow: hidden; }
-        .rank-badge { position: absolute; top: 0; left: 0; background: var(--primary); color: white; font-weight: 700; font-size: 12px; padding: 4px 10px; border-radius: 0 0 10px 0; }
+        /* Consumer Cards */
+        .consumer-list { display: flex; flex-direction: column; gap: 14px; }
+        .consumer-card { border: 1px solid #e2e8f0; border-radius: 14px; padding: 16px; background: #fafafa; position: relative; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .rank-badge { position: absolute; top: 0; left: 0; background: var(--primary); color: white; font-weight: 700; font-size: 12px; padding: 4px 10px; border-radius: 14px 0 10px 0; }
         
-        .c-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; margin-top: 8px; }
-        .c-number { font-size: 18px; font-weight: 800; color: #1e293b; font-family: monospace; }
-        .c-distance { font-size: 15px; font-weight: 700; color: #ef4444; background: #fee2e2; padding: 4px 8px; border-radius: 8px; }
+        .c-header { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; margin-bottom: 8px; }
+        .c-number { font-size: 17px; font-weight: 800; color: #1e293b; font-family: monospace; }
+        .c-distance { font-size: 14px; font-weight: 700; color: #ef4444; background: #fee2e2; padding: 3px 8px; border-radius: 6px; }
         
-        .c-details { font-size: 13px; color: #64748b; margin-bottom: 12px; }
-        .c-source { display: inline-block; background: #e2e8f0; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; color: #475569; margin-top: 4px; }
+        .c-details { font-size: 12px; color: #64748b; margin-bottom: 10px; }
+        .c-source { display: inline-block; background: #e2e8f0; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; color: #475569; }
         
-        .nav-btn { display: block; width: 100%; text-align: center; background: #3b82f6; color: white; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: 0.2s; }
-        .nav-btn:hover { background: #2563eb; }
-
+        /* DTR Inner Box */
+        .dtr-box { background: #ffffff; border: 1px dashed #cbd5e1; border-radius: 10px; padding: 10px 12px; margin-bottom: 12px; font-size: 12px; }
+        .dtr-title { font-weight: 700; color: var(--primary); font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+        .dtr-row { display: flex; justify-content: space-between; align-items: center; }
+        .dtr-name-txt { font-weight: 700; color: #1e293b; }
+        
+        .nav-btn { display: block; width: 100%; text-align: center; background: #0284c7; color: white; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 13px; transition: 0.2s; }
+        .nav-btn:hover { background: #0369a1; }
     </style>
 </head>
 <body>
 
 <div class="app-card">
     <div class="brand-header">
-        <!-- Assuming you have logo.png in the same folder -->
         <img src="logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
-        <h1>Consumer Radar</h1>
-        <p>Find the closest meters to your current location</p>
+        <h1>Consumer & DTR Radar</h1>
+        <p>Find & Plot Top 10 Nearby Consumers</p>
     </div>
 
-    <button id="locateBtn" class="btn-primary" disabled>
-        <span>📍</span> Find Nearby Consumers
-    </button>
-    
-    <div id="statusMessage" class="status-badge">⏳ Loading database...</div>
+    <!-- Input Box for Paste / Custom Location -->
+    <div class="input-group">
+        <input type="text" id="manualLocationInput" class="styled-input" placeholder="Paste Lat, Lon or Google Maps Link (e.g. 26.178, 90.623)">
+    </div>
 
+    <div class="btn-grid">
+        <button id="gpsBtn" class="btn-primary btn-gps" disabled>📍 Use GPS</button>
+        <button id="searchPasteBtn" class="btn-primary" disabled>🔍 Search Location</button>
+    </div>
+    
+    <div id="statusMessage" class="status-badge">⏳ Loading databases...</div>
+
+    <!-- Embedded Map -->
+    <div id="map"></div>
+
+    <!-- Results Section -->
     <div id="resultsArea" class="results-section">
-        <div class="results-header">Top 5 Closest Consumers</div>
+        <div class="results-header">Top 10 Closest Consumers & DTRs</div>
         <div class="consumer-list" id="consumerList"></div>
     </div>
 </div>
 
+<!-- Free Leaflet Map JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 <script>
     let consumerDatabase = [];
+    let dtrDatabase = [];
+    let mapInstance = null;
+    let mapMarkers = [];
 
     // ==========================================
-    // 1. LOAD DATABASE ON START
+    // 1. LOAD DATABASES (data.json + dtr.json)
     // ==========================================
-    async function loadDatabase() {
+    async function loadDatabases() {
         try {
-            const res = await fetch('data.json');
-            consumerDatabase = await res.json();
+            const consRes = await fetch('data.json');
+            consumerDatabase = await consRes.json();
+
+            const dtrRes = await fetch('dtr.json');
+            dtrDatabase = await dtrRes.json();
             
             const status = document.getElementById('statusMessage');
-            status.textContent = `✅ Loaded ${consumerDatabase.length} records`;
+            status.textContent = `✅ Ready (${consumerDatabase.length} consumers, ${dtrDatabase.length} DTRs)`;
             status.style.color = "#059669";
             status.style.background = "#ecfdf5";
             
-            document.getElementById('locateBtn').disabled = false;
+            document.getElementById('gpsBtn').disabled = false;
+            document.getElementById('searchPasteBtn').disabled = false;
         } catch (error) {
             const status = document.getElementById('statusMessage');
-            status.textContent = "❌ Failed to load data.json";
+            status.textContent = "❌ Failed to load JSON files";
             status.style.color = "#dc2626";
             status.style.background = "#fef2f2";
         }
     }
 
-    // Initialize
-    loadDatabase();
+    loadDatabases();
 
     // ==========================================
-    // 2. MATH & LOGIC
+    // 2. MATH & LOCATION PARSER
     // ==========================================
     function haversine(lat1, lon1, lat2, lon2) {
         const R = 6371000; // Earth radius in meters
@@ -127,50 +165,105 @@
         return (meters / 1000).toFixed(2) + " km";
     }
 
-    // ==========================================
-    // 3. GEOLOCATION & SCANNING
-    // ==========================================
-    document.getElementById('locateBtn').addEventListener('click', () => {
-        const btn = document.getElementById('locateBtn');
-        const status = document.getElementById('statusMessage');
+    // Extract Lat, Lon from text or Google Maps Links
+    function parseLocationString(inputStr) {
+        if (!inputStr) return null;
         
-        if (!navigator.geolocation) {
-            alert("Geolocation is not supported by your browser.");
-            return;
-        }
+        // Regex matches decimal coordinates like 26.1784, 90.6230
+        const coordRegex = /(-?\d+\.\d+)\s*,\s*(-?\d+\.\d+)/;
+        const match = inputStr.match(coordRegex);
 
-        btn.disabled = true;
-        btn.innerHTML = "<span>⏳</span> Getting GPS signal...";
-        status.textContent = "Requesting location permissions...";
+        if (match) {
+            let lat = parseFloat(match[1]);
+            let lon = parseFloat(match[2]);
+
+            // Handle swapped coordinates
+            if (Math.abs(lat) > 90 && Math.abs(lon) <= 90) {
+                let temp = lat; lat = lon; lon = temp;
+            }
+
+            if (Math.abs(lat) <= 90 && Math.abs(lon) <= 180) {
+                return { lat, lon };
+            }
+        }
+        return null;
+    }
+
+    // Find Nearest DTR for a given consumer coordinate
+    function getNearestDTR(targetLat, targetLon) {
+        let bestDist = Infinity;
+        let bestDtr = null;
+
+        dtrDatabase.forEach(dtr => {
+            let dLat = parseFloat(dtr.Latitude);
+            let dLon = parseFloat(dtr.Longitude);
+            if (isNaN(dLat) || isNaN(dLon)) return;
+
+            let dist = haversine(targetLat, targetLon, dLat, dLon);
+            if (dist < bestDist) {
+                bestDist = dist;
+                let numCap = parseInt((dtr.Capacity || "0").replace(/\D/g, '')) || 0;
+                let numCons = parseInt(dtr["Consumer Count"]) || 0;
+                let isOver = (numCap > 0 && numCons > numCap);
+
+                bestDtr = {
+                    dtrNo: dtr["DTR No"] || "N/A",
+                    name: dtr["DTR Name"] || "Unknown DTR",
+                    capacity: dtr.Capacity || "N/A",
+                    dist: dist,
+                    loadStatus: isOver ? "⚠️ Overloaded" : "✅ Optimal",
+                    loadColor: isOver ? "#dc2626" : "#059669",
+                    lat: dLat,
+                    lon: dLon
+                };
+            }
+        });
+        return bestDtr;
+    }
+
+    // ==========================================
+    // 3. SEARCH TRIGGERS
+    // ==========================================
+    // GPS Button Click
+    document.getElementById('gpsBtn').addEventListener('click', () => {
+        const status = document.getElementById('statusMessage');
+        if (!navigator.geolocation) return alert("GPS is not supported by your browser.");
+
+        status.textContent = "📍 Requesting GPS position...";
         status.style.background = "#fffbeb";
         status.style.color = "#d97706";
 
         navigator.geolocation.getCurrentPosition(
-            (position) => {
-                const userLat = position.coords.latitude;
-                const userLon = position.coords.longitude;
-                
-                status.textContent = "📍 Location found! Scanning database...";
-                
-                // Allow UI to update before heavy calculation
-                setTimeout(() => findNearby(userLat, userLon), 50);
-            },
-            (error) => {
-                btn.disabled = false;
-                btn.innerHTML = "<span>📍</span> Find Nearby Consumers";
-                status.textContent = "❌ Error: " + error.message;
+            (pos) => processRadarSearch(pos.coords.latitude, pos.coords.longitude, "Current GPS Location"),
+            (err) => {
+                status.textContent = "❌ GPS Error: " + err.message;
                 status.style.color = "#dc2626";
-                status.style.background = "#fef2f2";
-                alert("Please ensure GPS/Location Services are turned on and permissions are granted to your browser.");
             },
             { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
         );
     });
 
-    function findNearby(userLat, userLon) {
+    // Paste/Manual Search Click
+    document.getElementById('searchPasteBtn').addEventListener('click', () => {
+        const rawInput = document.getElementById('manualLocationInput').value;
+        const parsed = parseLocationString(rawInput);
+
+        if (!parsed) {
+            return alert("Invalid location format! Please paste valid coordinates or a Google Maps link (e.g. 26.178, 90.623).");
+        }
+
+        processRadarSearch(parsed.lat, parsed.lon, "Pasted/Custom Location");
+    });
+
+    // ==========================================
+    // 4. RADAR SEARCH ENGINE (TOP 10 + DTR MATCHING)
+    // ==========================================
+    function processRadarSearch(userLat, userLon, sourceTitle) {
+        const status = document.getElementById('statusMessage');
+        status.textContent = "⚡ Calculating distances for consumers & DTRs...";
+
         let distances = [];
 
-        // Scan every consumer
         consumerDatabase.forEach(row => {
             if (!row.ConsumerNo) return;
             let consumerNo = row.ConsumerNo.toString().trim();
@@ -180,65 +273,60 @@
             let bestLon = null;
             let bestSource = "";
 
-            // Check Smart
             if (isValidCoordinate(row.SmartLat, row.SmartLong)) {
                 let d = haversine(userLat, userLon, parseFloat(row.SmartLat), parseFloat(row.SmartLong));
-                if (d < bestDist) { bestDist = d; bestLat = row.SmartLat; bestLon = row.SmartLong; bestSource = "Smart Meter"; }
+                if (d < bestDist) { bestDist = d; bestLat = parseFloat(row.SmartLat); bestLon = parseFloat(row.SmartLong); bestSource = "Smart Meter"; }
             }
-            // Check ARMS
             if (isValidCoordinate(row.ArmsLat, row.ArmsLong)) {
                 let d = haversine(userLat, userLon, parseFloat(row.ArmsLat), parseFloat(row.ArmsLong));
-                if (d < bestDist) { bestDist = d; bestLat = row.ArmsLat; bestLon = row.ArmsLong; bestSource = "ARMS Postpaid"; }
+                if (d < bestDist) { bestDist = d; bestLat = parseFloat(row.ArmsLat); bestLon = parseFloat(row.ArmsLong); bestSource = "ARMS Postpaid"; }
             }
-            // Check Prepaid
             if (isValidCoordinate(row.PrepaidLat, row.PrepaidLong)) {
                 let d = haversine(userLat, userLon, parseFloat(row.PrepaidLat), parseFloat(row.PrepaidLong));
-                if (d < bestDist) { bestDist = d; bestLat = row.PrepaidLat; bestLon = row.PrepaidLong; bestSource = "Prepaid Meter"; }
+                if (d < bestDist) { bestDist = d; bestLat = parseFloat(row.PrepaidLat); bestLon = parseFloat(row.PrepaidLong); bestSource = "Prepaid Meter"; }
             }
 
-            // If we found a valid coordinate, save it
             if (bestDist !== Infinity) {
+                let nearestDtr = getNearestDTR(bestLat, bestLon);
                 distances.push({
                     consumerNo: consumerNo,
                     dist: bestDist,
                     lat: bestLat,
                     lon: bestLon,
-                    source: bestSource
+                    source: bestSource,
+                    dtr: nearestDtr
                 });
             }
         });
 
-        // Sort by closest distance
         distances.sort((a, b) => a.dist - b.dist);
-        
-        // Grab top 5
-        let top5 = distances.slice(0, 5);
-        renderResults(top5);
+        let top10 = distances.slice(0, 10);
+
+        renderResultsAndMap(userLat, userLon, top10, sourceTitle);
     }
 
     // ==========================================
-    // 4. RENDERING RESULTS
+    // 5. RENDER CARDS & PLOT DIRECTLY ON MAP
     // ==========================================
-    function renderResults(top5) {
-        const btn = document.getElementById('locateBtn');
+    function renderResultsAndMap(userLat, userLon, top10, sourceTitle) {
         const status = document.getElementById('statusMessage');
         const resultsArea = document.getElementById('resultsArea');
         const listContainer = document.getElementById('consumerList');
+        const mapDiv = document.getElementById('map');
 
-        btn.disabled = false;
-        btn.innerHTML = "<span>🔄</span> Refresh Location";
-        
-        status.textContent = "✅ Scan complete";
+        status.textContent = `✅ Found Top ${top10.length} Consumers near ${sourceTitle}`;
         status.style.color = "#059669";
         status.style.background = "#ecfdf5";
 
-        if (top5.length === 0) {
-            listContainer.innerHTML = `<div style="text-align:center; padding: 20px; color: #64748b;">No consumers with valid GPS data found.</div>`;
+        // --- 1. RENDER CARDS ---
+        if (top10.length === 0) {
+            listContainer.innerHTML = `<div style="text-align:center; padding: 20px; color: #64748b;">No valid consumer coordinates found.</div>`;
             resultsArea.style.display = "block";
+            mapDiv.style.display = "none";
             return;
         }
 
-        let html = top5.map((item, index) => `
+        let html = top10.map((item, index) => `
             <div class="consumer-card">
                 <div class="rank-badge">#${index + 1}</div>
                 <div class="c-header">
@@ -246,8 +334,20 @@
                     <div class="c-distance">${formatDistance(item.dist)} away</div>
                 </div>
                 <div class="c-details">
-                    Found via: <span class="c-source">${item.source}</span>
+                    Location Source: <span class="c-source">${item.source}</span>
                 </div>
+
+                ${item.dtr ? `
+                <div class="dtr-box">
+                    <div class="dtr-title">⚡ Nearest Tagged DTR:</div>
+                    <div class="dtr-row">
+                        <span class="dtr-name-txt">${item.dtr.name} (${item.dtr.capacity})</span>
+                        <span style="font-weight:700; color:${item.dtr.loadColor};">${item.dtr.loadStatus}</span>
+                    </div>
+                    <div style="color:#64748b; margin-top:2px;">DTR No: ${item.dtr.dtrNo} | Distance: ${formatDistance(item.dtr.dist)}</div>
+                </div>
+                ` : ''}
+
                 <a href="https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lon}" target="_blank" class="nav-btn">
                     🧭 Navigate in Google Maps
                 </a>
@@ -256,6 +356,61 @@
 
         listContainer.innerHTML = html;
         resultsArea.style.display = "block";
+
+        // --- 2. PLOT DIRECTLY ON INTERACTIVE LEAFLET MAP ---
+        mapDiv.style.display = "block";
+
+        if (!mapInstance) {
+            mapInstance = L.map('map');
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+            }).addTo(mapInstance);
+        }
+
+        // Clear previous markers
+        mapMarkers.forEach(m => mapInstance.removeLayer(m));
+        mapMarkers = [];
+
+        let bounds = [];
+
+        // Marker for Search Center Point
+        let centerMarker = L.marker([userLat, userLon]).addTo(mapInstance)
+            .bindPopup(`<b>📍 Search Center</b><br>${sourceTitle}`);
+        mapMarkers.push(centerMarker);
+        bounds.push([userLat, userLon]);
+
+        // Plot Top 10 Consumers & DTRs
+        top10.forEach((item, i) => {
+            let cMarker = L.circleMarker([item.lat, item.lon], {
+                radius: 8,
+                fillColor: "#0f4c81",
+                color: "#ffffff",
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 0.9
+            }).addTo(mapInstance).bindPopup(`<b>#${i + 1} Consumer: ${item.consumerNo}</b><br>Dist: ${formatDistance(item.dist)}<br>Source: ${item.source}`);
+            
+            mapMarkers.push(cMarker);
+            bounds.push([item.lat, item.lon]);
+
+            if (item.dtr) {
+                let dMarker = L.circleMarker([item.dtr.lat, item.dtr.lon], {
+                    radius: 6,
+                    fillColor: "#ef4444",
+                    color: "#ffffff",
+                    weight: 1.5,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                }).addTo(mapInstance).bindPopup(`<b>⚡ DTR: ${item.dtr.name}</b><br>DTR No: ${item.dtr.dtrNo}<br>Cap: ${item.dtr.capacity}`);
+                
+                mapMarkers.push(dMarker);
+                bounds.push([item.dtr.lat, item.dtr.lon]);
+            }
+        });
+
+        // Fit map view to show all markers smoothly
+        mapInstance.fitBounds(bounds, { padding: [30, 30] });
     }
 </script>
 </body>
