@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f4c81">
     <title>Location & DTR Tracker - GESD</title>
-    <a href="nearby-consumers.html" style="display: block; text-align: center; margin-top: 10px; color: var(--primary); font-size: 13px; font-weight: bold; text-decoration: none;">
-    📡 Open Nearby Consumer Radar ↗
-</a>
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest-tracker.json">
+    <link rel="icon" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="GESD Tracker">
     <style>
         :root {
             --primary: #0f4c81;
@@ -26,8 +29,10 @@
         /* Install Banner */
         #installAppBtn { width: 100%; max-width: 480px; padding: 14px; background-color: #10b981; color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: bold; cursor: pointer; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
 
+        .radar-link { display: block; text-align: center; margin-bottom: 12px; color: var(--primary); font-size: 13px; font-weight: bold; text-decoration: none; }
+
         .app-card { background: var(--card-bg); width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); padding: 28px 24px; border: 1px solid #f1f5f9; position: relative; }
-        
+
         .brand-header { text-align: center; margin-bottom: 20px; }
         .brand-logo { height: 60px; width: auto; object-fit: contain; margin-bottom: 10px; }
         .brand-header h1 { font-size: 20px; font-weight: 700; color: var(--primary); }
@@ -42,7 +47,7 @@
         .styled-input { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #e2e8f0; font-size: 16px; outline: none; transition: all 0.2s ease; background: #fafafa; margin-bottom: 12px; }
         .styled-input:focus { border-color: var(--primary); background: #ffffff; box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1); }
         textarea.styled-input { resize: vertical; min-height: 100px; font-family: monospace; font-size: 14px; }
-        
+
         .btn-primary { width: 100%; padding: 14px; border-radius: 12px; border: none; background-color: var(--primary); color: white; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25); }
         .btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
         .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
@@ -50,10 +55,10 @@
         .btn-secondary { background-color: #64748b; }
 
         .status-badge { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 6px 12px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 0 auto; }
-        
+
         .results-section { margin-top: 20px; display: none; }
         .consumer-chip { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; font-family: monospace; font-size: 16px; font-weight: 700; text-align: center; padding: 10px; border-radius: 10px; margin-bottom: 16px; }
-        
+
         /* TABS UI */
         .tabs-container { display: flex; border-bottom: 2px solid #e2e8f0; margin-bottom: 16px; }
         .tab { flex: 1; text-align: center; padding: 10px 5px; font-size: 13px; font-weight: 700; color: #94a3b8; cursor: pointer; border-bottom: 3px solid transparent; transition: 0.2s; }
@@ -69,17 +74,17 @@
         .card-prepaid { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
 
         /* DTR Cards & Headers */
-        .dtr-section-title { 
+        .dtr-section-title {
             font-size: 13px; font-weight: 700; color: #ffffff; background: var(--primary);
             padding: 10px 14px; border-radius: 10px 10px 0 0; margin: 16px 0 0 0;
             text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px;
         }
-        .dtr-block { 
+        .dtr-block {
             border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 10px 10px;
-            padding: 12px 14px; background: #fafafa; margin-bottom: 16px; 
+            padding: 12px 14px; background: #fafafa; margin-bottom: 16px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-        
+
         .dtr-item { padding: 10px 0; border-bottom: 1px dashed #cbd5e1; }
         .dtr-item:last-child { border-bottom: none; padding-bottom: 0; }
         .dtr-main-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
@@ -103,7 +108,9 @@
 </head>
 <body>
 
-<button id="installAppBtn" class="hidden">📲 Install App to Home Screen</button>
+<button id="installAppBtn" class="hidden" type="button">📲 Install App to Home Screen</button>
+
+<a href="nearby-consumers.html" class="radar-link">📡 Open Nearby Consumer Radar ↗</a>
 
 <!-- LOGIN SCREEN -->
 <div class="app-card" id="loginScreen">
@@ -141,7 +148,7 @@
 
         <div id="resultsArea" class="results-section">
             <div class="consumer-chip" id="displayFullNumber"></div>
-            
+
             <div class="tabs-container">
                 <div class="tab" data-target="tab-locations">📍 Meter Locations</div>
                 <div class="tab" data-target="tab-dtrs">⚡ Nearest DTRs</div>
@@ -175,6 +182,43 @@
 
 <script>
     // ==========================================
+    // 0. PWA INSTALL (service worker + install button)
+    // ==========================================
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw-tracker.js');
+    }
+
+    const installBtn = document.getElementById('installAppBtn');
+    let deferredPrompt = null;
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches
+                      || window.navigator.standalone === true;
+
+    if (!isStandalone) {
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.classList.remove('hidden');
+        });
+
+        installBtn.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') installBtn.classList.add('hidden');
+            deferredPrompt = null;
+        });
+
+        // iPhone Safari never fires the install event, so show manual steps
+        if (/iphone|ipad|ipod/i.test(navigator.userAgent)) {
+            installBtn.textContent = '📲 Install: tap Share → Add to Home Screen';
+            installBtn.classList.remove('hidden');
+            installBtn.onclick = () => alert('Tap the Share button in Safari, then "Add to Home Screen", then "Add".');
+        }
+    }
+
+    window.addEventListener('appinstalled', () => installBtn.classList.add('hidden'));
+
+    // ==========================================
     // 1. UI MODE & TAB NAVIGATION
     // ==========================================
     const btnSingle = document.getElementById('btnSingleMode');
@@ -199,8 +243,9 @@
     // Tab Logic with Memory
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
-    
-    const savedTab = localStorage.getItem('gesd_active_tab_v3') || 'tab-locations';
+
+    let savedTab = 'tab-locations';
+    try { savedTab = localStorage.getItem('gesd_active_tab_v3') || 'tab-locations'; } catch (e) {}
     const initialTab = document.querySelector(`[data-target="${savedTab}"]`) || tabs[0];
     initialTab.classList.add('active');
     document.getElementById(initialTab.getAttribute('data-target')).classList.add('active');
@@ -209,12 +254,12 @@
         tab.addEventListener('click', () => {
             tabs.forEach(t => t.classList.remove('active'));
             tabContents.forEach(c => c.classList.remove('active'));
-            
+
             tab.classList.add('active');
             const targetId = tab.getAttribute('data-target');
             document.getElementById(targetId).classList.add('active');
-            
-            localStorage.setItem('gesd_active_tab_v3', targetId);
+
+            try { localStorage.setItem('gesd_active_tab_v3', targetId); } catch (e) {}
         });
     });
 
@@ -247,39 +292,44 @@
         }
     }
 
-    const CORRECT_PASSWORD = "gesd2026"; 
+    const CORRECT_PASSWORD = "gesd2026";
     const loginScreen = document.getElementById('loginScreen');
     const mainApp = document.getElementById('mainApp');
     const passInput = document.getElementById('passInput');
 
-    if (localStorage.getItem('gesd_tracker_unlocked') === 'true') {
+    let unlocked = false;
+    try { unlocked = localStorage.getItem('gesd_tracker_unlocked') === 'true'; } catch (e) {}
+    if (unlocked) {
         loginScreen.style.display = 'none';
         mainApp.style.display = 'block';
-        loadDatabases(); 
+        loadDatabases();
     }
 
-    document.getElementById('loginBtn').addEventListener('click', function() {
+    function tryLogin() {
         if (passInput.value === CORRECT_PASSWORD) {
-            localStorage.setItem('gesd_tracker_unlocked', 'true');
+            try { localStorage.setItem('gesd_tracker_unlocked', 'true'); } catch (e) {}
             loginScreen.style.display = 'none';
             mainApp.style.display = 'block';
-            loadDatabases(); 
+            loadDatabases();
         } else {
             document.getElementById('loginError').style.display = 'block';
         }
-    });
+    }
+    document.getElementById('loginBtn').addEventListener('click', tryLogin);
+    passInput.addEventListener('keypress', e => { if (e.key === 'Enter') tryLogin(); });
 
     document.getElementById('logoutBtn').addEventListener('click', function() {
-        localStorage.removeItem('gesd_tracker_unlocked');
+        try { localStorage.removeItem('gesd_tracker_unlocked'); } catch (e) {}
         mainApp.style.display = 'none';
         loginScreen.style.display = 'block';
+        passInput.value = '';
     });
 
     // ==========================================
     // 3. HAVERSINE & CALCULATIONS
     // ==========================================
     function haversine(lat1, lon1, lat2, lon2) {
-        const R = 6371000; 
+        const R = 6371000;
         const toRad = Math.PI / 180;
         const dLat = (lat2 - lat1) * toRad;
         const dLon = (lon2 - lon1) * toRad;
@@ -292,8 +342,8 @@
             let dLat = parseFloat(dtr.Latitude);
             let dLon = parseFloat(dtr.Longitude);
             if (isNaN(dLat) || isNaN(dLon)) return null;
-            
-            let numCap = parseInt((dtr.Capacity || "0").replace(/\D/g, '')) || 0;
+
+            let numCap = parseInt((dtr.Capacity || "0").toString().replace(/\D/g, '')) || 0;
             let numCons = parseInt(dtr["Consumer Count"]) || 0;
             let isOver = (numCap > 0 && numCons > numCap);
 
@@ -367,7 +417,7 @@
 
         // --- POPULATE TAB 2: NEAREST DTRS ---
         let dtrHtml = '';
-        
+
         function buildDtrBlock(typeLabel, lat, lon) {
             if (!isValidCoordinate(lat, lon)) return '';
             let nearest = getNearestDTRs(parseFloat(lat), parseFloat(lon), 3);
@@ -415,7 +465,7 @@
     // 5. BATCH PROCESSING & EXPORT W/ ALL COORDS
     // ==========================================
     let generatedBatchCSV = "";
-    let generatedBatchTSV = ""; 
+    let generatedBatchTSV = "";
 
     function getBatchDataString(lat, lon, isCsv = true) {
         let sep = isCsv ? "," : "\t";
@@ -435,16 +485,15 @@
         let numbers = rawInput.split(/[\n,]+/).map(n => n.trim()).filter(n => n !== "");
         if (numbers.length === 0) return alert("Please paste consumer numbers first.");
 
-        // New Headers for ALL THREE coordinate types side-by-side
         let csvHeaders = [
-            "Consumer_No", 
+            "Consumer_No",
             "Smart_Lat", "Smart_Lon", "Smart_DTR_No", "Smart_DTR_Name", "Smart_Dist(m)", "Smart_Load",
             "ARMS_Lat", "ARMS_Lon", "ARMS_DTR_No", "ARMS_DTR_Name", "ARMS_Dist(m)", "ARMS_Load",
             "Prepaid_Lat", "Prepaid_Lon", "Prepaid_DTR_No", "Prepaid_DTR_Name", "Prepaid_Dist(m)", "Prepaid_Load"
         ];
-        
+
         let tsvHeaders = [
-            "Consumer No", 
+            "Consumer No",
             "Smart Lat", "Smart Lon", "Smart DTR No", "Smart DTR Name", "Smart Dist(m)", "Smart Load",
             "ARMS Lat", "ARMS Lon", "ARMS DTR No", "ARMS DTR Name", "ARMS Dist(m)", "ARMS Load",
             "Prepaid Lat", "Prepaid Lon", "Prepaid DTR No", "Prepaid DTR Name", "Prepaid Dist(m)", "Prepaid Load"
@@ -461,14 +510,12 @@
             let row = consumerDatabase[fullNo];
 
             if (!row) {
-                // 18 empty separators after Consumer No
                 generatedBatchCSV += `${fullNo},,,,,,,,,,,,,,,,,,\n`;
                 generatedBatchTSV += `${fullNo}\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n`;
                 previewText += `${fullNo} -> ❌ Not Found in DB\n`;
                 return;
             }
 
-            // Generate string blocks for each coordinate type
             let smartCSV = getBatchDataString(row.SmartLat, row.SmartLong, true);
             let armsCSV = getBatchDataString(row.ArmsLat, row.ArmsLong, true);
             let prepCSV = getBatchDataString(row.PrepaidLat, row.PrepaidLong, true);
@@ -482,7 +529,9 @@
             previewText += `${fullNo} -> Analyzed successfully\n`;
         });
 
-        document.getElementById('batchOutputPreview').textContent = previewText;
+        const out = document.getElementById('batchOutputPreview');
+        out.textContent = previewText;
+        out.style.display = 'block';
         document.getElementById('batchResultsContainer').style.display = 'block';
     });
 
@@ -510,11 +559,6 @@
         link.click();
         document.body.removeChild(link);
     });
-
-    // PWA Service Worker Registration
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js');
-    }
 </script>
 </body>
 </html>
