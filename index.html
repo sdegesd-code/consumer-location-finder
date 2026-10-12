@@ -53,6 +53,7 @@
         .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
         .btn-success { background-color: #10b981; }
         .btn-secondary { background-color: #64748b; }
+        .btn-kml { background-color: #f59e0b; }
 
         .status-badge { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 6px 12px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 0 auto; }
 
@@ -97,7 +98,8 @@
 
         /* Batch Results Preview */
         .batch-output-box { background: #1e293b; color: #38bdf8; padding: 12px; border-radius: 10px; font-family: monospace; font-size: 12px; max-height: 180px; overflow-y: auto; white-space: pre; margin-top: 12px; display: none; }
-        .batch-actions { display: flex; gap: 10px; margin-top: 12px; }
+        .batch-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+        .batch-hint { font-size: 12px; color: var(--text-muted); margin-top: 10px; line-height: 1.5; }
 
         .badge-missing { background: #f1f5f9; color: #94a3b8; font-size: 13px; padding: 14px; border-radius: 12px; text-align: center; border: 1px dashed #cbd5e1; font-weight: 500; }
         .error-card { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 14px; border-radius: 12px; text-align: center; font-size: 14px; font-weight: 600; }
@@ -173,6 +175,10 @@
             <div class="batch-actions">
                 <button id="copyBatchBtn" class="btn-primary btn-secondary" style="flex: 1;">📋 Copy to Clipboard</button>
                 <button id="downloadBatchBtn" class="btn-primary btn-success" style="flex: 1;">⬇ Download CSV</button>
+                <button id="kmlBatchBtn" class="btn-primary btn-kml" style="flex: 1 1 100%;">🗺 Download KML (Google My Maps)</button>
+            </div>
+            <div class="batch-hint">
+                To view on a map: open <b>mymaps.google.com</b> → Create a new map → Import → select the downloaded KML file.
             </div>
         </div>
     </div>
@@ -554,6 +560,70 @@
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
         link.download = `GESD_Detailed_Batch_DTR_${new Date().getTime()}.csv`;
+        link.style.display = "none";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+
+    // ==========================================
+    // 6. KML EXPORT FOR GOOGLE MY MAPS
+    // ==========================================
+    function xmlEsc(s) {
+        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function buildKML(numbers) {
+        // KML colours are aabbggrr
+        const types = [
+            { name: 'Smart Meter',   lat: 'SmartLat',   lon: 'SmartLong',   color: 'ff81b910', id: 'smart' },
+            { name: 'ARMS Postpaid', lat: 'ArmsLat',    lon: 'ArmsLong',    color: 'ffc78402', id: 'arms' },
+            { name: 'Prepaid Meter', lat: 'PrepaidLat', lon: 'PrepaidLong', color: 'fff65c8b', id: 'prepaid' }
+        ];
+
+        let kml = `<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>GESD Consumers</name>`;
+
+        types.forEach(t => {
+            kml += `<Style id="${t.id}"><IconStyle><color>${t.color}</color><scale>1.1</scale>
+<Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>`;
+        });
+
+        types.forEach(t => {
+            kml += `<Folder><name>${t.name}</name>`;
+            numbers.forEach(num => {
+                let last5 = num.slice(-5).padStart(5, '0');
+                let fullNo = (parseInt(last5.charAt(0)) >= 7 ? "0400100" : "0400000") + last5;
+                let row = consumerDatabase[fullNo];
+                if (!row || !isValidCoordinate(row[t.lat], row[t.lon])) return;
+
+                let lat = parseFloat(row[t.lat]), lon = parseFloat(row[t.lon]);
+                let d = getNearestDTRs(lat, lon, 1)[0];
+                let desc = d
+                    ? `Nearest DTR: ${d.name} (${d.dtrNo})\nDistance: ${d.dist.toFixed(1)} m\nCapacity: ${d.capacity}\nFeeder: ${d.feeder}\nLoad: ${d.loadStatus}`
+                    : 'No DTR found';
+
+                kml += `<Placemark><name>${fullNo}</name>
+<description>${xmlEsc(desc)}</description>
+<styleUrl>#${t.id}</styleUrl>
+<Point><coordinates>${lon},${lat},0</coordinates></Point></Placemark>`;
+            });
+            kml += `</Folder>`;
+        });
+
+        kml += `</Document></kml>`;
+        return kml;
+    }
+
+    document.getElementById('kmlBatchBtn').addEventListener('click', () => {
+        let numbers = document.getElementById('batchInput').value
+            .split(/[\n,]+/).map(n => n.trim()).filter(n => n !== "");
+        if (numbers.length === 0) return alert("Please paste consumer numbers first.");
+
+        const blob = new Blob([buildKML(numbers)], { type: 'application/vnd.google-earth.kml+xml' });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = `GESD_Map_${Date.now()}.kml`;
         link.style.display = "none";
         document.body.appendChild(link);
         link.click();
