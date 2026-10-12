@@ -99,7 +99,10 @@
         /* Batch Results Preview */
         .batch-output-box { background: #1e293b; color: #38bdf8; padding: 12px; border-radius: 10px; font-family: monospace; font-size: 12px; max-height: 180px; overflow-y: auto; white-space: pre; margin-top: 12px; display: none; }
         .batch-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
-        .batch-hint { font-size: 12px; color: var(--text-muted); margin-top: 10px; line-height: 1.5; }
+        .create-map-box { margin-top: 16px; padding: 14px; border: 1.5px dashed #f59e0b; border-radius: 12px; background: #fffbeb; }
+        .create-map-box h3 { font-size: 15px; color: #92400e; margin-bottom: 6px; }
+        .create-map-box p { font-size: 12px; color: #78350f; line-height: 1.6; margin-bottom: 10px; }
+        .create-map-link { display: block; text-align: center; padding: 12px; border-radius: 10px; background: #f59e0b; color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; }
 
         .badge-missing { background: #f1f5f9; color: #94a3b8; font-size: 13px; padding: 14px; border-radius: 12px; text-align: center; border: 1px dashed #cbd5e1; font-weight: 500; }
         .error-card { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 14px; border-radius: 12px; text-align: center; font-size: 14px; font-weight: 600; }
@@ -177,8 +180,10 @@
                 <button id="downloadBatchBtn" class="btn-primary btn-success" style="flex: 1;">⬇ Download CSV</button>
                 <button id="kmlBatchBtn" class="btn-primary btn-kml" style="flex: 1 1 100%;">🗺 Download KML (Google My Maps)</button>
             </div>
-            <div class="batch-hint">
-                To view on a map: open <b>mymaps.google.com</b> → Create a new map → Import → select the downloaded KML file.
+            <div class="create-map-box">
+                <h3>🗺 Create Map</h3>
+                <p>1. Tap <b>Download KML</b> above.<br>2. Open a blank Google My Map below.<br>3. In the map, tap <b>Import</b> and choose the KML file.</p>
+                <a href="https://www.google.com/maps/d/edit?create=1&hl=en" target="_blank" rel="noopener" class="create-map-link">➕ Create New Google My Map ↗</a>
             </div>
         </div>
     </div>
@@ -569,24 +574,36 @@
     // ==========================================
     // 6. KML EXPORT FOR GOOGLE MY MAPS
     // ==========================================
+    // My Maps icon number used in the KML style ids.
+    // 1660 = Crisis lightning icon (taken from an exported My Maps KML).
+    const KML_ICON_ID = 1660;
+
     function xmlEsc(s) {
         return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
     function buildKML(numbers) {
-        // KML colours are aabbggrr
+        // My Maps reads the icon glyph and colour from the style id: icon-<ICON_ID>-<RRGGBB>
+        // KML <color> tag is aabbggrr (same colour, reversed byte order)
         const types = [
-            { name: 'Smart Meter',   lat: 'SmartLat',   lon: 'SmartLong',   color: 'ff81b910', id: 'smart' },
-            { name: 'ARMS Postpaid', lat: 'ArmsLat',    lon: 'ArmsLong',    color: 'ffc78402', id: 'arms' },
-            { name: 'Prepaid Meter', lat: 'PrepaidLat', lon: 'PrepaidLong', color: 'fff65c8b', id: 'prepaid' }
+            { name: 'Smart Meter',   lat: 'SmartLat',   lon: 'SmartLong',   hex: '10B981', kmlColor: 'ff81b910' },
+            { name: 'ARMS Postpaid', lat: 'ArmsLat',    lon: 'ArmsLong',    hex: '0284C7', kmlColor: 'ffc78402' },
+            { name: 'Prepaid Meter', lat: 'PrepaidLat', lon: 'PrepaidLong', hex: '8B5CF6', kmlColor: 'fff65c8b' }
         ];
+        types.forEach(t => { t.id = `icon-${KML_ICON_ID}-${t.hex}`; });
 
         let kml = `<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>GESD Consumers</name>`;
 
         types.forEach(t => {
-            kml += `<Style id="${t.id}"><IconStyle><color>${t.color}</color><scale>1.1</scale>
-<Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>`;
+            ['normal', 'highlight'].forEach(mode => {
+                kml += `<Style id="${t.id}-${mode}"><IconStyle><color>${t.kmlColor}</color><scale>1</scale>
+<Icon><href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href></Icon>
+<hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/></IconStyle>
+<LabelStyle><scale>0</scale></LabelStyle></Style>`;
+            });
+            kml += `<StyleMap id="${t.id}"><Pair><key>normal</key><styleUrl>#${t.id}-normal</styleUrl></Pair>
+<Pair><key>highlight</key><styleUrl>#${t.id}-highlight</styleUrl></Pair></StyleMap>`;
         });
 
         types.forEach(t => {
