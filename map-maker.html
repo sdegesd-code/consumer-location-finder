@@ -138,6 +138,12 @@
 <script>
     const $ = id => document.getElementById(id);
 
+    // State (must be declared before the login check below calls loadDatabases)
+    let consumerDatabase = {};
+    let dtrDatabase = [];
+    let dbReady = false;
+    let consumers = [];   // final list of 12-digit consumer numbers
+
     // ==========================================
     // 1. LOGIN (same unlock key as the tracker, so one login covers both pages)
     // ==========================================
@@ -172,11 +178,6 @@
     // ==========================================
     // 2. DATABASES
     // ==========================================
-    let consumerDatabase = {};
-    let dtrDatabase = [];
-    let dbReady = false;
-    let consumers = [];   // final list of 12-digit consumer numbers
-
     async function loadDatabases() {
         if (dbReady) return;
         try {
@@ -196,7 +197,7 @@
             runExtraction();
         } catch (error) {
             const s = $('statusMessage');
-            s.textContent = "❌ Failed to load JSON (data.json / dtr.json)";
+            s.textContent = "❌ Failed to load: " + (error && error.message ? error.message : "data.json / dtr.json");
             s.style.color = "#dc2626";
             s.style.background = "#fef2f2";
         }
