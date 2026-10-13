@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f4c81">
+    <title>Map Maker - GESD</title>
+    <link rel="icon" href="logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        :root {
+            --primary: #0f4c81;
+            --primary-hover: #083358;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px 12px; }
+
+        .app-card { background: var(--card-bg); width: 100%; max-width: 520px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); padding: 28px 24px; border: 1px solid #f1f5f9; }
+        .back-link { display: block; text-align: center; margin-bottom: 12px; color: var(--primary); font-size: 13px; font-weight: bold; text-decoration: none; }
+
+        .brand-header { text-align: center; margin-bottom: 20px; }
+        .brand-logo { height: 60px; width: auto; object-fit: contain; margin-bottom: 10px; }
+        .brand-header h1 { font-size: 20px; font-weight: 700; color: var(--primary); }
+        .brand-header p { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+
+        .section-title { font-size: 13px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; margin: 6px 0 8px; }
+
+        .styled-input { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #e2e8f0; font-size: 16px; outline: none; transition: all 0.2s ease; background: #fafafa; margin-bottom: 12px; }
+        .styled-input:focus { border-color: var(--primary); background: #ffffff; box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1); }
+        textarea.styled-input { resize: vertical; min-height: 140px; font-family: monospace; font-size: 14px; }
+
+        .btn-primary { width: 100%; padding: 14px; border-radius: 12px; border: none; background-color: var(--primary); color: white; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25); }
+        .btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
+        .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
+        .btn-success { background-color: #10b981; }
+        .btn-secondary { background-color: #64748b; }
+        .btn-kml { background-color: #f59e0b; }
+
+        .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+        .btn-row .btn-primary { flex: 1 1 140px; }
+
+        .options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+        .options label { font-size: 13px; color: var(--text-main); display: flex; gap: 8px; align-items: flex-start; line-height: 1.4; cursor: pointer; }
+        .options input { margin-top: 3px; }
+
+        .summary { font-size: 13px; font-weight: 600; color: #1e40af; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 10px 12px; margin: 4px 0 12px; line-height: 1.5; }
+        .summary.empty { color: var(--text-muted); background: #f1f5f9; border-color: #e2e8f0; }
+
+        .num-list { list-style: none; max-height: 220px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 10px; padding: 6px 12px; background: #fafafa; margin-bottom: 4px; }
+        .num-list li { font-family: monospace; font-size: 14px; padding: 4px 0; border-bottom: 1px dashed #e2e8f0; }
+        .num-list li:last-child { border-bottom: none; }
+
+        details { margin-top: 10px; font-size: 12px; color: var(--text-muted); }
+        details summary { cursor: pointer; font-weight: 600; }
+        details ul { margin: 6px 0 0 18px; line-height: 1.6; max-height: 140px; overflow-y: auto; }
+
+        .create-map-box { margin-top: 16px; padding: 14px; border: 1.5px dashed #f59e0b; border-radius: 12px; background: #fffbeb; }
+        .create-map-box h3 { font-size: 15px; color: #92400e; margin-bottom: 6px; }
+        .create-map-box p { font-size: 12px; color: #78350f; line-height: 1.6; margin-bottom: 10px; }
+        .create-map-link { display: block; text-align: center; padding: 12px; border-radius: 10px; background: #f59e0b; color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; }
+
+        .status-badge { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 6px 12px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 15px auto 0; }
+
+        hr.sep { border: none; border-top: 1px solid #e2e8f0; margin: 20px 0 14px; }
+
+        #loginError { color: #dc2626; font-size: 13px; text-align: center; margin-top: 10px; display: none; font-weight: 600; }
+        #mainApp { display: none; }
+    </style>
+</head>
+<body>
+
+<a href="index.html" class="back-link">← Back to Location Tracker</a>
+
+<!-- LOGIN SCREEN -->
+<div class="app-card" id="loginScreen">
+    <div class="brand-header">
+        <img src="logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
+        <h1>Authorized Access</h1>
+        <p>Goalpara ESD Map Maker</p>
+    </div>
+    <input type="password" id="passInput" class="styled-input" placeholder="Enter Access PIN" autocomplete="off">
+    <button id="loginBtn" class="btn-primary">Unlock App</button>
+    <div id="loginError">❌ Incorrect PIN. Please try again.</div>
+</div>
+
+<!-- MAIN APP -->
+<div class="app-card" id="mainApp">
+    <div class="brand-header">
+        <img src="logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
+        <h1>🗺 Map Maker</h1>
+        <p>Paste anything → extract consumer numbers → Google My Maps</p>
+        <button id="logoutBtn" style="background:none; border:none; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:12px; margin-top:4px;">Lock App</button>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="section-title">1. Paste raw data</div>
+    <textarea id="rawInput" class="styled-input" placeholder="Paste anything here: WhatsApp messages, Excel rows, lists with names and phone numbers...&#10;Consumer numbers are picked out automatically."></textarea>
+
+    <div class="options">
+        <label><input type="checkbox" id="dbOnlyChk" checked> Keep only numbers found in the consumer database (recommended for messy text)</label>
+        <label><input type="checkbox" id="looseChk"> Also accept 6 to 11 digit numbers (uses their last 5 digits)</label>
+    </div>
+
+    <div class="summary empty" id="summaryBox">Nothing extracted yet.</div>
+    <ul class="num-list" id="numList" style="display:none;"></ul>
+    <details id="excludedBox" style="display:none;"><summary id="excludedTitle"></summary><ul id="excludedList"></ul></details>
+    <details id="ignoredBox" style="display:none;"><summary id="ignoredTitle"></summary><ul id="ignoredList"></ul></details>
+
+    <div class="btn-row">
+        <button id="copyNumsBtn" class="btn-primary btn-secondary" disabled>📋 Copy Numbers</button>
+        <button id="excelBtn" class="btn-primary btn-success" disabled>⬇ Download Excel</button>
+    </div>
+
+    <hr class="sep">
+
+    <!-- STEP 2 -->
+    <div class="section-title">2. Make the map</div>
+    <div class="btn-row" style="margin-top:0;">
+        <button id="kmlBtn" class="btn-primary btn-kml" style="flex: 1 1 100%;" disabled>🗺 Download KML (Google My Maps)</button>
+        <button id="csvBtn" class="btn-primary btn-secondary" disabled>⬇ Details CSV</button>
+        <button id="copyDetailsBtn" class="btn-primary btn-secondary" disabled>📋 Copy Details</button>
+    </div>
+
+    <div class="create-map-box">
+        <h3>🗺 Create Map</h3>
+        <p>1. Tap <b>Download KML</b> above.<br>2. Open a blank Google My Map below.<br>3. In the map, tap <b>Import</b> and choose the KML file.</p>
+        <a href="https://www.google.com/maps/d/edit?create=1&hl=en" target="_blank" rel="noopener" class="create-map-link">➕ Create New Google My Map ↗</a>
+    </div>
+
+    <div id="statusMessage" class="status-badge">⏳ Loading databases...</div>
+</div>
+
+<script>
+    const $ = id => document.getElementById(id);
+
+    // ==========================================
+    // 1. LOGIN (same unlock key as the tracker, so one login covers both pages)
+    // ==========================================
+    const CORRECT_PASSWORD = "gesd2026";
+    let unlocked = false;
+    try { unlocked = localStorage.getItem('gesd_tracker_unlocked') === 'true'; } catch (e) {}
+    if (unlocked) {
+        $('loginScreen').style.display = 'none';
+        $('mainApp').style.display = 'block';
+        loadDatabases();
+    }
+
+    function tryLogin() {
+        if ($('passInput').value === CORRECT_PASSWORD) {
+            try { localStorage.setItem('gesd_tracker_unlocked', 'true'); } catch (e) {}
+            $('loginScreen').style.display = 'none';
+            $('mainApp').style.display = 'block';
+            loadDatabases();
+        } else {
+            $('loginError').style.display = 'block';
+        }
+    }
+    $('loginBtn').addEventListener('click', tryLogin);
+    $('passInput').addEventListener('keypress', e => { if (e.key === 'Enter') tryLogin(); });
+    $('logoutBtn').addEventListener('click', () => {
+        try { localStorage.removeItem('gesd_tracker_unlocked'); } catch (e) {}
+        $('mainApp').style.display = 'none';
+        $('loginScreen').style.display = 'block';
+        $('passInput').value = '';
+    });
+
+    // ==========================================
+    // 2. DATABASES
+    // ==========================================
+    let consumerDatabase = {};
+    let dtrDatabase = [];
+    let dbReady = false;
+    let consumers = [];   // final list of 12-digit consumer numbers
+
+    async function loadDatabases() {
+        if (dbReady) return;
+        try {
+            const consRes = await fetch('data.json');
+            const consData = await consRes.json();
+            consData.forEach(row => {
+                if (row.ConsumerNo) consumerDatabase[row.ConsumerNo.toString().trim()] = row;
+            });
+            const dtrRes = await fetch('dtr.json');
+            dtrDatabase = await dtrRes.json();
+
+            dbReady = true;
+            const s = $('statusMessage');
+            s.textContent = "✅ Databases Ready";
+            s.style.color = "#059669";
+            s.style.background = "#ecfdf5";
+            runExtraction();
+        } catch (error) {
+            const s = $('statusMessage');
+            s.textContent = "❌ Failed to load JSON (data.json / dtr.json)";
+            s.style.color = "#dc2626";
+            s.style.background = "#fef2f2";
+        }
+    }
+
+    // ==========================================
+    // 3. HAVERSINE & DTR LOOKUP
+    // ==========================================
+    function haversine(lat1, lon1, lat2, lon2) {
+        const R = 6371000;
+        const toRad = Math.PI / 180;
+        const dLat = (lat2 - lat1) * toRad;
+        const dLon = (lon2 - lon1) * toRad;
+        const a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(lat1 * toRad) * Math.cos(lat2 * toRad) * Math.sin(dLon/2) * Math.sin(dLon/2);
+        return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)));
+    }
+
+    function getNearestDTRs(targetLat, targetLon, maxCount = 1) {
+        let distances = dtrDatabase.map(dtr => {
+            let dLat = parseFloat(dtr.Latitude);
+            let dLon = parseFloat(dtr.Longitude);
+            if (isNaN(dLat) || isNaN(dLon)) return null;
+
+            let numCap = parseInt((dtr.Capacity || "0").toString().replace(/\D/g, '')) || 0;
+            let numCons = parseInt(dtr["Consumer Count"]) || 0;
+            let isOver = (numCap > 0 && numCons > numCap);
+
+            return {
+                dtrNo: dtr["DTR No"] || "N/A",
+                name: dtr["DTR Name"] || "Unknown",
+                capacity: dtr.Capacity || "0",
+                feeder: (dtr["Feeder Name"] || "N/A").trim(),
+                consumers: numCons,
+                loadStatus: isOver ? "⚠️ Overloaded" : "✅ Optimal",
+                dist: haversine(targetLat, targetLon, dLat, dLon)
+            };
+        }).filter(item => item !== null);
+        distances.sort((a, b) => a.dist - b.dist);
+        return distances.slice(0, maxCount);
+    }
+
+    function isValidCoordinate(lat, long) {
+        if (lat == null || long == null) return false;
+        let strLat = lat.toString().trim().toLowerCase();
+        let strLong = long.toString().trim().toLowerCase();
+        if (["", "0", "0.0", "nil", "null", "n/a"].includes(strLat)) return false;
+        return !isNaN(parseFloat(strLat)) && !isNaN(parseFloat(strLong)) && parseFloat(strLat) !== 0;
+    }
+
+    // ==========================================
+    // 4. EXTRACT CONSUMER NUMBERS FROM ANY JUNK
+    // ==========================================
+    function toFullNo(last5) {
+        return (parseInt(last5.charAt(0)) >= 7 ? "0400100" : "0400000") + last5;
+    }
+
+    /*
+      Rules, applied to every run of digits found in the text:
+        - 12 digits starting 0400000 / 0400100  -> full consumer number, kept as is
+        - exactly 5 digits                      -> short code, expanded to 12 digits
+        - 6 to 11 digits                        -> only if "loose" is on (last 5 digits used)
+        - anything else (phone numbers, dates, 12-digit non-consumer codes, 13+ digits) -> ignored
+      Duplicates are removed and the original order is kept.
+    */
+    function extractConsumers(text, loose) {
+        const items = [];
+        const seen = new Set();
+        const ignored = [];
+        let duplicates = 0;
+
+        const runs = text.match(/\d+/g) || [];
+        runs.forEach(run => {
+            let full = null;
+
+            if (run.length === 12 && /^0400[01]00\d{5}$/.test(run)) {
+                full = run;
+            } else if (run.length === 5) {
+                full = toFullNo(run);
+            } else if (loose && run.length >= 6 && run.length <= 11) {
+                full = toFullNo(run.slice(-5));
+            } else {
+                let reason = run.length === 12 ? "12 digits but not a consumer prefix"
+                           : run.length < 5 ? "too short"
+                           : run.length <= 11 ? "6 to 11 digits (turn on the option to accept)"
+                           : "too long";
+                ignored.push({ text: run, reason });
+                return;
+            }
+
+            if (seen.has(full)) { duplicates++; return; }
+            seen.add(full);
+            items.push(full);
+        });
+
+        return { items, duplicates, ignored };
+    }
+
+    function runExtraction() {
+        const text = $('rawInput').value;
+        const loose = $('looseChk').checked;
+        const dbOnly = $('dbOnlyChk').checked;
+
+        const res = extractConsumers(text, loose);
+
+        let excluded = [];
+        if (dbOnly && dbReady) {
+            excluded = res.items.filter(no => !consumerDatabase[no]);
+            consumers = res.items.filter(no => consumerDatabase[no]);
+        } else {
+            consumers = res.items;
+        }
+
+        // Summary
+        const box = $('summaryBox');
+        if (!text.trim()) {
+            box.className = 'summary empty';
+            box.textContent = 'Nothing extracted yet.';
+        } else {
+            let parts = [`✅ ${consumers.length} consumer number${consumers.length === 1 ? '' : 's'} found`];
+            if (res.duplicates) parts.push(`${res.duplicates} duplicate${res.duplicates === 1 ? '' : 's'} removed`);
+            if (excluded.length) parts.push(`${excluded.length} not in database`);
+            if (res.ignored.length) parts.push(`${res.ignored.length} other number${res.ignored.length === 1 ? '' : 's'} ignored`);
+            if (!dbReady && dbOnly) parts.push('database still loading');
+            box.className = consumers.length ? 'summary' : 'summary empty';
+            box.textContent = parts.join(' · ');
+        }
+
+        // Lists
+        const list = $('numList');
+        list.innerHTML = consumers.map(no => `<li>${no}</li>`).join('');
+        list.style.display = consumers.length ? 'block' : 'none';
+
+        fillDetails('excludedBox', 'excludedTitle', 'excludedList',
+            excluded.map(no => no), `Not in database (${excluded.length}), excluded`);
+        fillDetails('ignoredBox', 'ignoredTitle', 'ignoredList',
+            res.ignored.map(i => `${i.text} (${i.reason})`), `Ignored numbers (${res.ignored.length})`);
+
+        // Buttons
+        const has = consumers.length > 0;
+        ['copyNumsBtn', 'excelBtn', 'kmlBtn', 'csvBtn', 'copyDetailsBtn'].forEach(id => { $(id).disabled = !has; });
+        // details need the database
+        if (!dbReady) ['kmlBtn', 'csvBtn', 'copyDetailsBtn', 'excelBtn'].forEach(id => { $(id).disabled = true; });
+    }
+
+    function fillDetails(boxId, titleId, listId, lines, title) {
+        const box = $(boxId);
+        if (!lines.length) { box.style.display = 'none'; return; }
+        $(titleId).textContent = title;
+        $(listId).innerHTML = lines.slice(0, 200).map(l => `<li>${escHtml(l)}</li>`).join('')
+            + (lines.length > 200 ? `<li>…and ${lines.length - 200} more</li>` : '');
+        box.style.display = 'block';
+    }
+
+    let debounce = null;
+    $('rawInput').addEventListener('input', () => { clearTimeout(debounce); debounce = setTimeout(runExtraction, 250); });
+    $('looseChk').addEventListener('change', runExtraction);
+    $('dbOnlyChk').addEventListener('change', runExtraction);
+
+    // ==========================================
+    // 5. EXPORT HELPERS
+    // ==========================================
+    function escHtml(s) {
+        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function flash(btn, msg) {
+        const old = btn.textContent;
+        btn.textContent = msg;
+        setTimeout(() => btn.textContent = old, 2000);
+    }
+
+    function downloadBlob(blob, filename) {
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = filename;
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    // Copies a table so that Excel keeps leading zeros (text format) when pasting
+    function copyTable(rows, btn) {
+        const plainText = rows.map(r => r.join('\t')).join('\n');
+        const htmlText = '<table>' + rows.map(r =>
+            '<tr>' + r.map(c => `<td style="mso-number-format:'\\@'">${escHtml(c)}</td>`).join('') + '</tr>'
+        ).join('') + '</table>';
+
+        const fallback = () => navigator.clipboard.writeText(plainText)
+            .then(() => flash(btn, "✅ Copied (format column as Text in Excel)"))
+            .catch(() => alert("Copy failed. Use the download buttons instead."));
+
+        if (navigator.clipboard && window.ClipboardItem) {
+            const item = new ClipboardItem({
+                'text/plain': new Blob([plainText], { type: 'text/plain' }),
+                'text/html': new Blob([htmlText], { type: 'text/html' })
+            });
+            navigator.clipboard.write([item])
+                .then(() => flash(btn, "✅ Copied!"))
+                .catch(fallback);
+        } else if (navigator.clipboard) {
+            fallback();
+        } else {
+            alert("Copy is not supported in this browser. Use the download buttons instead.");
+        }
+    }
+
+    const DETAIL_HEADERS = [
+        "Consumer No",
+        "Smart Lat", "Smart Lon", "Smart DTR No", "Smart DTR Name", "Smart Dist(m)", "Smart Load",
+        "ARMS Lat", "ARMS Lon", "ARMS DTR No", "ARMS DTR Name", "ARMS Dist(m)", "ARMS Load",
+        "Prepaid Lat", "Prepaid Lon", "Prepaid DTR No", "Prepaid DTR Name", "Prepaid Dist(m)", "Prepaid Load"
+    ];
+
+    function detailCells(lat, lon) {
+        if (!isValidCoordinate(lat, lon)) return ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'];
+        const n = getNearestDTRs(parseFloat(lat), parseFloat(lon), 1)[0];
+        if (!n) return [lat, lon, 'No DTRs', 'No DTRs', 'N/A', 'N/A'];
+        return [lat, lon, n.dtrNo, n.name, n.dist.toFixed(1), n.loadStatus];
+    }
+
+    function buildDetailRows() {
+        return consumers.map(no => {
+            const row = consumerDatabase[no] || {};
+            return [no].concat(
+                detailCells(row.SmartLat, row.SmartLong),
+                detailCells(row.ArmsLat, row.ArmsLong),
+                detailCells(row.PrepaidLat, row.PrepaidLong)
+            ).map(String);
+        });
+    }
+
+    // Copy numbers (single column)
+    $('copyNumsBtn').addEventListener('click', () => {
+        if (!consumers.length) return;
+        copyTable(consumers.map(no => [no]), $('copyNumsBtn'));
+    });
+
+    // Copy details table
+    $('copyDetailsBtn').addEventListener('click', () => {
+        if (!consumers.length) return;
+        copyTable([DETAIL_HEADERS].concat(buildDetailRows()), $('copyDetailsBtn'));
+    });
+
+    // Download Excel (numbers stored as text so zeros are kept)
+    $('excelBtn').addEventListener('click', () => {
+        if (!consumers.length) return;
+        if (typeof XLSX === 'undefined') return alert("Excel library could not load (offline?). Use Details CSV instead.");
+
+        const sheet1 = XLSX.utils.aoa_to_sheet([['Consumer No']].concat(consumers.map(no => [{ v: no, t: 's' }])));
+        const sheet2 = XLSX.utils.aoa_to_sheet(
+            [DETAIL_HEADERS].concat(buildDetailRows().map(r => r.map(c => ({ v: String(c), t: 's' }))))
+        );
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, sheet1, "ConsumerNos");
+        XLSX.utils.book_append_sheet(wb, sheet2, "Details");
+        XLSX.writeFile(wb, `GESD_Consumers_${Date.now()}.xlsx`);
+    });
+
+    // Download details CSV
+    $('csvBtn').addEventListener('click', () => {
+        if (!consumers.length) return;
+        const q = c => '"' + String(c).replace(/"/g, '""') + '"';
+        const csv = [DETAIL_HEADERS].concat(buildDetailRows()).map(r => r.map(q).join(',')).join('\n');
+        downloadBlob(new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' }), `GESD_Detailed_DTR_${Date.now()}.csv`);
+    });
+
+    // ==========================================
+    // 6. KML EXPORT FOR GOOGLE MY MAPS
+    // ==========================================
+    // My Maps icon number (1660 = Crisis lightning icon, read from an exported My Maps KML)
+    const KML_ICON_ID = 1660;
+
+    function buildKML(list) {
+        // My Maps reads glyph + colour from the style id: icon-<ICON_ID>-<RRGGBB>
+        // KML <color> is aabbggrr (same colour, reversed byte order)
+        const types = [
+            { name: 'Smart Meter',   lat: 'SmartLat',   lon: 'SmartLong',   hex: '10B981', kmlColor: 'ff81b910' },
+            { name: 'ARMS Postpaid', lat: 'ArmsLat',    lon: 'ArmsLong',    hex: '0284C7', kmlColor: 'ffc78402' },
+            { name: 'Prepaid Meter', lat: 'PrepaidLat', lon: 'PrepaidLong', hex: '8B5CF6', kmlColor: 'fff65c8b' }
+        ];
+        types.forEach(t => { t.id = `icon-${KML_ICON_ID}-${t.hex}`; });
+
+        let kml = `<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>GESD Consumers</name>`;
+
+        types.forEach(t => {
+            kml += `<Style id="${t.id}-normal"><IconStyle><color>${t.kmlColor}</color><scale>1</scale>
+<Icon><href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href></Icon></IconStyle>
+<LabelStyle><scale>0</scale></LabelStyle></Style>
+<Style id="${t.id}-highlight"><IconStyle><color>${t.kmlColor}</color><scale>1</scale>
+<Icon><href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href></Icon></IconStyle>
+<LabelStyle><scale>1</scale></LabelStyle></Style>
+<StyleMap id="${t.id}"><Pair><key>normal</key><styleUrl>#${t.id}-normal</styleUrl></Pair>
+<Pair><key>highlight</key><styleUrl>#${t.id}-highlight</styleUrl></Pair></StyleMap>`;
+        });
+
+        types.forEach(t => {
+            kml += `<Folder><name>${t.name}</name>`;
+            list.forEach(fullNo => {
+                const row = consumerDatabase[fullNo];
+                if (!row || !isValidCoordinate(row[t.lat], row[t.lon])) return;
+
+                const lat = parseFloat(row[t.lat]), lon = parseFloat(row[t.lon]);
+                const d = getNearestDTRs(lat, lon, 1)[0];
+                const lines = d
+                    ? [`Nearest DTR: ${d.name} (${d.dtrNo})`, `Distance: ${d.dist.toFixed(1)} m`, `Capacity: ${d.capacity}`, `Feeder: ${d.feeder}`, `Load: ${d.loadStatus}`]
+                    : ['No DTR found'];
+                const desc = lines.map(l => l.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')).join('<br>');
+
+                kml += `<Placemark><name>${fullNo}</name>
+<description><![CDATA[${desc}]]></description>
+<styleUrl>#${t.id}</styleUrl>
+<Point><coordinates>${lon},${lat},0</coordinates></Point></Placemark>`;
+            });
+            kml += `</Folder>`;
+        });
+
+        kml += `</Document></kml>`;
+        return kml;
+    }
+
+    $('kmlBtn').addEventListener('click', () => {
+        if (!consumers.length) return;
+        downloadBlob(new Blob([buildKML(consumers)], { type: 'application/vnd.google-earth.kml+xml' }), `GESD_Map_${Date.now()}.kml`);
+    });
+</script>
+</body>
+</html>
