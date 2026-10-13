@@ -39,9 +39,6 @@
         .brand-header p { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 
         /* Mode Switcher */
-        .mode-toggle { display: flex; background: #f1f5f9; border-radius: 12px; margin-bottom: 20px; padding: 4px; }
-        .mode-btn { flex: 1; padding: 10px; text-align: center; font-size: 13px; font-weight: 700; cursor: pointer; color: #64748b; border-radius: 8px; transition: 0.2s; }
-        .mode-btn.active { background: var(--primary); color: white; box-shadow: 0 2px 8px rgba(15, 76, 129, 0.2); }
 
         /* Inputs */
         .styled-input { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #e2e8f0; font-size: 16px; outline: none; transition: all 0.2s ease; background: #fafafa; margin-bottom: 12px; }
@@ -53,7 +50,6 @@
         .btn-primary:disabled { background-color: #cbd5e1; cursor: not-allowed; box-shadow: none; }
         .btn-success { background-color: #10b981; }
         .btn-secondary { background-color: #64748b; }
-        .btn-kml { background-color: #f59e0b; }
 
         .status-badge { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 6px 12px; border-radius: 20px; background: #f1f5f9; width: fit-content; margin: 0 auto; }
 
@@ -96,13 +92,6 @@
         .dtr-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 12px; }
         .consumer-val { font-weight: 700; color: #1e293b; }
 
-        /* Batch Results Preview */
-        .batch-output-box { background: #1e293b; color: #38bdf8; padding: 12px; border-radius: 10px; font-family: monospace; font-size: 12px; max-height: 180px; overflow-y: auto; white-space: pre; margin-top: 12px; display: none; }
-        .batch-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
-        .create-map-box { margin-top: 16px; padding: 14px; border: 1.5px dashed #f59e0b; border-radius: 12px; background: #fffbeb; }
-        .create-map-box h3 { font-size: 15px; color: #92400e; margin-bottom: 6px; }
-        .create-map-box p { font-size: 12px; color: #78350f; line-height: 1.6; margin-bottom: 10px; }
-        .create-map-link { display: block; text-align: center; padding: 12px; border-radius: 10px; background: #f59e0b; color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; }
 
         .badge-missing { background: #f1f5f9; color: #94a3b8; font-size: 13px; padding: 14px; border-radius: 12px; text-align: center; border: 1px dashed #cbd5e1; font-weight: 500; }
         .error-card { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 14px; border-radius: 12px; text-align: center; font-size: 14px; font-weight: 600; }
@@ -116,6 +105,7 @@
 <button id="installAppBtn" class="hidden" type="button">📲 Install App to Home Screen</button>
 
 <a href="nearby-consumers.html" class="radar-link">📡 Open Nearby Consumer Radar ↗</a>
+<a href="map-maker.html" class="radar-link">🗺 Open Map Maker (Batch → Google My Maps) ↗</a>
 
 <!-- LOGIN SCREEN -->
 <div class="app-card" id="loginScreen">
@@ -135,12 +125,6 @@
         <img src="logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
         <h1>Location & DTR Tracker</h1>
         <button id="logoutBtn" style="background:none; border:none; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:12px; margin-top:4px;">Lock App</button>
-    </div>
-
-    <!-- Mode Switcher -->
-    <div class="mode-toggle">
-        <div class="mode-btn active" id="btnSingleMode">Single Search</div>
-        <div class="mode-btn" id="btnBatchMode">Batch Process</div>
     </div>
 
     <!-- SINGLE SEARCH MODE -->
@@ -164,27 +148,6 @@
 
             <!-- TAB 2: NEAREST DTRS -->
             <div id="tab-dtrs" class="tab-content"></div>
-        </div>
-    </div>
-
-    <!-- BATCH PROCESS MODE -->
-    <div id="modeBatch" class="hidden">
-        <label style="font-size: 13px; font-weight: 600; margin-bottom: 6px; display:block;">Paste Consumer Numbers (One per line)</label>
-        <textarea id="batchInput" class="styled-input" placeholder="72136&#10;54321&#10;98765"></textarea>
-        <button id="batchProcessBtn" class="btn-primary btn-success" disabled>⚡ Process Batch Data</button>
-
-        <div id="batchResultsContainer" style="display: none;">
-            <div class="batch-output-box" id="batchOutputPreview"></div>
-            <div class="batch-actions">
-                <button id="copyBatchBtn" class="btn-primary btn-secondary" style="flex: 1;">📋 Copy to Clipboard</button>
-                <button id="downloadBatchBtn" class="btn-primary btn-success" style="flex: 1;">⬇ Download CSV</button>
-                <button id="kmlBatchBtn" class="btn-primary btn-kml" style="flex: 1 1 100%;">🗺 Download KML (Google My Maps)</button>
-            </div>
-            <div class="create-map-box">
-                <h3>🗺 Create Map</h3>
-                <p>1. Tap <b>Download KML</b> above.<br>2. Open a blank Google My Map below.<br>3. In the map, tap <b>Import</b> and choose the KML file.</p>
-                <a href="https://www.google.com/maps/d/u/0/?hl=en" target="_blank" rel="noopener" class="create-map-link">➕ Create New Google My Map ↗</a>
-            </div>
         </div>
     </div>
 
@@ -230,27 +193,8 @@
     window.addEventListener('appinstalled', () => installBtn.classList.add('hidden'));
 
     // ==========================================
-    // 1. UI MODE & TAB NAVIGATION
+    // 1. TAB NAVIGATION
     // ==========================================
-    const btnSingle = document.getElementById('btnSingleMode');
-    const btnBatch = document.getElementById('btnBatchMode');
-    const modeSingle = document.getElementById('modeSingle');
-    const modeBatch = document.getElementById('modeBatch');
-
-    btnSingle.addEventListener('click', () => {
-        btnSingle.classList.add('active');
-        btnBatch.classList.remove('active');
-        modeSingle.classList.remove('hidden');
-        modeBatch.classList.add('hidden');
-    });
-
-    btnBatch.addEventListener('click', () => {
-        btnBatch.classList.add('active');
-        btnSingle.classList.remove('active');
-        modeBatch.classList.remove('hidden');
-        modeSingle.classList.add('hidden');
-    });
-
     // Tab Logic with Memory
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -295,7 +239,6 @@
             document.getElementById('statusMessage').style.color = "#059669";
             document.getElementById('statusMessage').style.background = "#ecfdf5";
             document.getElementById('searchBtn').disabled = false;
-            document.getElementById('batchProcessBtn').disabled = false;
         } catch (error) {
             document.getElementById('statusMessage').textContent = "❌ Failed to load JSON";
             document.getElementById('statusMessage').style.color = "#dc2626";
@@ -472,180 +415,6 @@
         if (e.key === 'Enter') document.getElementById('searchBtn').click();
     });
 
-    // ==========================================
-    // 5. BATCH PROCESSING & EXPORT W/ ALL COORDS
-    // ==========================================
-    let generatedBatchCSV = "";
-    let generatedBatchTSV = "";
-
-    function getBatchDataString(lat, lon, isCsv = true) {
-        let sep = isCsv ? "," : "\t";
-        if (!isValidCoordinate(lat, lon)) {
-            return `N/A${sep}N/A${sep}N/A${sep}N/A${sep}N/A${sep}N/A`;
-        }
-        let nearest = getNearestDTRs(parseFloat(lat), parseFloat(lon), 1)[0];
-        if (nearest) {
-            let name = isCsv ? `"${nearest.name}"` : nearest.name;
-            return `${lat}${sep}${lon}${sep}${nearest.dtrNo}${sep}${name}${sep}${nearest.dist.toFixed(1)}${sep}${nearest.loadStatus}`;
-        }
-        return `${lat}${sep}${lon}${sep}No DTRs${sep}No DTRs${sep}N/A${sep}N/A`;
-    }
-
-    document.getElementById('batchProcessBtn').addEventListener('click', () => {
-        let rawInput = document.getElementById('batchInput').value;
-        let numbers = rawInput.split(/[\n,]+/).map(n => n.trim()).filter(n => n !== "");
-        if (numbers.length === 0) return alert("Please paste consumer numbers first.");
-
-        let csvHeaders = [
-            "Consumer_No",
-            "Smart_Lat", "Smart_Lon", "Smart_DTR_No", "Smart_DTR_Name", "Smart_Dist(m)", "Smart_Load",
-            "ARMS_Lat", "ARMS_Lon", "ARMS_DTR_No", "ARMS_DTR_Name", "ARMS_Dist(m)", "ARMS_Load",
-            "Prepaid_Lat", "Prepaid_Lon", "Prepaid_DTR_No", "Prepaid_DTR_Name", "Prepaid_Dist(m)", "Prepaid_Load"
-        ];
-
-        let tsvHeaders = [
-            "Consumer No",
-            "Smart Lat", "Smart Lon", "Smart DTR No", "Smart DTR Name", "Smart Dist(m)", "Smart Load",
-            "ARMS Lat", "ARMS Lon", "ARMS DTR No", "ARMS DTR Name", "ARMS Dist(m)", "ARMS Load",
-            "Prepaid Lat", "Prepaid Lon", "Prepaid DTR No", "Prepaid DTR Name", "Prepaid Dist(m)", "Prepaid Load"
-        ];
-
-        generatedBatchCSV = csvHeaders.join(",") + "\n";
-        generatedBatchTSV = tsvHeaders.join("\t") + "\n";
-
-        let previewText = `Processed ${numbers.length} records. Ready for export.\n\nRESULTS PREVIEW:\n-----------------------------------------\n`;
-
-        numbers.forEach(num => {
-            let last5 = num.slice(-5).padStart(5, '0');
-            let fullNo = (parseInt(last5.charAt(0)) >= 7 ? "0400100" : "0400000") + last5;
-            let row = consumerDatabase[fullNo];
-
-            if (!row) {
-                generatedBatchCSV += `${fullNo},,,,,,,,,,,,,,,,,,\n`;
-                generatedBatchTSV += `${fullNo}\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n`;
-                previewText += `${fullNo} -> ❌ Not Found in DB\n`;
-                return;
-            }
-
-            let smartCSV = getBatchDataString(row.SmartLat, row.SmartLong, true);
-            let armsCSV = getBatchDataString(row.ArmsLat, row.ArmsLong, true);
-            let prepCSV = getBatchDataString(row.PrepaidLat, row.PrepaidLong, true);
-
-            let smartTSV = getBatchDataString(row.SmartLat, row.SmartLong, false);
-            let armsTSV = getBatchDataString(row.ArmsLat, row.ArmsLong, false);
-            let prepTSV = getBatchDataString(row.PrepaidLat, row.PrepaidLong, false);
-
-            generatedBatchCSV += `${fullNo},${smartCSV},${armsCSV},${prepCSV}\n`;
-            generatedBatchTSV += `${fullNo}\t${smartTSV}\t${armsTSV}\t${prepTSV}\n`;
-            previewText += `${fullNo} -> Analyzed successfully\n`;
-        });
-
-        const out = document.getElementById('batchOutputPreview');
-        out.textContent = previewText;
-        out.style.display = 'block';
-        document.getElementById('batchResultsContainer').style.display = 'block';
-    });
-
-    // DIRECT COPY TO CLIPBOARD
-    document.getElementById('copyBatchBtn').addEventListener('click', () => {
-        if (!generatedBatchTSV) return;
-        navigator.clipboard.writeText(generatedBatchTSV).then(() => {
-            const btn = document.getElementById('copyBatchBtn');
-            btn.textContent = "✅ Copied to Clipboard!";
-            setTimeout(() => btn.textContent = "📋 Copy to Clipboard", 2000);
-        }).catch(err => {
-            alert("Copy failed. Please use the Download CSV option.");
-        });
-    });
-
-    // DOWNLOAD CSV EXCEL FILE
-    document.getElementById('downloadBatchBtn').addEventListener('click', () => {
-        if (!generatedBatchCSV) return;
-        const blob = new Blob([generatedBatchCSV], { type: 'text/csv;charset=utf-8;' });
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = `GESD_Detailed_Batch_DTR_${new Date().getTime()}.csv`;
-        link.style.display = "none";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    });
-
-    // ==========================================
-    // 6. KML EXPORT FOR GOOGLE MY MAPS
-    // ==========================================
-    // My Maps icon number used in the KML style ids.
-    // 1660 = Crisis lightning icon (taken from an exported My Maps KML).
-    const KML_ICON_ID = 1660;
-
-    function xmlEsc(s) {
-        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-    }
-
-    function buildKML(numbers) {
-        // My Maps reads the icon glyph and colour from the style id: icon-<ICON_ID>-<RRGGBB>
-        // KML <color> tag is aabbggrr (same colour, reversed byte order)
-        const types = [
-            { name: 'Smart Meter',   lat: 'SmartLat',   lon: 'SmartLong',   hex: '10B981', kmlColor: 'ff81b910' },
-            { name: 'ARMS Postpaid', lat: 'ArmsLat',    lon: 'ArmsLong',    hex: '0284C7', kmlColor: 'ffc78402' },
-            { name: 'Prepaid Meter', lat: 'PrepaidLat', lon: 'PrepaidLong', hex: '8B5CF6', kmlColor: 'fff65c8b' }
-        ];
-        types.forEach(t => { t.id = `icon-${KML_ICON_ID}-${t.hex}`; });
-
-        let kml = `<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>GESD Consumers</name>`;
-
-        types.forEach(t => {
-            ['normal', 'highlight'].forEach(mode => {
-                kml += `<Style id="${t.id}-${mode}"><IconStyle><color>${t.kmlColor}</color><scale>1</scale>
-<Icon><href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href></Icon>
-<hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/></IconStyle>
-<LabelStyle><scale>0</scale></LabelStyle></Style>`;
-            });
-            kml += `<StyleMap id="${t.id}"><Pair><key>normal</key><styleUrl>#${t.id}-normal</styleUrl></Pair>
-<Pair><key>highlight</key><styleUrl>#${t.id}-highlight</styleUrl></Pair></StyleMap>`;
-        });
-
-        types.forEach(t => {
-            kml += `<Folder><name>${t.name}</name>`;
-            numbers.forEach(num => {
-                let last5 = num.slice(-5).padStart(5, '0');
-                let fullNo = (parseInt(last5.charAt(0)) >= 7 ? "0400100" : "0400000") + last5;
-                let row = consumerDatabase[fullNo];
-                if (!row || !isValidCoordinate(row[t.lat], row[t.lon])) return;
-
-                let lat = parseFloat(row[t.lat]), lon = parseFloat(row[t.lon]);
-                let d = getNearestDTRs(lat, lon, 1)[0];
-                let desc = d
-                    ? `Nearest DTR: ${d.name} (${d.dtrNo})\nDistance: ${d.dist.toFixed(1)} m\nCapacity: ${d.capacity}\nFeeder: ${d.feeder}\nLoad: ${d.loadStatus}`
-                    : 'No DTR found';
-
-                kml += `<Placemark><name>${fullNo}</name>
-<description>${xmlEsc(desc)}</description>
-<styleUrl>#${t.id}</styleUrl>
-<Point><coordinates>${lon},${lat},0</coordinates></Point></Placemark>`;
-            });
-            kml += `</Folder>`;
-        });
-
-        kml += `</Document></kml>`;
-        return kml;
-    }
-
-    document.getElementById('kmlBatchBtn').addEventListener('click', () => {
-        let numbers = document.getElementById('batchInput').value
-            .split(/[\n,]+/).map(n => n.trim()).filter(n => n !== "");
-        if (numbers.length === 0) return alert("Please paste consumer numbers first.");
-
-        const blob = new Blob([buildKML(numbers)], { type: 'application/vnd.google-earth.kml+xml' });
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = `GESD_Map_${Date.now()}.kml`;
-        link.style.display = "none";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    });
 </script>
 </body>
 </html>
